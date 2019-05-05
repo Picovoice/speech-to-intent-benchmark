@@ -1,0 +1,5325 @@
+{
+    "0075d273-51bb-47cb-b323-4437bd0de029.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "00e09cf0-a01d-453e-9b89-dc6e6d31d362.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "01a50d1b-ed05-4708-b076-5387ea170058.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "02b77977-ada7-4f37-a1b3-8cb433c8c8da.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "size": "eight ounce"
+        }
+    },
+    "0334e17c-b72f-4e1a-ba76-0bb6c110ef94.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "038439fc-2a04-4ed3-9caa-cf2a5a086aef.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "some milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "0493148e-eb66-4e64-984a-8dfb2e41866e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " soy milk",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "04b09ada-5dcc-491a-ae95-fe4e4993869e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "medium roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "05984e70-4ec7-4aaa-af56-8dbacf982486.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " milk",
+            "roast": "medium roast"
+        }
+    },
+    "05ad3db4-3456-4570-a4dd-4c64d8814681.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "05ae073e-842f-4492-9fdc-e8a5bba5ace0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee"
+        }
+    },
+    "05b2d348-4ab5-4ccc-a17e-3ccb3907b272.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "size": "twenty ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "05c641eb-5164-40f6-91ff-b742d1987e0b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot"
+        }
+    },
+    "05da5bb1-5c0e-4ef4-a5e8-74fd62dbd1ed.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "lots of cream",
+            "numberOfShots": "double shot",
+            "size": "large",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "062522f9-261b-4cc5-9edb-c5183c6402af.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a lot of skim milk",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "062998e3-3f9a-49ac-aaae-d7ade473817d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot",
+            "roast": "medium roast"
+        }
+    },
+    "0636c68b-ef43-4340-bf91-ce8c6397c045.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " whole milk",
+            "size": "medium",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "06fcc9ca-99f0-4ac0-9ae5-74b719960cd0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " skim milk",
+            "size": "medium"
+        }
+    },
+    "0704c731-9895-4eb1-b93c-427c95ce8316.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " whole milk",
+            "roast": "medium roast",
+            "size": "large"
+        }
+    },
+    "07c2c646-98f0-47a2-a53d-2cfffd7a8124.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "roast": "dark roast",
+            "coffeeDrink": "house coffee",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "089f79a8-6e8f-4a0f-8ef9-32008dc2dad2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a lot of cream",
+            "numberOfShots": "double shot",
+            "roast": "medium roast"
+        }
+    },
+    "08b22cb8-01d7-449a-923d-1597720742f0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "08d043b2-af11-409d-b597-65c565c13dd4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "size": "medium",
+            "sugarAmount": "sugar"
+        }
+    },
+    "08fece20-8c90-4997-be96-ebf725018efa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "09db6218-51af-4f95-8bff-ab7c15b771ee.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot"
+        }
+    },
+    "0a1cb083-726e-438d-ac80-eab9811305ea.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "0a40c7aa-7adf-4687-a54f-1506c1d7b8ef.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "0a4e9b1d-e294-40fc-afaa-4a07b9437ff7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "medium roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "0b2aa010-3b02-470e-aad9-be77fe743084.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast",
+            "size": "eight ounce",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "0b3c4445-7e32-4372-a2a2-3b8d903dbf80.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "0c6a26aa-bc20-4c64-960a-9162b5f81925.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a lot of milk",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "0d4a3829-18a4-4e40-a4d7-e97b516b2e77.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " milk",
+            "size": "sixteen ounce"
+        }
+    },
+    "0e11b6e8-560e-4858-966e-8a1d3c9e0178.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino"
+        }
+    },
+    "0e9cba9e-e9f2-40b1-9e39-24de4a264934.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "0ec16306-e9ed-40cd-856b-2af24601916c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " whole milk",
+            "roast": "medium roast",
+            "size": "large"
+        }
+    },
+    "0ec187f5-4dd7-43f8-818a-2136bf66d94e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "dark roast"
+        }
+    },
+    "0f3be9fd-bad8-41ec-a7df-a30e228e3b80.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a lot of skim milk",
+            "numberOfShots": "single shot",
+            "roast": "medium roast"
+        }
+    },
+    "0f6ccd6a-b7a7-4e05-aa5e-02f76b0381cb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "medium roast",
+            "size": "small"
+        }
+    },
+    "0fb01265-e40d-4c41-ba9e-608b875405d9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "10222c57-2e58-4f30-b0ef-47add92f546f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "small",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "10be3115-d533-4793-8dcd-b982999c69e1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "123d9d2b-91b2-4411-8cf2-9b75b09fb439.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "size": "eight ounce"
+        }
+    },
+    "128282e4-c60d-4550-9c47-89cb6654a8aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "some skim milk"
+        }
+    },
+    "132f5ddc-5ae6-4d75-8559-674abdbadca2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "134b10d6-c656-44fc-aa6e-45b5aa458c79.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "light roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "1350b48d-ff17-4e38-a8f0-1561f3bbb39c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "13b57702-312b-4b35-974b-a9d0a4473099.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a lot of skim milk",
+            "size": "twenty ounce",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "15a46fe9-a3d0-47ed-9898-8a0fe223a33d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " soy milk"
+        }
+    },
+    "15e95bb2-b43f-44a5-adb9-7206a1537890.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of cream",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "16245b86-120d-405b-aeaf-c5e6070db48c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " cream",
+            "numberOfShots": "single shot"
+        }
+    },
+    "165bced7-3ecc-41f3-acf8-e584141f0379.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "size": "small",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "16701b2c-45d2-43a6-a79e-5085f2bf861e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " skim milk",
+            "numberOfShots": "triple shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "1698c3c6-aa49-4059-a86d-c1207b83bf17.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "16eee89a-932c-47b1-abad-87fdfc757eab.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "16f23e83-0947-41c9-b509-486cf81e43d8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "170a2326-8544-422b-a0b8-03f163279aa4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "174bec6a-f50c-439f-a951-98ce8497d8ce.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a bit of almond milk",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "17fe40a1-0678-4f27-b318-e3e6715f1262.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " skim milk"
+        }
+    },
+    "18036a5c-cf79-4b4f-a69b-80240ea319dd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot"
+        }
+    },
+    "183861c6-450e-495d-aa55-c943ee3d6c76.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " whole milk",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "18ae57a1-c98d-453a-bbcc-d1d063d2eff1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " cream",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "18d9c393-d322-402b-9839-f2dd3a09c346.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "19b33c87-f765-4f8c-b88d-284acae987fb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a lot of almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "19d5be84-9454-479c-8cfd-a86f9cad6f91.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "medium roast",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "1a3b706a-9056-43c1-809e-bda1fe6eca96.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " soy milk",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "1a5e796d-2046-4a34-a01d-a906d09a0847.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "light roast",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "1a8dc4dc-edd7-4629-9eb3-c30c74881930.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "1aa31732-038f-4a5d-9778-11ab445769b2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "size": "eight ounce"
+        }
+    },
+    "1c4a98d5-534f-4c5d-851f-2e26d8befbe3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "1c4b2042-ef8d-4172-a068-9c9867c929b8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "1cada0fd-3bd6-45d6-a3e1-df077e1e3bca.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "1cf61395-1205-46c4-bf1c-2e43dd489455.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast"
+        }
+    },
+    "1e0e6369-2795-4ed9-933f-230abc57e9fc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "roast": "medium roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "1e37483d-173a-4527-949c-317182a92d49.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "size": "twelve ounce"
+        }
+    },
+    "1e446516-c580-4489-82d5-338df61705f1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a lot of cream",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "1e70a5cf-3954-4fbe-b235-e763a01a7f3f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "1e8e3e61-6e39-461e-ac26-a6912019bd47.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of soy milk",
+            "size": "sixteen ounce",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "1ea9f810-95cc-4399-9514-83d1104e797c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "a lot of skim milk",
+            "size": "small",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "1ed43aa9-822a-44d7-b2be-8d4116229b07.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a little bit of almond milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "1f4f4aac-2af7-4919-8a04-dd53c22baabd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "1f664345-7799-4921-9ca8-06d7ac717107.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " whole milk",
+            "size": "sixteen ounce",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "22aca806-3cfb-4ada-9dc0-695bd372cbd3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "twenty ounce"
+        }
+    },
+    "234164af-fa20-488c-8041-e86e644bbbe8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "single shot"
+        }
+    },
+    "23a12090-edd6-4fbf-89e0-6866831975a4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a bit of soy milk",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "24050f1a-7cbe-40ca-ba4a-9b197309803e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a bit of milk",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "25312afd-a0f0-4758-821a-da99b66d2a3a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "253b08c9-e468-4e4d-8036-3720fb827f2d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee"
+        }
+    },
+    "25443b47-4927-4b18-8655-95e5970d9374.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte"
+        }
+    },
+    "260da357-b641-40ac-9a65-95c8a88afd2a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot",
+            "roast": "light roast"
+        }
+    },
+    "2630f6ea-dcdb-44d0-a045-b564d346f3d0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " skim milk",
+            "size": "sixteen ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "26ba7b95-44ca-47f2-a7e1-627b9530637c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "almond milk",
+            "numberOfShots": "single shot",
+            "size": "twelve ounce"
+        }
+    },
+    "273ecb20-8c0a-4242-9678-b622ae2da7b1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "2759b85f-4f7c-4cb2-9d52-50f5a49a0ed1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "27c0f514-2435-470f-8d39-04c7a4ef7d72.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "twenty ounce"
+        }
+    },
+    "27d6b06e-fdf2-499a-9142-ab8e531a0fea.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "282d32e1-e1e5-4760-b574-9f629d824384.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino"
+        }
+    },
+    "2859280f-7f86-4e5a-aba9-b2f212ea0b3c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "lots of soy milk"
+        }
+    },
+    "285b32ac-011d-4062-9131-0f4bf0f390ce.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "eight ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "28e13a17-773f-45b4-903e-b0bc6d2691e0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "29f51dce-cec6-496e-a344-a1c948ac6a5d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "2a06482c-64d2-4658-9e71-d16c7f9c6cc1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "2a6cdcfc-22c3-410b-a329-aae941869b98.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "2acbdc28-a89a-4947-9587-864cb9eb8784.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "small",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "2b885668-3255-4b7f-b91e-2f0309cef458.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "2c053c4c-58e0-463b-aaa4-7d6b8f9fa6a6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "double shot",
+            "size": "large"
+        }
+    },
+    "2c20cd54-ada9-403e-94fb-01816f6b2c57.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "large"
+        }
+    },
+    "2c552e54-4c2f-40d5-b4f2-0d3b865e3fe4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "2ca1aacd-3bb7-4dbf-93e0-fa6615ca6ecf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "medium roast",
+            "size": "medium"
+        }
+    },
+    "2db6a160-38fb-4370-bb61-06454745bf4d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "2ddb5ca3-f176-41c1-a4ee-c8aafce8ffe6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "2e6bf48b-04c3-4faf-a85d-829a3704fbd6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": "sweetener"
+        }
+    },
+    "2e92db09-6538-4315-a754-46edf5f7856c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "2f383cf4-d9f4-442e-9393-3632dc5c718d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of soy milk",
+            "roast": "dark roast",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "2f524213-47f3-496a-af8a-d2849b5f9963.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " soy milk",
+            "roast": "light roast",
+            "size": "twenty ounce",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "2f71d6c9-6592-4407-aab7-8ddbb55bec62.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a little bit of skim milk",
+            "numberOfShots": "triple shot",
+            "size": "eight ounce",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "2fcd4e53-c547-4368-9d9d-ff7d274caf90.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " whole milk",
+            "roast": "dark roast"
+        }
+    },
+    "3047146b-1413-46b3-b118-6edc360c0109.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " skim milk",
+            "numberOfShots": "double shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "3135ac62-c1f0-4bb9-97ff-56e378adb2c1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "32208af4-b76c-4658-b91f-bb7678e0f088.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a lot of almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "3241dc45-7f94-4352-894c-622865a1b94f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte"
+        }
+    },
+    "32fab152-c605-4383-832b-f4b2fd1fee9a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of cream",
+            "numberOfShots": "single shot",
+            "size": "twenty ounce"
+        }
+    },
+    "330b5017-23c4-4346-adaa-da3ffeefead1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "333064e4-f6af-4a72-9378-b7eebff92d71.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some whole milk",
+            "numberOfShots": "triple shot",
+            "size": "small"
+        }
+    },
+    "33bdf715-ce04-408d-b3d7-c77900fc9ed1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " milk",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "34dbbb8c-c7c3-44c3-8ab8-2dbfc430a147.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a little bit of skim milk",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "35572354-0df2-473d-84fd-538a6f1a70d6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano"
+        }
+    },
+    "35aef469-606f-4418-b960-4e6d060d7cf9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " whole milk",
+            "roast": "medium roast",
+            "size": "medium"
+        }
+    },
+    "36383499-45b3-4125-bbf8-c76f90c67769.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "36401774-6932-4f99-8629-6da15367abb6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "36e04319-8fd0-4d7e-88ac-f136efd04085.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "372e01aa-5484-43d0-8174-2f86f2620c08.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " almond milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "384891ae-9e12-4d01-af69-c29ee69de214.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "388db33c-6be4-4c21-bb0d-e724f349e7d9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " cream",
+            "size": "twelve ounce",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "39e3cd7a-71ec-4519-8973-e2e8c72378d2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "3abdea43-7871-4f33-a978-9f22293346fa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "size": "twenty ounce"
+        }
+    },
+    "3b1a9487-87e7-48dd-991b-563c2e1c44b3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "3bca1e0c-2502-4854-a41a-e393b6d5b01e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " skim milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "small",
+            "sugarAmount": " sugar"
+        }
+    },
+    "3c7149d4-2c90-4933-a564-584d77d7a63f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "some soy milk",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "3ca84362-f8b1-4803-bec8-bd3a90b71889.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "3d13959a-4c40-4af9-bc07-5d15ff4e36c3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "roast": "dark roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "3d35ba8e-1738-445f-a5fe-d45025f7265d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "twenty ounce"
+        }
+    },
+    "3d74794b-80bb-4a96-b000-8d5bc7e4e2eb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "3d81fdaa-d6e6-4718-a562-fe4b3fb639c6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " cream",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "3d964e4e-9e22-49cd-af3b-7fbe6a039c22.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "3da49d22-5ba4-4f62-9f91-53219d2fcee1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot"
+        }
+    },
+    "3dd7fde3-7460-4df5-bf74-6b1d0fb6f569.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " milk",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "3ded6c67-175d-4347-8a21-df3b1773738f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "eight ounce"
+        }
+    },
+    "3df6c3a4-a407-4de8-bff2-319c3d5873f5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " cream",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "3df788b5-8fe3-4520-a079-9aeff4a6422f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "3e7ee3cc-4e1d-431b-b347-0118cb18fad2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "medium roast",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "3e81883a-3a0d-4820-855d-93221fb2dba9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "3f1ad540-9680-4e9e-8692-523c9ff199fb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "3f94e11d-445a-4852-9e1a-a99f0fa71aac.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "400b19f7-7e22-4762-83e5-7502c1b32964.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a lot of soy milk",
+            "roast": "light roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "41be2a72-d354-47a2-b8bf-419f057a4a3a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "420aadd0-721a-49ed-b3d5-31e5713114ae.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "large",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "421a82f2-4293-41c0-8557-90bbf4a212af.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "eight ounce",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "42b059cf-c87e-4b10-84cc-13e0b4f3bc31.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "437e6a34-24d3-4521-8e76-e3e392ae2741.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "439556c2-71cf-44cd-8bb2-37335fab2fe6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "441770b4-3757-4e61-a5de-999dcd30506f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "44e7fcfb-2fbb-459f-b570-24737feac4c2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a bit of cream",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "44eab143-e4ec-4b5a-aac9-d826dc1b16c2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some soy milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "eight ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "456808e4-0536-4f14-b081-4fd55a74e2df.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "skim milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "458e9432-c9c7-45f1-8887-0490fbccca6d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "dark roast"
+        }
+    },
+    "45a1cf1b-d94e-4d01-a60a-4dd9c48e3246.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "45e6e6bb-09cd-4efa-9ec2-93e3b3e97382.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " whole milk",
+            "roast": "medium roast",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "45e8b580-f97d-4f61-861b-13db5678e761.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "medium roast",
+            "size": "twenty ounce"
+        }
+    },
+    "4619ec5c-d202-413a-84ba-05adc02804e3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a lot of whole milk",
+            "size": "medium",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "4654d039-a899-43a0-b694-634c581c318e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "46d1f086-f4e5-41d8-8f5c-71fc0333418f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "size": "medium",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "4751cd18-7dbc-4ddd-b125-ae95a2b12197.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "48771c69-7371-4114-870c-4ffaa840702c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a little bit of skim milk",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "491ecfc7-4bbb-4e9b-b83e-b6dfc7738096.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a little bit of soy milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "large"
+        }
+    },
+    "4a4cbb1e-d25e-445c-ac60-446c66795f21.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "roast": "light roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "4b0250a8-d6c7-46c2-ac3c-b4bf605a805c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " cream"
+        }
+    },
+    "4bd0731a-a39e-4c00-9c45-d5f0a787a3f3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "large",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "4bf32777-06a2-482e-9464-c1ab15ce538e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a bit of whole milk",
+            "sugarAmount": " sugar"
+        }
+    },
+    "4d2c1238-2021-4ffb-9ab0-862120214222.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "lots of milk",
+            "roast": "light roast",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "4dbe3c42-5ec1-435f-b31c-153da5560c12.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "4dd4dbf0-7c07-45e3-b181-96f25bb1da4c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "4de24ccc-5ef2-4219-9222-39346d81fcce.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a little bit of milk",
+            "numberOfShots": "single shot",
+            "roast": "medium roast"
+        }
+    },
+    "4e1db2e2-ea9d-49f4-b166-c2f941f292a0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "lots of skim milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "4e1e986e-6f58-4737-9870-4065c083725b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "size": "small",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "4e6a0b5f-6be6-4653-8cef-697bbe888a5f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot"
+        }
+    },
+    "4f0b1081-0a28-4ca8-a051-1c7bed01944d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "4f480f4d-5877-4fd2-b37b-1b19461b967a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "twenty ounce",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "4fa6ae80-4387-471d-83b3-0e06a6c1c710.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "single shot",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "505a930b-d364-4010-a71b-7dd270e9e576.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "size": "small",
+            "milkAmount": "soy milk"
+        }
+    },
+    "506f882d-291f-4ece-aa86-472f6dec5941.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "double shot",
+            "roast": "medium roast"
+        }
+    },
+    "50f3df4b-57cd-4c27-890b-1dbeeeab9352.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " soy milk",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "510ac912-3ec5-4fe7-b3f8-4a1d77e15b0b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "51a57b6c-8ea6-4d86-81e9-e4b885338e23.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a lot of skim milk",
+            "numberOfShots": "single shot",
+            "roast": "medium roast"
+        }
+    },
+    "52815da3-a510-4144-83f8-2dbad497eb63.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a lot of skim milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "52c120b7-1fb5-4151-8de2-00ee7b0fb0b4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of cream",
+            "roast": "medium roast",
+            "size": "twelve ounce",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "52c27de2-32f5-4cdf-8f31-49570e35cad9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "some soy milk",
+            "roast": "medium roast",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "53b306e3-855c-4c77-a109-41507cfc2887.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "light roast"
+        }
+    },
+    "53b77672-339f-461b-a232-bfd79cf20e3e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "540a38c2-c3ce-4457-8536-066cab0af8b1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " whole milk",
+            "roast": "dark roast"
+        }
+    },
+    "5432761b-afae-4033-b0d1-5ba236ebe7d8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " cream",
+            "sugarAmount": " sugar"
+        }
+    },
+    "54b348b2-3804-45ff-bf6a-86b1c2c731c5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a lot of cream",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "54e3ae14-4ba3-44f6-acdb-964434910bd3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "light roast",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "55522a2f-5479-4a37-99e2-0ee0d3b8f181.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot",
+            "size": "large"
+        }
+    },
+    "556d3d7d-959e-4280-8e61-a943f22ff317.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "size": "twelve ounce"
+        }
+    },
+    "55f5fd11-dcbe-4ca6-8d86-260815e844d7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "some whole milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "55fdbd85-fbe0-4c62-9f95-8854c477e17b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a lot of soy milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast"
+        }
+    },
+    "56488676-aa72-4525-9133-34a4e0e2f82b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "size": "eight ounce"
+        }
+    },
+    "56c99f2c-9e95-448b-b327-53690389ed05.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a bit of soy milk",
+            "roast": "dark roast",
+            "size": "large",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "5702b61e-51ef-4d0c-b596-942fce612892.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "dark roast",
+            "size": "large"
+        }
+    },
+    "572317d0-4a53-4ef3-9d9a-b3cf8a1f2771.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "light roast"
+        }
+    },
+    "577de09d-4310-49c1-b3a7-a651199236b6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "double shot",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "57936990-3dd7-4760-a763-d1ca6da6493f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "some skim milk",
+            "roast": "light roast",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "582d4ff6-fe69-400d-b37a-0308b831666d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a bit of milk",
+            "roast": "dark roast",
+            "sugarAmount": "brown sugar"
+        }
+    },
+    "59d70a14-aebf-4064-a529-6ffef9045666.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "5ae5ab1a-4732-47ee-a156-cab0fd85ef96.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee"
+        }
+    },
+    "5af1fed6-6e50-4e38-9503-a6b0a121c5aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "eight ounce"
+        }
+    },
+    "5bf15a68-538f-4609-a419-0b7bea308f61.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "5c1f2252-71e8-41d8-b645-ae05bbb33bfd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "size": "small"
+        }
+    },
+    "5c66d07f-1c77-4c7a-a0c8-4d812f08414e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "a bit of skim milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "5d1dbbd1-3c7a-4749-b09d-839c801f51e4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "dark roast"
+        }
+    },
+    "5d52900c-d287-4f2c-8bd9-aacbd68f0409.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "dark roast",
+            "size": "twelve ounce"
+        }
+    },
+    "5d8141e7-39cd-47b7-84eb-ff737d67a00c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a little bit of milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "eight ounce",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "5d9cd8a3-50d2-4202-bf07-9aa6e1268b31.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "size": "large",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "5dc0751e-251b-45a3-a04e-8909890535c7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "size": "twelve ounce",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "5e5fc9c6-4506-4498-a8b5-f94cb81e6fe2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " skim milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "5e900eef-0ae6-40ce-8acf-6b9779ce6a6c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "dark roast",
+            "size": "twelve ounce"
+        }
+    },
+    "5ecc6aa2-3b5e-40ea-98cc-591b86a45645.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "lots of milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "5f1aaf6b-1047-414f-b807-323e8f5830b9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "607e1f21-f0e6-46ab-af95-cb87bd908d41.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "60990bcc-85ad-4d1a-9067-a42755175b1b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "609d9524-df0d-44f3-a600-17404afc7771.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "size": "small",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "60c651ad-520e-40ef-acc7-2b4d82822853.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "613fe9bc-3c1f-49fd-8062-4e296a12b520.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "size": "medium"
+        }
+    },
+    "615bd959-d385-4c4b-861e-fb0013e81afc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "61b6baf5-cad2-4f60-965c-8cbbfb73389a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "size": "small"
+        }
+    },
+    "61defc4f-f0c3-4e87-9854-c293525a3217.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " skim milk",
+            "roast": "medium roast",
+            "size": "large"
+        }
+    },
+    "62356467-e0bc-41a4-9b5f-625e681a97fd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "627b8b3a-c132-47f3-9924-28b47f9d44e2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "large",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "63011534-319d-4fd5-87f7-fda60cc9c6a6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "size": "twenty ounce"
+        }
+    },
+    "63165bdd-cbea-42cd-ac07-8b50818ae79e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "6363f981-be45-4e7b-a312-1fa854357a33.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " skim milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "6401bd39-94c8-4b12-895d-68a1ad79fbbc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "some skim milk",
+            "numberOfShots": "single shot",
+            "size": "small"
+        }
+    },
+    "6440344c-8299-43e7-93b9-abe53d70f7c3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "size": "small"
+        }
+    },
+    "65141554-8990-497c-b9cb-fa72def6592a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a little bit of almond milk",
+            "roast": "medium roast",
+            "size": "medium",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "654d9e0c-b8d5-46ae-80ef-0857251450d3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " milk"
+        }
+    },
+    "65dc2adc-cdaa-4f9b-b22f-5f4dade68a43.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "size": "twelve ounce"
+        }
+    },
+    "661d004b-2486-487e-9e06-a32e8bb301b3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "a lot of cream",
+            "numberOfShots": "single shot",
+            "roast": "dark roast"
+        }
+    },
+    "6647fb7f-670c-475b-bcae-5765f3e58ccf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "light roast"
+        }
+    },
+    "665b11d2-78f5-4135-8b5c-f587e43383df.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce"
+        }
+    },
+    "67b33122-5aba-4cdc-903b-0fea998bd8cc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "sugarAmount": " sugar"
+        }
+    },
+    "680bf341-0157-4a51-bcb5-52dc0d94fabb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot"
+        }
+    },
+    "6850a6f3-a413-4d1d-95e5-df0ea7df6621.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a little bit of whole milk",
+            "numberOfShots": "single shot",
+            "size": "small"
+        }
+    },
+    "6962ced8-9b7b-4440-a966-7a741ce73b27.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a little bit of cream",
+            "roast": "medium roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "69954475-b3d5-43ac-a967-2ad6c8e47a49.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " cream",
+            "roast": "dark roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "69b0ae18-80ba-42e3-a4e0-248b62d4a6f1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "6a570514-6360-4a86-aade-494ad2f25568.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "6aaee34c-c84f-42e2-9d30-9d6654004d74.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " milk",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "6b28cf60-fb3e-46b0-bbad-80e812f54078.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "medium roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "6c04621d-5262-4dbe-816f-5101e06e88ea.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "triple shot",
+            "size": "small"
+        }
+    },
+    "6c36c3fb-8239-4c56-91cb-c35709e91571.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "size": "eight ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "6cb6a079-1420-4abe-8584-4501c8611ab2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a lot of almond milk",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "6cd38e49-8d1c-4975-b40a-d50c1c645b2e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "some milk",
+            "numberOfShots": "double shot",
+            "size": "eight ounce"
+        }
+    },
+    "6d362a1d-64fe-4cb7-b12e-289dabf84713.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "6e0efef3-9d66-4501-b548-dcaaf47b5eaa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "a lot of skim milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "6e8d4b90-3399-47f5-be29-6f1c7ecf429c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "6ea29cef-aa45-44bc-b11a-1e70e190932c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "6f204cb3-5850-4eb0-a09e-52eb5d81651c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of whole milk",
+            "roast": "dark roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "6f249bf3-ae5d-4045-9fad-376fb2607a0d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "712cb0fa-8c74-4470-9ee5-81a18f33fbaf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "sixteen ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "71590c40-4031-4423-bd44-5d823aadce15.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a bit of whole milk",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "71f26636-186f-4e04-aeac-c66075d36e22.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "medium roast",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "724a662c-26eb-4a08-a593-60ba9f3098c7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "medium"
+        }
+    },
+    "726706ea-814c-4773-9845-1b50dac21210.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "72aa10d4-dee5-461e-b366-dbaa2cd98a31.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "size": "eight ounce"
+        }
+    },
+    "7358b0f7-a464-41a2-a8e5-53a94cb45428.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "roast": "medium roast",
+            "size": "large"
+        }
+    },
+    "73d0abfc-2d9f-4385-8df7-4e8c77fdfb8c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " cream",
+            "size": "large",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "74188f96-61d3-443e-ad9c-4a138600fd53.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "medium roast",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "7488d614-6c4e-4a3f-acaf-7f1e2dc7e068.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "single shot",
+            "roast": "medium roast"
+        }
+    },
+    "7594182a-ca01-45ae-8616-5f3bb086aaed.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "75aed699-ac18-45a4-a391-5f6f5979840f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "75b38d6f-defc-422d-b0fa-5ebf1913a8f2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "75f7e24e-7a38-4aaa-b60c-53125d454f9c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "76a753a3-bb5c-4e62-ac33-3174d8c864cb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "roast": "light roast"
+        }
+    },
+    "76c73b9a-0bdd-4f24-aed5-f4ac707980ce.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "triple shot",
+            "size": "eight ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "76dddf86-06e4-49a4-9cb4-aaecd3eeabb3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of almond milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "77a26007-6e9d-4e1d-9d65-f501093b3264.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "dark roast",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "77eb60a3-e432-4752-b8c6-22a617e75b37.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot",
+            "size": "large"
+        }
+    },
+    "789fdd07-80f9-4af7-b067-df7fe5489dfa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "79256bc0-1729-4b22-acbc-7c8da2a63b83.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "size": "small"
+        }
+    },
+    "79a55fec-56dd-429f-afa4-d408e97f578f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "79dcac01-fc87-4099-b943-660848f46551.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "79f2e5d5-e1c6-4e8f-b660-ab2148947b30.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "7a5c3ae9-a2c2-4aac-af23-09e6e78ea078.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "some whole milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "small"
+        }
+    },
+    "7a90589c-a294-4284-a931-d7eeab68377e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "triple shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "7abfc788-1c85-46cc-ac0e-999ccce74899.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a bit of whole milk",
+            "sugarAmount": " sugar"
+        }
+    },
+    "7b73b78d-fbdb-48b2-aab9-967294a69381.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "size": "eight ounce"
+        }
+    },
+    "7c503d1c-22aa-4e41-9432-8a78e263abb3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "7c9e49da-e7c6-4fdb-8ffd-ffb69ea1a5da.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee"
+        }
+    },
+    "7caecd9d-9d01-4050-adbb-f13e85bae43d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "lots of whole milk",
+            "size": "twelve ounce"
+        }
+    },
+    "7ce74879-f830-463a-86b4-8f901c16705a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "7d2fe946-e5ca-4c81-be8e-afbe468950d4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " almond milk",
+            "numberOfShots": "single shot",
+            "size": "eight ounce",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "7d3c97b9-4f83-4def-a080-1b13f661acbf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot"
+        }
+    },
+    "7dbde3c5-6907-4592-b553-871ceb482fc8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "7dd74a7e-eafb-4ce3-bdec-2b85aa53fea8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "7de69d74-846f-44cc-88a3-31be6a636d11.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "medium roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "7df4e4a0-b812-4d01-b1aa-8234fe392d6f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "7e61d80c-73f6-4f77-a200-2d60ec265bc2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "7e9ed6f3-6601-4a23-8b49-c23f1e1e81bc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " whole milk"
+        }
+    },
+    "7ed87fb2-3f8c-43d0-998d-03a64f738a21.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "medium roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "7efe9d68-2bf4-43ea-b29c-e8302173a3b5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "dark roast",
+            "size": "twenty ounce"
+        }
+    },
+    "7f55dce3-012c-49da-862b-621b2a62d773.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "7fa68c1f-bd87-451d-a7e7-2d96fbfe482a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "light roast",
+            "size": "twelve ounce"
+        }
+    },
+    "8027cbd5-4177-43f4-8335-2781a87aaf15.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "806c84b9-5d3f-4a19-af96-93426d6805e8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "lots of whole milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "80eff3ea-643b-4ff0-9ffa-67a86773d49e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a bit of milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "81412bc0-2502-44bc-81e0-67b568c065d8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " skim milk",
+            "roast": "dark roast"
+        }
+    },
+    "81434b30-c8c7-4e2d-8fb3-a5faa2c5a202.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "lots of cream",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "81774d8e-7da7-4e9b-8cc3-33015b0ae0aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "sixteen ounce",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "819b8898-fc64-45d5-ad7b-c5f27d83e361.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " soy milk",
+            "size": "twenty ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "81a04d65-98ec-4ae0-9732-869fe33c6709.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " whole milk",
+            "roast": "light roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "82245fda-ea59-4ddb-8be5-876e7b349954.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of almond milk",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "82827e1b-52ee-4919-81e4-90376afb453a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "some almond milk",
+            "roast": "dark roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "82d252df-6c6b-4f9e-9cdc-ba6d5589e159.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "some almond milk",
+            "roast": "dark roast"
+        }
+    },
+    "82d50911-f71c-4b96-8be0-1291377f8795.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "size": "eight ounce"
+        }
+    },
+    "82ef5e8f-8922-4ead-941c-4aad7d147ce7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " skim milk",
+            "size": "twenty ounce"
+        }
+    },
+    "835af760-91d5-4833-9f68-f333d23c6b09.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "lots of whole milk"
+        }
+    },
+    "836430ef-5132-4695-80a3-4c41b02bfa19.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of soy milk"
+        }
+    },
+    "83e71481-f6c3-48bc-a147-b6b59a8fa22c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " skim milk",
+            "roast": "medium roast",
+            "size": "medium"
+        }
+    },
+    "83f2fc6e-50c0-4854-a5bc-71ee6214f34b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "842db79c-6f9f-4c03-9b99-f945f89fc048.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a bit of almond milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "small",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "84e34eca-07bd-4b19-8bb6-f4f4b0ba9da2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "a little bit of whole milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twenty ounce"
+        }
+    },
+    "85017a90-23b2-4d79-85d4-2e5a61e4127d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "854ab616-accc-428e-83c0-0bad1bb7d07f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " almond milk",
+            "roast": "dark roast"
+        }
+    },
+    "85a537ae-3485-47ae-a712-6115df56c6c8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "85d38f4a-3074-42a8-a5e5-f04a5080956b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "size": "medium",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "86e7a8f2-3f9e-4c48-aea6-6d8627667007.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "86f8854a-182f-45f5-b79e-ed24e155994a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some skim milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "8708a017-ccf0-4021-9f62-8ded7b57f4e0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "87104fc9-f72e-4940-b66f-6078a933c685.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "large",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "87280d78-4592-45f7-9fce-cf2afe715b7c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "dark roast"
+        }
+    },
+    "87ce794d-cb3b-4ae9-a4f7-3cc8840ea1aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of soy milk",
+            "size": "twenty ounce"
+        }
+    },
+    "880f5828-a717-4bc0-a151-18dd3d44ff30.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a bit of milk",
+            "numberOfShots": "double shot",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "89b54432-daca-45ef-8969-061ad940993b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": "sweetener"
+        }
+    },
+    "8a92c476-050d-4b5b-911e-24b661a5b69f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "light roast",
+            "size": "small"
+        }
+    },
+    "8aaf372d-30ee-4e85-92ce-8698fc907a1c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " soy milk",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "8b705c12-c550-4c28-860e-b5e1a2c4d20f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " milk",
+            "size": "large"
+        }
+    },
+    "8ba93aed-2f2e-4a0e-bdaf-a98c61c9de1b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "size": "small"
+        }
+    },
+    "8c31c816-4334-4754-b75e-c699506258ee.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "sixteen ounce"
+        }
+    },
+    "8c320b88-a2ec-4d47-9abf-3ed588510894.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " skim milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "small",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "8c481432-d865-4515-8f2b-0ece7a415e42.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " skim milk",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "8c59cf3c-53ad-4072-97fb-0021529fc055.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a little bit of soy milk",
+            "size": "large"
+        }
+    },
+    "8cdad489-40e5-4deb-a22e-c12083d15ad9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "sugarAmount": "sugar"
+        }
+    },
+    "8d42a233-fc8d-4aa2-9e91-47a007fc9f4e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "8d89ce69-6433-47d6-8f38-5bb605bda98c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "8dd8291f-f47f-4085-b631-9396fc5680a8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " milk",
+            "roast": "medium roast",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "8e671d9c-12eb-4c3b-85c5-68a0814aabef.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "size": "large",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "8ec5d594-4a66-4ce0-aa61-51aef66271b0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "twenty ounce"
+        }
+    },
+    "8f03800a-f761-4850-ac77-8755b58a4741.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "double shot",
+            "size": "medium",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "8f19e2d0-70da-4e2d-a991-b1da3902aa8b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "8f347d18-88f3-47e2-9a3a-6638279092e4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "8fb1933e-f040-45e3-945d-0f24d1d942fe.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " whole milk",
+            "size": "large"
+        }
+    },
+    "8ff2c90d-3847-4380-a961-c3aeef8c0363.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "size": "medium",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "9066c10e-a143-493d-a96b-b36a082cd75e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " almond milk",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "90a00f8a-a8e8-4b5c-96ea-3bc19c88dd2e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "lots of almond milk",
+            "roast": "dark roast"
+        }
+    },
+    "90c1e4a6-722b-41c8-b317-6755a0c3e67b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "size": "small",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "911d62c3-b105-43e5-bb72-94dbf4a55648.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "size": "small",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "9126538c-57c8-4322-9da4-63e446f3c788.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " skim milk"
+        }
+    },
+    "914cbcc0-c94d-447b-aeae-99e3bec6df85.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "918d2dcf-8689-441a-a557-55d7295363f7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot",
+            "size": "small"
+        }
+    },
+    "91c3d88a-a6bc-4e87-9d50-6c51da5ed5b6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " soy milk",
+            "roast": "dark roast",
+            "size": "large",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "92657dad-268a-4eb9-a802-a8ae7759e1e6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "926d8ff8-2e20-4c48-b1a4-8ca49c5a5d31.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot"
+        }
+    },
+    "937edcfb-a630-413c-8fcc-7facfe0070e4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " skim milk",
+            "numberOfShots": "triple shot",
+            "size": "medium"
+        }
+    },
+    "94103ad9-6f96-4a22-9e4e-8189edf19a31.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "959e462a-a784-4317-882e-e46fb6ff2d1d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "size": "sixteen ounce"
+        }
+    },
+    "95d1a48e-1d74-44f4-b69a-1e893be9e7aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of almond milk",
+            "roast": "medium roast"
+        }
+    },
+    "95d1d2da-0dd8-4d2b-a8d9-a5171f8dbcd0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "9617433f-e789-460f-83ff-8e69e1208a05.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "96e7abfd-3677-463f-bfaf-9b5beb649df3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " whole milk",
+            "size": "twelve ounce",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "9773a839-4a1c-4cc7-96d8-f18a3151cb43.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "97837b90-aee1-415f-893a-5e45371551c9.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some skim milk",
+            "roast": "dark roast",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "97923a5a-0c11-458a-95c5-e166df5e8faf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " almond milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "98639c59-cb9f-4494-98bf-c2f8b953dc67.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " almond milk",
+            "roast": "medium roast",
+            "size": "twelve ounce",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "987aba7c-b739-4ef7-a84d-a2b92f1dbc38.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "9885cff7-523c-4141-a8c1-8804e5c54de5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "992464ee-90ee-4f69-b628-07cd6a02e131.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " almond milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "9924fed5-c146-42c8-8f51-8fdeaace009a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "dark roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "9944c8ee-55c1-419c-8188-e0ec9abd32aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "size": "small"
+        }
+    },
+    "99bbe081-c8b1-4f7d-bbd4-c4188129670b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "99d5b4d7-83f6-4557-b3c4-0d824405f2aa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "9b2767fb-b71d-41c4-bb2c-01c133bcdb70.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "a little bit of almond milk",
+            "roast": "dark roast",
+            "size": "eight ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "9b3b0690-fa98-4faa-ac62-9be58f37a968.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "light roast",
+            "size": "small",
+            "sugarAmount": " sugar"
+        }
+    },
+    "9cc01282-acd1-4afd-876b-c17b671858d3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "lots of skim milk",
+            "size": "small"
+        }
+    },
+    "9cc7945a-4667-4b69-8234-b68b0270501c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot"
+        }
+    },
+    "9cf1f42a-4e68-448d-9ab9-f2eeabd374fa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee"
+        }
+    },
+    "9e06cfac-d747-4e7c-90ed-79eed24166e2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot"
+        }
+    },
+    "9e12a10d-23fc-45b3-8a21-bcedf61b959d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of milk",
+            "numberOfShots": "triple shot",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "9f807643-b551-4408-90f3-13dbbf890e2e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "9fe4d44b-2508-4c0e-b134-8674909d47cb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "a062c260-ee53-42dc-8092-e6319221b382.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " skim milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "a0d47c6a-2d0e-4013-a2d1-a63b604e6df0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "eight ounce"
+        }
+    },
+    "a134c8b2-a3b8-48a3-91b0-408696d183fc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "a1ed275a-fec1-42c4-8ef8-5b0eae78e4cc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a little bit of skim milk",
+            "numberOfShots": "triple shot",
+            "size": "eight ounce",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "a1f7dc7a-efe1-4d41-961e-8d89428d54cb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "size": "small"
+        }
+    },
+    "a234f42c-39a6-4f14-b991-a93284018431.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " soy milk",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "a2846afd-0161-4f83-8da0-140126dcc4e0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " almond milk",
+            "size": "sixteen ounce"
+        }
+    },
+    "a2e8d91c-5207-405d-9744-fe2e1a14e5f7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " milk",
+            "roast": "medium roast",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "a30e414a-f28a-44f5-81f5-61e58c5b00e6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " cream",
+            "size": "small"
+        }
+    },
+    "a31d4e67-28fc-49ed-b204-b7645503abf2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "a little bit of almond milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "a32a3840-79b3-4dd5-982d-fd2e5a5f0d16.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "large"
+        }
+    },
+    "a3d55b35-1afe-4a6f-bb9e-b9fd5c27b61a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "single shot",
+            "size": "twenty ounce"
+        }
+    },
+    "a4562aff-614c-4495-9d7d-a96fb2512c85.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "double shot"
+        }
+    },
+    "a457f993-c30e-460a-85a9-c50e0f8edb6d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " milk",
+            "size": "twelve ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "a499d75d-ef6e-4998-a2b9-601338441928.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "a4c92d83-15b4-4be2-8e91-71a1b8e09d19.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "some soy milk",
+            "roast": "dark roast",
+            "size": "twelve ounce"
+        }
+    },
+    "a54bceb3-cc96-4c1f-86c3-76bc50279a71.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "a63a5dcf-ad96-4f49-95e1-89b0a3bfb193.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "roast": "dark roast",
+            "coffeeDrink": "mocha",
+            "milkAmount": "soy milk",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "a6478a49-0e4c-45bb-b35e-de8cdb7796ac.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "a703986d-fbae-4dd8-8129-62f4c0a73d74.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "dark roast",
+            "size": "medium"
+        }
+    },
+    "a76d3205-3722-46c0-a813-936ac9448d38.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "size": "twenty ounce",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "a7b1de7b-82ce-48b8-9e63-77b0b821ad6f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast"
+        }
+    },
+    "a7ee7bfa-dc4f-4c1c-a30f-4d38ff3db03f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast"
+        }
+    },
+    "a7f0847f-4931-446b-a86b-5f5651e60b81.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast",
+            "size": "large",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "a8dba9ac-265d-4689-8229-2ceba78c9565.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "a90803ce-8055-4fbd-9ab4-e37c39053ef6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a little bit of soy milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "large"
+        }
+    },
+    "a9795924-cf6b-4598-b7e5-d31525bfe60c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "a9872fcf-7225-4dd3-afe8-200b6dc2b676.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "size": "eight ounce"
+        }
+    },
+    "a99d3e6f-d05d-40cd-9181-d689fa2e28e7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "eight ounce"
+        }
+    },
+    "a9e57ad9-ede5-4589-91fd-6656a91b715e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": " whole milk",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "aa658f13-ceb5-4b7d-bbd7-a9ecfcccb71a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a little bit of milk",
+            "roast": "dark roast"
+        }
+    },
+    "aa71faf5-5f0d-4c83-bec9-1bf737760730.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "lots of cream",
+            "numberOfShots": "single shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "aa9755e4-f62b-4f20-8226-6b53402933cc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "aa9ad693-0671-46b2-9420-7e82deab3c45.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "a lot of whole milk",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "medium"
+        }
+    },
+    "aab1f54a-d106-44bb-94b7-daacd9717d85.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " soy milk",
+            "size": "medium",
+            "numberOfShots": "triple shot"
+        }
+    },
+    "aabbb59c-0565-437b-81a1-850ea57b71b0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "dark roast",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "ab60ca67-e5c8-4836-9d8e-1a65856dcdbe.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "sugarAmount": "sugar"
+        }
+    },
+    "ac226b25-4da7-4109-bf52-c47399fc9eee.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "ac56404f-abdd-48e8-a222-d2d77e372e7a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "size": "twelve ounce"
+        }
+    },
+    "ac5f444c-7653-4e26-860b-1855afad3d2f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " cream",
+            "numberOfShots": "single shot"
+        }
+    },
+    "ace9395f-1fcf-450c-ab24-27299b05565f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "a bit of whole milk",
+            "numberOfShots": "single shot",
+            "size": "eight ounce"
+        }
+    },
+    "ad2f916f-aa09-4326-a61b-47bf4de36b4e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "ad5671da-96eb-42cc-8ed6-350224bc2d2d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee"
+        }
+    },
+    "ada21a02-df02-4ab3-9b6c-e8908cea6ca4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "adb5dd78-0da9-4381-aafd-fc2f66b87744.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "large",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "add328b3-7f36-44fb-8659-77e7e9811410.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "ae25eb00-0ba8-4f2b-bd8e-c969e7c3c45d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "some whole milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "ae4cf541-7dc6-4abe-8485-3b89f34abf07.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "twenty ounce"
+        }
+    },
+    "ae6dff96-7b5f-4bfc-aa64-895e453629e3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " whole milk",
+            "roast": "dark roast",
+            "size": "small"
+        }
+    },
+    "aeb25b61-5da7-48fa-9b8c-7a6149db9061.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "medium"
+        }
+    },
+    "af4008ed-9192-48da-b207-1aeaf98bef5c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "size": "eight ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "b0ec9d2b-e167-438e-9140-bf869205427b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a bit of almond milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "b109009d-422c-4ad0-b39e-76aafbfe46bd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano"
+        }
+    },
+    "b20e2145-1cc2-4656-bf51-d4287a21a56a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " milk",
+            "numberOfShots": "single shot",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "b27d47b8-59da-4c93-a32a-c9f6ed74aaff.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "b2bb0fb0-cfcc-4200-bc74-a21a6d9d8d30.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot"
+        }
+    },
+    "b30b89a8-2fc1-4adb-9e6e-74eac5c446e8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "some almond milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "b3249108-a294-4295-ac5b-cdabe3c840b5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of soy milk",
+            "roast": "medium roast",
+            "sugarAmount": "lots of sweetener"
+        }
+    },
+    "b350f6b3-54ee-4251-aa5f-70f7bac30355.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " almond milk",
+            "roast": "medium roast",
+            "size": "small",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "b3639f7a-ce0d-460d-86fd-83277f31f44c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "b425ec34-6977-4a9a-b9c7-fe368743e241.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a lot of soy milk",
+            "roast": "dark roast",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "b53b17e0-0e9f-478c-a939-05de590c45fc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast"
+        }
+    },
+    "b626dbb6-0890-4ec0-83ba-2cbf79bfd9c7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a bit of almond milk",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "medium"
+        }
+    },
+    "b6349719-b6fc-4b20-8eed-3a64549e1d24.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " skim milk",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "b6822824-5662-44e4-af15-2302b0fe2c47.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "light roast"
+        }
+    },
+    "b7678765-a3af-4b30-b999-5a4696d2ecd3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast"
+        }
+    },
+    "b7735b39-4504-4b25-ae2f-25a14488048e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot"
+        }
+    },
+    "b816d3fc-120c-49ee-92a0-15e0f0860f64.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "a bit of whole milk",
+            "numberOfShots": "single shot",
+            "size": "eight ounce"
+        }
+    },
+    "b8a4b96c-98e0-40d4-a2ae-c797b46dbe1c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "roast": "dark roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "b8a94551-377c-4def-9494-297246761b24.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "medium roast"
+        }
+    },
+    "b8ab35ed-529a-4b29-b96f-d9f52ef38096.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "roast": "dark roast",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "b9942dc9-0921-4a91-91eb-40c290b420f1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "bac1965a-7bb9-4a31-97ea-196ead5f3fbe.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "bac48298-a977-4e98-b436-8d4188d5ffd5.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "light roast",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "badc7de1-5c63-45bd-a6e4-25d5598179ff.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "some soy milk",
+            "numberOfShots": "double shot",
+            "roast": "medium roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "bba4cd55-2ed4-43c1-9d89-a55171786870.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "bbcde974-445a-4ad1-952c-723f94d2c5b2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " whole milk",
+            "numberOfShots": "double shot",
+            "size": "large"
+        }
+    },
+    "bc26d528-5289-44c8-8d89-6dc375334103.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "roast": "light roast"
+        }
+    },
+    "bca7e170-8911-41a3-afba-851306181dab.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "bd46b977-06eb-424f-964a-c9eb460e6e30.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " almond milk"
+        }
+    },
+    "bd65404f-cdd1-4b4f-ae0d-0725227d0bdb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "bd6cec28-e44f-4151-818d-6db42cb24c36.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "light roast",
+            "size": "small",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "bd804905-5e98-43a8-a594-d6c5f9049d6d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "bd9dd1f7-6660-43f0-a226-acb1d737197e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "bddafba5-bc5b-43db-9ccf-ae6063d5ca66.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " milk",
+            "size": "twelve ounce"
+        }
+    },
+    "bea2ada0-522d-46b2-9573-770052c4eb2d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "c00becba-b9f3-43e8-b109-89821270d5e8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some whole milk",
+            "roast": "dark roast",
+            "size": "twenty ounce"
+        }
+    },
+    "c0cb8635-a2e6-4603-a919-fc891f287e94.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " milk",
+            "size": "small"
+        }
+    },
+    "c12d3bea-cf73-479e-9f14-e7773e666ea6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "double shot",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "c18c6e4a-b590-4105-856f-a9d37962c74c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "c1f43c3f-f2ee-4367-b571-a9af708dd28a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "a bit of whole milk",
+            "numberOfShots": "single shot",
+            "roast": "dark roast"
+        }
+    },
+    "c2150a52-b205-4f95-afdf-4fc279bbf415.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "roast": "medium roast",
+            "size": "twenty ounce",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "c23f4efe-a670-4b48-8a09-5ee9db6a5851.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "c24cf498-7556-486d-b63b-3a5a2905f193.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "dark roast"
+        }
+    },
+    "c266bd5f-7a13-4f1d-b14f-49cfd607bd35.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot"
+        }
+    },
+    "c26c9c4c-ed4e-4248-832f-6f0f0c15a536.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "c38cfd83-fca0-4e6b-ba37-bd6483c79e0c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "large",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "c3960150-0b5a-4804-8844-1f277e636fdd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot"
+        }
+    },
+    "c3af8360-9206-4c38-bf56-0a36206b4050.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "size": "eight ounce"
+        }
+    },
+    "c4f19b4e-5a54-46fc-84be-3fb2b95ddc7f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "c50012bf-8ea8-47e9-bbae-f771ee2f8321.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "c52752be-6b90-45ba-ad63-4de39f2ead01.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " skim milk",
+            "size": "sixteen ounce"
+        }
+    },
+    "c5be2db7-c9f4-479e-a71f-1bb22fb55b9b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": " almond milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "c60a7987-a891-44ab-85c5-de748ee320c8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "lots of soy milk"
+        }
+    },
+    "c6568c59-4fb1-40c1-9f71-0e3ace5a9865.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "medium roast",
+            "size": "twelve ounce"
+        }
+    },
+    "c69d9a91-5f91-4a08-9f84-47ae751be4a6.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "c7337606-cb43-496d-9f53-0a90369ab2c1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " soy milk",
+            "numberOfShots": "triple shot",
+            "size": "twenty ounce"
+        }
+    },
+    "c7ab3dfb-6c4e-400e-b65e-ef4487f929cd.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "large",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "c7eb05e7-4e49-4222-9cd1-4fdf9a98b88e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " milk",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "c82c6757-fae3-4e99-82ff-025348218100.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "single shot",
+            "roast": "medium roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "c8808f3a-9550-4125-a035-092221629990.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " cream",
+            "numberOfShots": "double shot",
+            "roast": "dark roast",
+            "size": "twenty ounce"
+        }
+    },
+    "ca287326-00ff-4126-b0b4-8350f9571bf4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "single shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "ca4b8026-5be6-4566-b500-fd7e0f8ff8f1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee"
+        }
+    },
+    "ca5ccd37-a07c-4dfd-8c64-43a0eb4a8fdf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " almond milk",
+            "roast": "medium roast",
+            "size": "small",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "ca7f86bd-8ccb-4396-9613-e0ec5c487086.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "light roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "cb77e274-418f-43d7-9c23-8cca33dc2680.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "milkAmount": "lots of soy milk",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "cb9bb32e-c16f-41b1-950a-70367d738294.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "twelve ounce",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "cc1f7123-11ad-4d4a-93a3-af368837faf4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "size": "medium"
+        }
+    },
+    "cc994683-20e9-4143-b5f3-7deaaea4aa04.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "single shot",
+            "size": "small",
+            "sugarAmount": " sugar"
+        }
+    },
+    "cd49052f-d9d1-4278-9c47-f37735900c19.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " soy milk"
+        }
+    },
+    "cd4f04c1-7e36-490b-9dde-3f3c3106d590.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "cdb84aae-4762-49c9-8f24-6aebb201fde8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot",
+            "size": "large"
+        }
+    },
+    "cdc0c27a-d24e-4661-9342-f1794894b4f1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "roast": "dark roast"
+        }
+    },
+    "ce983ef5-1bdf-46a1-ae1c-75a0db7f6326.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "lots of almond milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "medium"
+        }
+    },
+    "cf909b46-496d-4fd3-a258-ec9a5b8a2d2c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "single shot"
+        }
+    },
+    "d0202aca-723f-45b1-b7b2-65b5c7434956.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "some whole milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "d05dadab-a1a5-4a9f-bcf3-fc5392e7652a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "double shot",
+            "roast": "medium roast"
+        }
+    },
+    "d06e5a5b-2026-4552-9a98-7f3e00d4217a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "size": "large",
+            "sugarAmount": "sugar"
+        }
+    },
+    "d085a2c4-f8ed-4e90-a7d0-a84d23d2472f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "d0bf9206-695d-405a-b22c-8211a4b29702.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of skim milk",
+            "numberOfShots": "triple shot",
+            "size": "small"
+        }
+    },
+    "d1cff360-3333-4a24-b0ac-6725aed53d73.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "twelve ounce"
+        }
+    },
+    "d1f724eb-2757-4259-ab26-c17e041e8766.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "d2fdc07b-7295-4505-a40c-ae993fb547e1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha"
+        }
+    },
+    "d37ce23f-5e8b-47d9-a74e-077017d50954.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "d3904aa3-684d-493e-b3fb-433447e74137.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "d40a1330-f4e5-4910-81b6-f17994a313b3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "a bit of soy milk",
+            "roast": "dark roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "d44ee4ab-fa18-4240-a49d-b12d4186f5ba.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " soy milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "d479eb79-87a2-44a6-bfe6-d401fafc2a14.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "d5f6c3c5-eabb-4c2d-bb2b-7451668bec0f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "milkAmount": "a bit of whole milk",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "d6576d6f-711b-4532-a3f5-0b40fcd0802d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "size": "medium",
+            "sugarAmount": " sugar"
+        }
+    },
+    "d6f1befe-7cca-44d5-9f61-b200495a6842.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "triple shot",
+            "size": "twelve ounce",
+            "sugarAmount": "a lot of brown sugar"
+        }
+    },
+    "d70f1aac-d09c-4264-80c1-578940338867.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "single shot"
+        }
+    },
+    "d7128a8c-55db-42e4-9932-50954da7be43.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "size": "small"
+        }
+    },
+    "d722570a-1a8c-4aca-b681-6421a14df254.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " almond milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "d776ec0b-4171-45c1-8fe0-900c747e0b8d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "d8228c74-9c2c-4646-8369-ef2f08146768.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "d8ae8467-90c8-4979-93a0-4628f7b5063f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": "lots of whole milk",
+            "numberOfShots": "triple shot",
+            "size": "twelve ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "d8bf02e8-fd48-4a68-aa42-cb59ffa9a8df.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "lots of skim milk",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "d97d5d95-4ef7-483a-bc73-94ee3af0244b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "roast": "dark roast"
+        }
+    },
+    "d99dde73-1f93-4190-bc09-0de51c54d71c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "size": "eight ounce"
+        }
+    },
+    "d9fc4e24-157c-40b0-a04b-08b7e37fee4a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "numberOfShots": "double shot",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "da30be12-67a0-450e-83c2-101ed2025a2b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "da7bc4e8-2b79-4997-86a2-2e9a72d5be8c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a lot of skim milk",
+            "roast": "medium roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "dceee8ae-4ce4-4914-966d-577cfa191997.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": " soy milk",
+            "numberOfShots": "double shot",
+            "roast": "dark roast"
+        }
+    },
+    "dd5e878e-8490-445f-a8bd-63de287f9f4d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "roast": "light roast",
+            "sugarAmount": " sugar"
+        }
+    },
+    "ddab596a-3805-4cb6-a531-06b22a51813f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " whole milk",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "de28e10e-10c4-4f4d-8496-45b4e6663555.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " almond milk",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "df10a2f7-c198-4efe-87e2-0d343de1ae1e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "sugarAmount": "brown sugar",
+            "numberOfShots": "double shot"
+        }
+    },
+    "df533902-a1a0-4986-8c66-86da23d1d54d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "df868bf4-3a55-46fb-88a6-1ec2e46c0d14.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "size": "sixteen ounce"
+        }
+    },
+    "df93f0aa-1a0c-4a42-9049-7fda320a5ba4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "medium roast"
+        }
+    },
+    "e02166f1-5c78-4d25-b177-02984bbfce0d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "sugarAmount": "some brown sugar"
+        }
+    },
+    "e0828298-0cf3-40e6-9115-4fb07a4e9a60.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a bit of skim milk",
+            "size": "medium",
+            "sugarAmount": "a bit of sugar"
+        }
+    },
+    "e0c2f1a2-efe8-49c9-82e7-a082c0f0d8f2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": " almond milk",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": "a lot of sweetener"
+        }
+    },
+    "e0cd7bb9-5b02-4bbe-a978-07f416357a4a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a bit of soy milk",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce"
+        }
+    },
+    "e0ff3a7c-5a9c-4fec-86ef-1a21a2ca6b5e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a lot of skim milk"
+        }
+    },
+    "e12e9e60-1beb-434f-937e-e4847c56fa99.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "e1a4d8c0-f82a-437a-b1fb-451e3a2a8524.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "e2382efa-80d1-4103-9378-e32bd0da9667.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "e3994017-f250-44bb-b382-a74e99bbade3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "light roast",
+            "size": "sixteen ounce",
+            "numberOfShots": "double shot"
+        }
+    },
+    "e46deffe-239e-47ff-b56b-f2114ad37b90.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee"
+        }
+    },
+    "e6a1f4c1-6355-4877-9c93-53ab203e3db7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a bit of almond milk",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "e6e971ee-01af-4f8c-840e-aada20eb8cda.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "e730b8a2-6b9b-4076-be1e-2c8a1deddb7c.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "e77b99b9-063a-479d-a505-ffe8969c38e4.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "e8d841f0-8133-43a3-93a3-b8562b5cb270.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "size": "medium",
+            "sugarAmount": " sugar"
+        }
+    },
+    "eafd66a6-1de2-43b8-9a32-d3e9c6b7d75e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": "a little bit of sweetener"
+        }
+    },
+    "ec21e470-5320-42a8-af02-95a0968acbab.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "small"
+        }
+    },
+    "ec614a57-abef-45f3-85ad-321091cf4d44.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " cream",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "ec6f778a-3d2b-4700-af2d-d471ad17f4c3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a little bit of soy milk",
+            "numberOfShots": "triple shot",
+            "size": "small",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "ed1f84e8-02d3-487f-b749-dae24d3611d7.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " skim milk",
+            "numberOfShots": "double shot",
+            "size": "twenty ounce",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "ed741aa4-f9c5-4b2e-8f23-56a6e2995303.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "size": "twelve ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "ed8239a4-87bf-4103-8685-eee60e7f9229.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": " milk",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "ed97d8e9-3fc4-4988-b7f0-536d86d58fec.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " almond milk",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "ee3ac692-0267-4ac7-90e3-4fd8f93c8aaa.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "eebba4ad-7cda-4493-8bba-3a1aafaf4953.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "ef4582d0-6e79-4c78-990b-5226ad438468.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "numberOfShots": "triple shot",
+            "size": "small",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "ef8a7701-82d9-405f-8883-b1b6b6625c2f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "medium roast",
+            "sugarAmount": "a little bit of sugar"
+        }
+    },
+    "f141586d-ceb5-4c21-9bc7-e17e7c75052a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "single shot",
+            "roast": "dark roast",
+            "size": "twenty ounce"
+        }
+    },
+    "f146dd14-c9a9-4f85-83a0-328a539a3727.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " soy milk",
+            "size": "twelve ounce"
+        }
+    },
+    "f17178fd-f113-4bfa-8590-5a7f414b29a1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "milkAmount": "some soy milk",
+            "numberOfShots": "double shot"
+        }
+    },
+    "f29e9896-b75d-44ed-a1e9-a38ea51ae805.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "size": "large",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "f2bd9cbd-b68f-48f3-ab13-0928d26050bc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "double shot",
+            "size": "sixteen ounce",
+            "sugarAmount": "some sugar"
+        }
+    },
+    "f30f8951-92d0-4b7e-be2a-e84da3a49acc.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "single shot",
+            "roast": "light roast"
+        }
+    },
+    "f332ba70-5647-40ee-99ff-eb4a0992088f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "sugarAmount": " sugar"
+        }
+    },
+    "f3b096bb-0353-4995-802e-840146d91f25.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce"
+        }
+    },
+    "f3cb3dd1-406c-4454-8ef1-11aa30f30f54.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "roast": "light roast",
+            "size": "large"
+        }
+    },
+    "f42b0986-8612-49a6-bbd1-017acb1cbe9a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "sugarAmount": "lots of brown sugar"
+        }
+    },
+    "f43dffb6-7400-4162-a9ae-e38d71465cf1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": " cream",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "f5c474f3-35e7-4ea7-9fe4-5391a52b9d7a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": "a little bit of whole milk"
+        }
+    },
+    "f5e9f194-da4b-415c-9f95-6db42bef26c8.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "sugarAmount": "a little bit of brown sugar"
+        }
+    },
+    "f623a0c7-8d82-4c08-a7bb-4e90f6c913bb.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "americano",
+            "milkAmount": " almond milk",
+            "size": "twenty ounce"
+        }
+    },
+    "f625af22-4bb1-4fc4-9b80-6f6dfca3fbda.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " cream",
+            "roast": "medium roast",
+            "sugarAmount": "lots of sugar"
+        }
+    },
+    "f6622fb3-5b89-498f-8c97-db1dfd849dd0.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "triple shot",
+            "size": "large",
+            "sugarAmount": "a bit of brown sugar"
+        }
+    },
+    "f6d40e0c-3bfd-49de-b1b0-0ad23c294b73.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twenty ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "f700116d-d441-4ddc-90b6-d925162defd3.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "numberOfShots": "single shot",
+            "roast": "light roast",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "f74584de-f2cc-4301-b6d5-2bb3d73e925f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " soy milk",
+            "numberOfShots": "triple shot",
+            "sugarAmount": " sugar"
+        }
+    },
+    "f77914b1-0738-4a70-88ad-103910ec79cf.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some milk",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "twelve ounce",
+            "sugarAmount": " sweetener"
+        }
+    },
+    "f7898988-81d2-4640-86af-6f560ab8b28f.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "double shot",
+            "sugarAmount": "a bit of sweetener"
+        }
+    },
+    "f7cc06a3-3478-4634-b937-d40df068c85d.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "milkAmount": "a little bit of skim milk",
+            "numberOfShots": "double shot",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "f8c0cf50-e818-4dcc-a73d-10bf1a762c75.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": " almond milk",
+            "sugarAmount": "some sweetener"
+        }
+    },
+    "f8db4b9c-1997-4ca3-b9a4-9bbaa7e310c2.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "roast": "light roast",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "f974a20c-cf7e-41e4-b718-2d66385b4b1a.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced coffee",
+            "roast": "dark roast",
+            "size": "sixteen ounce",
+            "sugarAmount": " sugar"
+        }
+    },
+    "fa37e8f8-fda9-4633-baa0-342deece3b48.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "numberOfShots": "double shot",
+            "roast": "light roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "fbb2f04c-ed15-4b29-9632-d518db4baeef.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "milkAmount": " milk",
+            "numberOfShots": "triple shot",
+            "roast": "light roast",
+            "size": "eight ounce",
+            "sugarAmount": "a lot of sugar"
+        }
+    },
+    "fbc1060f-fae6-48a5-ad04-e3ef41c1013b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "size": "eight ounce"
+        }
+    },
+    "fc77398d-2086-4508-a57c-a039e143712b.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "numberOfShots": "triple shot",
+            "roast": "dark roast",
+            "size": "eight ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "fd3fc53b-fe59-4405-a3b6-4692641eab24.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "mocha",
+            "roast": "dark roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "fd91b2c4-44c2-45ef-9318-f7d208407c4e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "house coffee",
+            "milkAmount": " whole milk",
+            "size": "eight ounce",
+            "sugarAmount": " brown sugar"
+        }
+    },
+    "fe9b6ade-b983-4338-a11b-c4fb9ffb1f91.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "latte",
+            "numberOfShots": "double shot",
+            "size": "medium",
+            "sugarAmount": " sugar"
+        }
+    },
+    "febb6093-3cc6-430e-94bc-8c1cfe7fb29e.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "espresso",
+            "numberOfShots": "double shot"
+        }
+    },
+    "fefb3a43-0768-4d94-ab37-9b3d9d42d0c1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "a lot of skim milk",
+            "size": "small"
+        }
+    },
+    "ff065308-0183-4670-aa15-04ea03d7c335.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "coffee",
+            "milkAmount": "a little bit of soy milk"
+        }
+    },
+    "ff24d3e2-d867-4da2-9f6e-27a3b2ba7180.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "iced mocha",
+            "milkAmount": "some cream",
+            "numberOfShots": "double shot",
+            "size": "twelve ounce"
+        }
+    },
+    "ffe40d95-3930-4c6f-a923-05907250f859.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "drip coffee",
+            "milkAmount": "a bit of cream",
+            "numberOfShots": "triple shot",
+            "roast": "medium roast",
+            "size": "sixteen ounce"
+        }
+    },
+    "fff153da-9151-4856-a32c-6905b37014a1.wav": {
+        "intent": "orderDrink",
+        "slots": {
+            "coffeeDrink": "cappuccino",
+            "numberOfShots": "double shot",
+            "roast": "medium roast"
+        }
+    }
+}
