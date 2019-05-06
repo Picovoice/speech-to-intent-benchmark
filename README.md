@@ -9,6 +9,11 @@ enabled coffee maker. You can listen to one of the sample commands [here](/data/
 In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen
 to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).
 
+# Data
+
+The speech commands are crowd sourced from more than 50 unique speakers. Each speaker contributed about 10 different commands.
+Collectively there are 625 commands used in this benchmark. Noise is downloaded from [Freesound](https://freesound.org/).
+
 # Usage
 
 Clone the directory and its submodules via
@@ -40,5 +45,9 @@ python benchmark/benchmark.py ${NOISE}
 The script creates the accuracy results.
 
 # Results
+
+Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
+to correctly understand the speech command. As it can be seen the engines performance does not drop even in low SNR regime
+depicting its resiliency to environmental noise.
 
 ![](data/misc/result.png)
