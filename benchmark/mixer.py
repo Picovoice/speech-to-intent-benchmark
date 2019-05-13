@@ -47,7 +47,7 @@ def mix(clean_folder, mix_folder, noise_name, snr_db):
 
 
 def run(noise):
-    for snr_db in [24, 21, 18, 15, 12, 9, 6, 3]:
+    for snr_db in [24, 21, 18, 15, 12, 9, 6]:
         snr_dir = _path('data/speech/%s_%ddb' % (noise, snr_db))
         if os.path.isdir(snr_dir):
             shutil.rmtree(snr_dir)

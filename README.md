@@ -9,6 +9,8 @@ enabled coffee maker. You can listen to one of the sample commands [here](/data/
 In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen
 to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).
 
+Additionally we compare the accuracy of rhino with Google's [Dialogflow](https://dialogflow.com/).
+
 # Data
 
 The speech commands are crowd sourced from more than 50 unique speakers. Each speaker contributed about 10 different commands.
@@ -23,7 +25,8 @@ git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-ben
 ```
 
 The repository grabs the latest version of rhino as a Git submodule under [rhino](/rhino). All data needed for this
-benchmark including speech, noise, and labels are provided under [data](/data). The benchmark code is located under
+benchmark including speech, noise, and labels are provided under [data](/data). Additionally the Dialogflow agent used
+in this benchamrk is exported [here](/data/dialogflow). The benchmark code is located under
 [benchmark](/benchmark).
 
 The first step is to mix the clean speech data under [clean](/data/speech/clean) with noise. There are two types of noise
@@ -39,10 +42,14 @@ python benchmark/mixer.py ${NOISE}
 Then in order to run the noisy commands through speech-to-intent engine run the following
 
 ```bash
-python benchmark/benchmark.py ${NOISE}
+python benchmark/rhino.py ${NOISE}
 ``` 
 
-The script creates the accuracy results.
+The script creates the accuracy results. In order to run the noisy spoken commands through Dialogflow API run the following
+
+```bash
+python benchmark/dialogflow.py ${GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} ${NOISE}
+```
 
 # Results
 
