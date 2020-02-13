@@ -21,8 +21,8 @@ CONTEXT_PATH = _path('rhino/resources/contexts/linux/coffee_maker_linux.rhn')
 def process_file(path):
     rhino = Rhino(
         library_path=LIB_PATH,
-        model_file_path=MODEL_PATH,
-        context_file_path=CONTEXT_PATH)
+        model_path=MODEL_PATH,
+        context_path=CONTEXT_PATH)
 
     pcm, sample_rate = soundfile.read(path, dtype='int16')
     assert pcm.ndim == 1
@@ -84,7 +84,7 @@ def process(folder):
 
 
 if __name__ == '__main__':
-    noise = sys.argv[1]
+    noise = 'cafe'
 
     for snr_db in [24, 21, 18, 15, 12, 9, 6]:
         print('%s %d db:' % (noise, snr_db))
