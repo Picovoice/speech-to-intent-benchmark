@@ -395,7 +395,7 @@
         "intent": "orderDrink",
         "slots": {
             "coffeeDrink": "house coffee",
-            "milkAmount": " soy milk"
+            "milkAmount": "soy milk"
         }
     },
     "15e95bb2-b43f-44a5-adb9-7206a1537890.wav": {
@@ -523,7 +523,7 @@
         "intent": "orderDrink",
         "slots": {
             "coffeeDrink": "coffee",
-            "milkAmount": "a lot of almond milk",
+            "milkAmount": "lots of almond milk",
             "numberOfShots": "triple shot",
             "roast": "dark roast",
             "size": "small"
@@ -2508,7 +2508,7 @@
             "coffeeDrink": "house coffee",
             "numberOfShots": "triple shot",
             "size": "sixteen ounce",
-            "sugarAmount": "a lot of sugar"
+            "sugarAmount": "lots of sugar"
         }
     },
     "7abfc788-1c85-46cc-ac0e-999ccce74899.wav": {
@@ -2607,8 +2607,7 @@
         "slots": {
             "coffeeDrink": "cappuccino",
             "numberOfShots": "triple shot",
-            "roast": "light roast",
-            "size": "large"
+            "roast": "light roast"
         }
     },
     "7e61d80c-73f6-4f77-a200-2d60ec265bc2.wav": {
@@ -3497,8 +3496,7 @@
             "coffeeDrink": "coffee",
             "milkAmount": " cream",
             "numberOfShots": "triple shot",
-            "roast": "dark roast",
-            "size": "large"
+            "roast": "dark roast"
         }
     },
     "a3d55b35-1afe-4a6f-bb9e-b9fd5c27b61a.wav": {

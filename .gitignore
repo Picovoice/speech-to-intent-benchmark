@@ -105,3 +105,4 @@ venv.bak/
 
 .idea/
 data/speech/*db
+*npz
