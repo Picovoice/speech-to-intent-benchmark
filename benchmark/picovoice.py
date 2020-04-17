@@ -84,7 +84,7 @@ def process(folder):
 
 
 if __name__ == '__main__':
-    noise = 'cafe'
+    noise = sys.argv[1]
 
     for snr_db in [24, 21, 18, 15, 12, 9, 6]:
         print('%s %d db:' % (noise, snr_db))

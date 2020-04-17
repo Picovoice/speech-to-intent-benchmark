@@ -11,6 +11,12 @@ def _path(x):
 
 
 def process_file(path, project_id):
+    cache_path = path.replace('.wav', '.dialogflow')
+
+    if os.path.exists(cache_path):
+        with open(cache_path) as f:
+            return json.load(f)
+
     session_client = dialogflow.SessionsClient()
 
     session_id = os.path.basename(path)[0]
@@ -45,6 +51,9 @@ def process_file(path, project_id):
                     elif '20' in v or 'twenty' in v:
                         v = 'twenty ounce'
                 result['slots'][k] = v
+
+    with open(cache_path, 'w') as f:
+        json.dump(result, f)
 
     return result
 
