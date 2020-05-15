@@ -13,6 +13,7 @@ import soundfile
 def _path(x):
     return os.path.join(os.path.dirname(__file__), '../%s' % x)
 
+
 sys.path.append(_path('rhino/binding/python'))
 from rhino import Rhino
 
@@ -68,13 +69,15 @@ class NLUEngine(object):
                     if slot not in result["slots"]:
                         num_errors += 1
                         break
-                    if result["slots"][slot].strip() != label["slots"][slot].strip():
+                    if (result["slots"][slot].strip() !=
+                            label["slots"][slot].strip()):
                         num_errors += 1
                         break
 
         print('num examples: %d' % num_examples)
         print('num errors: %d' % num_errors)
-        print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
+        print('accuracy: %f' %
+              (float(num_examples - num_errors) / num_examples))
 
     def __str__(self):
         raise NotImplementedError()
@@ -88,7 +91,8 @@ class NLUEngine(object):
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
-            raise ValueError("cannot create %s of type '%s'" % (cls.__name__, engine_type))
+            raise ValueError("cannot create %s of type '%s'" %
+                             (cls.__name__, engine_type))
 
 
 class AmazonLex(NLUEngine):
@@ -113,7 +117,8 @@ class AmazonLex(NLUEngine):
             )
 
         result = dict(intent=response['intentName'],
-                      slots={k: v for k, v in response['slots'].items() if v is not None},
+                      slots={k: v for k, v in response['slots'].items()
+                             if v is not None},
                       inputTranscript=response['inputTranscript'])
 
         with open(cache_path, 'w') as f:
@@ -152,9 +157,12 @@ class GoogleDialogflow(NLUEngine):
 
         query_input = dialogflow.types.QueryInput(audio_config=audio_config)
 
-        response = session_client.detect_intent(session=session, query_input=query_input, input_audio=input_audio)
+        response = session_client.detect_intent(session=session,
+                                                query_input=query_input,
+                                                input_audio=input_audio)
 
-        result = dict(intent=response.query_result.intent.display_name, slots=dict())
+        result = dict(intent=response.query_result.intent.display_name,
+                      slots=dict())
 
         for k in ['coffeeDrink', 'size', 'roast', 'numberOfShots', 'sugarAmount', 'milkAmount']:
             if response.query_result.parameters.fields.get(k) is not None:
