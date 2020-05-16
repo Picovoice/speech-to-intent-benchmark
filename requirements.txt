@@ -2,3 +2,4 @@ numpy
 soundfile
 dialogflow
 matplotlib
+boto3
