@@ -53,6 +53,8 @@ python benchmark/benchmark.py --engine_type GOOGLE_DIALOGFLOW --gcp_credential_p
 # Results
 
 Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
-to correctly understand the speech command.
+to correctly understand the speech command.  
+The Amazon Lex bot and Dialogflow agent used to produce these results were
+both trained on all 432 sample utterances.
 
 ![](data/misc/result.png)
