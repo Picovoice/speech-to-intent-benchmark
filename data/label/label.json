@@ -2306,7 +2306,7 @@
         "intent": "orderDrink",
         "slots": {
             "coffeeDrink": "iced mocha",
-            "milkAmount": "a bit of whole milk",
+            "milkAmount": "a bit of almond milk",
             "roast": "medium roast",
             "sugarAmount": " sugar"
         }
