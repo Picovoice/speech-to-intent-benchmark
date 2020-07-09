@@ -7,7 +7,12 @@ from enum import Enum
 
 import boto3
 import dialogflow_v2 as dialogflow
+from ibm_watson import SpeechToTextV1
+from ibm_watson import NaturalLanguageUnderstandingV1
+from ibm_watson.natural_language_understanding_v1 import Features, EntitiesOptions
 import soundfile
+
+from custom import create_language_model
 
 
 def _path(x):
@@ -18,6 +23,7 @@ class NLUEngines(Enum):
     AMAZON_LEX = 'AMAZON_LEX'
     GOOGLE_DIALOGFLOW = 'GOOGLE_DIALOGFLOW'
     PICOVOICE_RHINO = 'PICOVOICE_RHINO'
+    IBM_WATSON = 'IBM_WATSON'
 
 
 class NLUEngine(object):
@@ -77,11 +83,13 @@ class NLUEngine(object):
         raise NotImplementedError()
 
     @classmethod
-    def create(cls, engine_type, project_id):
+    def create(cls, engine_type, gcp_project_id, ibm_model_id, ibm_custom_id):
         if engine_type is NLUEngines.AMAZON_LEX:
             return AmazonLex()
         elif engine_type is NLUEngines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(project_id)
+            return GoogleDialogflow(gcp_project_id)
+        elif engine_type is NLUEngines.IBM_WATSON:
+            return IBMWatson(ibm_model_id, ibm_custom_id)
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
@@ -111,7 +119,7 @@ class AmazonLex(NLUEngine):
 
         result = dict(intent=response['intentName'],
                       slots={k: v for k, v in response['slots'].items() if v is not None},
-                      inputTranscript=response['inputTranscript'])
+                      transcript=response['inputTranscript'])
 
         with open(cache_path, 'w') as f:
             json.dump(result, f, indent=2)
@@ -174,6 +182,61 @@ class GoogleDialogflow(NLUEngine):
 
     def __str__(self):
         return 'Google Dialogflow'
+
+
+class IBMWatson(NLUEngine):
+    def __init__(self, model_id, custom_id):
+        self._model_id = model_id
+        if custom_id is None:
+            self._custom_id = create_language_model()
+        else:
+            self._custom_id = custom_id
+
+    def process_file(self, path):
+        cache_path = path.replace('.wav', '.watson')
+
+        if os.path.exists(cache_path):
+            with open(cache_path) as f:
+                return json.load(f)
+
+        stt_service = SpeechToTextV1()
+        with open(path, 'rb') as audio_file:
+            stt_response = stt_service.recognize(
+                audio=audio_file,
+                content_type='audio/wav',
+                language_customization_id=self._custom_id
+            ).get_result()['results']
+
+        if stt_response:
+            transcript = stt_response[0]['alternatives'][0]['transcript'].lower()
+        else:
+            return None
+
+        nlu_service = NaturalLanguageUnderstandingV1(version='2018-03-16')
+
+        response = nlu_service.analyze(
+            features=Features(entities=EntitiesOptions(model=self._model_id)),
+            text=transcript,
+            language='en'
+        ).get_result()['entities']
+
+        intent = None
+        slots = dict()
+        for e in response:
+            if e['type'] == 'orderDrink':
+                intent = 'orderDrink'
+            else:
+                slots[e['type']] = e['text']
+
+        result = dict(intent=intent, slots=slots, transcript=transcript)
+
+        with open(cache_path, 'w') as f:
+            json.dump(result, f, indent=2)
+
+        return result
+
+    def __str__(self):
+        return 'IBM Watson'
 
 
 class PicovoiceRhino(NLUEngine):

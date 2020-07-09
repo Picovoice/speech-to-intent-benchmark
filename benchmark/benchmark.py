@@ -11,19 +11,25 @@ def _path(x):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--engine_type', choices=['AMAZON_LEX', 'GOOGLE_DIALOGFLOW', 'PICOVOICE_RHINO'],
+    parser.add_argument('--engine_type', choices=['AMAZON_LEX', 'GOOGLE_DIALOGFLOW', 'PICOVOICE_RHINO', 'IBM_WATSON'],
                         required=True)
     parser.add_argument('--gcp_credential_path', required=('GOOGLE_DIALOGFLOW' in argv))
     parser.add_argument('--gcp_project_id', required=('GOOGLE_DIALOGFLOW' in argv))
+    parser.add_argument('--ibm_credential_path', required=('IBM_WATSON' in argv))
+    parser.add_argument('--ibm_model_id', required=('IBM_WATSON' in argv))
+    parser.add_argument('--ibm_custom_id')
     parser.add_argument('--noise', required=True)
 
     args = parser.parse_args()
 
-    engine = NLUEngine.create(NLUEngines[args.engine_type], args.gcp_project_id)
-    print('created %s engine' % str(engine))
-
     if args.gcp_credential_path is not None:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.gcp_credential_path
+
+    if args.ibm_credential_path is not None:
+        os.environ['IBM_CREDENTIALS_FILE'] = args.ibm_credential_path
+
+    engine = NLUEngine.create(NLUEngines[args.engine_type], args.gcp_project_id, args.ibm_model_id, args.ibm_custom_id)
+    print('created %s engine' % str(engine))
 
     for snr_db in [24, 21, 18, 15, 12, 9, 6]:
         print('%s %d db:' % (args.noise, snr_db))
