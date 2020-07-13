@@ -11,8 +11,10 @@ from ibm_watson import SpeechToTextV1
 from ibm_watson import NaturalLanguageUnderstandingV1
 from ibm_watson.natural_language_understanding_v1 import Features, EntitiesOptions
 import soundfile
+import requests
+import urllib3
 
-from custom import create_language_model
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def _path(x):
@@ -83,13 +85,20 @@ class NLUEngine(object):
         raise NotImplementedError()
 
     @classmethod
-    def create(cls, engine_type, gcp_project_id, ibm_model_id, ibm_custom_id):
+    def create(cls, **kwargs):
+        engine_type = NLUEngines[kwargs['engine_type']]
+        gcp_project_id = kwargs['gcp_project_id']
+        ibm_model_id = kwargs['ibm_model_id']
+        ibm_custom_id = kwargs['ibm_custom_id']
+        apikey = kwargs['apikey']
+        stt_url = kwargs['stt_url']
+
         if engine_type is NLUEngines.AMAZON_LEX:
             return AmazonLex()
         elif engine_type is NLUEngines.GOOGLE_DIALOGFLOW:
             return GoogleDialogflow(gcp_project_id)
         elif engine_type is NLUEngines.IBM_WATSON:
-            return IBMWatson(ibm_model_id, ibm_custom_id)
+            return IBMWatson(ibm_model_id, ibm_custom_id, apikey, stt_url)
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
@@ -185,12 +194,95 @@ class GoogleDialogflow(NLUEngine):
 
 
 class IBMWatson(NLUEngine):
-    def __init__(self, model_id, custom_id):
+    def __init__(self, model_id, custom_id, apikey, stt_url):
         self._model_id = model_id
+        self._username = "apikey"
+        self._apikey = apikey
+        self._stt_url = stt_url
+        self._headers = {'Content-Type': "application/json"}
         if custom_id is None:
-            self._custom_id = create_language_model()
+            self._custom_id = self.create_language_model()
+            self.train_language_model()
         else:
             self._custom_id = custom_id
+
+    def create_language_model(self):
+        data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
+                "description": "STT custom model for coffee maker context"}
+        uri = self._stt_url + "/v1/customizations"
+        response = requests.post(uri, auth=(self._username, self._apikey), verify=False,
+                                 headers=self._headers, data=json.dumps(data).encode('utf-8'))
+
+        if response.status_code != 201:
+            print(response.text)
+            raise RuntimeError("Failed to create model")
+
+        custom_id = response.json()['customization_id']
+        print("Model customization id: ", custom_id)
+        return custom_id
+
+    def add_corpus(self):
+        corpus_name = "corpus1"
+        corpus_path = _path('data/watson/corpus.txt')
+
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/corpora/" + corpus_name
+        with open(corpus_path, 'rb') as f:
+            response = requests.post(uri, auth=(self._username, self._apikey), verify=False,
+                                     headers=self._headers, data=f)
+
+        if response.status_code != 201:
+            print(response.text)
+            raise RuntimeError("Failed to add corpus file")
+
+        print("Added corpus file")
+        return uri
+
+    def get_corpus_status(self, uri):
+        response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+        response_json = response.json()
+        status = response_json['status']
+        time_to_run = 0
+        while status != 'analyzed' and time_to_run < 10000:
+            time.sleep(10)
+            response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+            response_json = response.json()
+            status = response_json['status']
+            time_to_run += 10
+
+        if status != 'analyzed':
+            raise RuntimeError()
+
+        print("Corpus analysis complete")
+
+    def train(self):
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/train"
+        response = requests.post(uri, auth=(self._username, self._apikey),
+                                 verify=False, data=json.dumps({}).encode('utf-8'))
+
+        if response.status_code != 200:
+            raise RuntimeError("Failed to start training custom model")
+
+    def get_training_status(self):
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id
+        response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+        status = response.json()['status']
+        time_to_run = 0
+        while status != 'available' and time_to_run < 10000:
+            time.sleep(10)
+            response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+            status = response.json()['status']
+            time_to_run += 10
+
+        if status != 'available':
+            raise RuntimeError()
+
+        print("Training custom model complete")
+
+    def train_language_model(self):
+        corpus_uri = self.add_corpus()
+        self.get_corpus_status(corpus_uri)
+        self.train()
+        self.get_training_status()
 
     def process_file(self, path):
         cache_path = path.replace('.wav', '.watson')

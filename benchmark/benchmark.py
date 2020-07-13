@@ -21,14 +21,23 @@ if __name__ == "__main__":
     parser.add_argument('--noise', required=True)
 
     args = parser.parse_args()
+    args_dict = vars(args)
 
     if args.gcp_credential_path is not None:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.gcp_credential_path
 
     if args.ibm_credential_path is not None:
-        os.environ['IBM_CREDENTIALS_FILE'] = args.ibm_credential_path
+        with open(args.ibm_credential_path) as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                key, value = line.strip().split('=', 1)
+                if key == 'SPEECH_TO_TEXT_APIKEY':
+                    args_dict['apikey'] = value
+                elif key == 'SPEECH_TO_TEXT_URL':
+                    args_dict['stt_url'] = value
 
-    engine = NLUEngine.create(NLUEngines[args.engine_type], args.gcp_project_id, args.ibm_model_id, args.ibm_custom_id)
+    engine = NLUEngine.create(**args_dict)
     print('created %s engine' % str(engine))
 
     for snr_db in [24, 21, 18, 15, 12, 9, 6]:
