@@ -9,7 +9,7 @@ enabled coffee maker. You can listen to one of the sample commands [here](/data/
 In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen
 to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).
 
-Additionally we compare the accuracy of rhino with [Google Dialogflow](https://dialogflow.com/) and [Amazon Lex](https://aws.amazon.com/lex/).
+Additionally we compare the accuracy of rhino with [Google Dialogflow](https://dialogflow.com/), [Amazon Lex](https://aws.amazon.com/lex/), and [IBM Watson](https://www.ibm.com/watson).
 
 # Data
 
@@ -43,18 +43,25 @@ Create accuracy results for running the noisy spoken commands through a NLU engi
 python benchmark/benchmark.py --engine_type ${AN_ENGINE_TYPE} --noise ${NOISE}
 ```
 
-The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, and `PICOVOICE_RHINO`.
+The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, and `PICOVOICE_RHINO`, `IBM_WATSON`.
 
 In order to run the noisy spoken commands through Dialogflow API, include your Google Cloud Platform credential path and Google Cloud Platform project ID like the following
 ```bash
 python benchmark/benchmark.py --engine_type GOOGLE_DIALOGFLOW --gcp_credential_path ${GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} --gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise ${NOISE}
 ```
 
+To run the noisy spoken commands through IBM Watson API, include your IBM Cloud credential path and your Natural Language Understanding model ID.  
+If you already have a custom Speech to Text language model, include its ID using the argument `--ibm_custom_id`. Otherwise, a new custom language model
+will be created for you.
+```bash
+python benchmark/benchmark.py --engine_type IBM_WATSON --ibm_credential_path ${IBM_CREDENTIAL_PATH} --ibm_model_id ${IBM_MODEL_ID} --noise ${NOISE}
+```
+
 # Results
 
 Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
 to correctly understand the speech command.  
-The Amazon Lex bot and Dialogflow agent used to produce these results were
-both trained on all 432 sample utterances.
+The Amazon Lex bot, Google Dialogflow agent, and IBM Watson model used to produce these results were
+all trained on all 432 sample utterances.
 
 ![](data/misc/result.png)

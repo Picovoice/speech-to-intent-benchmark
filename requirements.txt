@@ -3,3 +3,6 @@ soundfile
 dialogflow
 matplotlib
 boto3
+ibm-watson
+requests
+urllib3

@@ -7,7 +7,14 @@ from enum import Enum
 
 import boto3
 import dialogflow_v2 as dialogflow
+import requests
 import soundfile
+import urllib3
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson import NaturalLanguageUnderstandingV1, SpeechToTextV1
+from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Features
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def _path(x):
@@ -18,6 +25,7 @@ class NLUEngines(Enum):
     AMAZON_LEX = 'AMAZON_LEX'
     GOOGLE_DIALOGFLOW = 'GOOGLE_DIALOGFLOW'
     PICOVOICE_RHINO = 'PICOVOICE_RHINO'
+    IBM_WATSON = 'IBM_WATSON'
 
 
 class NLUEngine(object):
@@ -77,11 +85,17 @@ class NLUEngine(object):
         raise NotImplementedError()
 
     @classmethod
-    def create(cls, engine_type, project_id):
+    def create(cls, engine_type, **kwargs):
+        engine_type = NLUEngines[engine_type]
+
         if engine_type is NLUEngines.AMAZON_LEX:
             return AmazonLex()
         elif engine_type is NLUEngines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(project_id)
+            return GoogleDialogflow(kwargs['gcp_project_id'])
+        elif engine_type is NLUEngines.IBM_WATSON:
+            return IBMWatson(kwargs['ibm_model_id'], kwargs['ibm_custom_id'],
+                             kwargs['stt_apikey'], kwargs['stt_url'],
+                             kwargs['nlu_apikey'], kwargs['nlu_url'])
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
@@ -111,7 +125,7 @@ class AmazonLex(NLUEngine):
 
         result = dict(intent=response['intentName'],
                       slots={k: v for k, v in response['slots'].items() if v is not None},
-                      inputTranscript=response['inputTranscript'])
+                      transcript=response['inputTranscript'])
 
         with open(cache_path, 'w') as f:
             json.dump(result, f, indent=2)
@@ -174,6 +188,152 @@ class GoogleDialogflow(NLUEngine):
 
     def __str__(self):
         return 'Google Dialogflow'
+
+
+class IBMWatson(NLUEngine):
+    def __init__(self, model_id, custom_id, stt_apikey, stt_url, nlu_apikey, nlu_url):
+        self._model_id = model_id
+        self._username = "apikey"
+        self._stt_apikey = stt_apikey
+        self._stt_url = stt_url
+        self._nlu_apikey = nlu_apikey
+        self._nlu_url = nlu_url
+        self._headers = {'Content-Type': "application/json"}
+        if custom_id is None:
+            self._custom_id = self._create_language_model()
+            self._train_language_model()
+        else:
+            self._custom_id = custom_id
+
+    def _create_language_model(self):
+        data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
+                "description": "STT custom model for coffee maker context"}
+        uri = self._stt_url + "/v1/customizations"
+        response = requests.post(uri, auth=(self._username, self._stt_apikey), verify=False,
+                                 headers=self._headers, data=json.dumps(data).encode('utf-8'))
+
+        if response.status_code != 201:
+            print(response.text)
+            raise RuntimeError("Failed to create model")
+
+        custom_id = response.json()['customization_id']
+        print("Model customization id: ", custom_id)
+        return custom_id
+
+    def _add_corpus(self):
+        corpus_name = "corpus1"
+        corpus_path = _path('data/watson/corpus.txt')
+
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/corpora/" + corpus_name
+        with open(corpus_path, 'rb') as f:
+            response = requests.post(uri, auth=(self._username, self._stt_apikey), verify=False,
+                                     headers=self._headers, data=f)
+
+        if response.status_code != 201:
+            print(response.text)
+            raise RuntimeError("Failed to add corpus file")
+
+        print("Added corpus file")
+        return uri
+
+    def _get_corpus_status(self, uri):
+        response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
+        response_json = response.json()
+        status = response_json['status']
+        time_to_run = 0
+        while status != 'analyzed' and time_to_run < 10000:
+            time.sleep(10)
+            response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
+            response_json = response.json()
+            status = response_json['status']
+            time_to_run += 10
+
+        if status != 'analyzed':
+            raise RuntimeError()
+
+        print("Corpus analysis complete")
+
+    def _train(self):
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/train"
+        response = requests.post(uri, auth=(self._username, self._stt_apikey),
+                                 verify=False, data=json.dumps({}).encode('utf-8'))
+
+        if response.status_code != 200:
+            raise RuntimeError("Failed to start training custom model")
+
+        print("Started training custom model")
+
+    def _get_training_status(self):
+        uri = self._stt_url + "/v1/customizations/" + self._custom_id
+        response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
+        status = response.json()['status']
+        time_to_run = 0
+        while status != 'available' and time_to_run < 10000:
+            time.sleep(10)
+            response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
+            status = response.json()['status']
+            time_to_run += 10
+
+        if status != 'available':
+            raise RuntimeError()
+
+        print("Training custom model complete")
+
+    def _train_language_model(self):
+        corpus_uri = self._add_corpus()
+        self._get_corpus_status(corpus_uri)
+        self._train()
+        self._get_training_status()
+
+    def process_file(self, path):
+        cache_path = path.replace('.wav', '.watson')
+
+        if os.path.exists(cache_path):
+            with open(cache_path) as f:
+                return json.load(f)
+
+        stt_service = SpeechToTextV1(authenticator=IAMAuthenticator(self._stt_apikey))
+        stt_service.set_service_url(self._stt_url)
+
+        with open(path, 'rb') as audio_file:
+            stt_response = stt_service.recognize(
+                audio=audio_file,
+                content_type='audio/wav',
+                language_customization_id=self._custom_id
+            ).get_result()['results']
+
+        if stt_response:
+            transcript = stt_response[0]['alternatives'][0]['transcript'].lower()
+        else:
+            return None
+
+        nlu_service = NaturalLanguageUnderstandingV1(authenticator=IAMAuthenticator(self._nlu_apikey),
+                                                     version='2018-03-16')
+        nlu_service.set_service_url(self._nlu_url)
+
+        response = nlu_service.analyze(
+            features=Features(entities=EntitiesOptions(model=self._model_id)),
+            text=transcript,
+            language='en'
+        ).get_result()['entities']
+
+        intent = None
+        slots = dict()
+        for e in response:
+            if e['type'] == 'orderDrink':
+                intent = 'orderDrink'
+            else:
+                slots[e['type']] = e['text']
+
+        result = dict(intent=intent, slots=slots, transcript=transcript)
+
+        with open(cache_path, 'w') as f:
+            json.dump(result, f, indent=2)
+
+        return result
+
+    def __str__(self):
+        return 'IBM Watson'
 
 
 class PicovoiceRhino(NLUEngine):
