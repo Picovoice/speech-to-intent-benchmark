@@ -29,13 +29,16 @@ if __name__ == "__main__":
     if args.ibm_credential_path is not None:
         with open(args.ibm_credential_path) as f:
             for line in f:
-                if not line.strip():
-                    continue
-                key, value = line.strip().split('=', 1)
-                if key == 'SPEECH_TO_TEXT_APIKEY':
-                    args_dict['apikey'] = value
-                elif key == 'SPEECH_TO_TEXT_URL':
-                    args_dict['stt_url'] = value
+                if len(line.strip()) > 0:
+                    key, value = line.strip().split('=', maxsplit=1)
+                    if key == 'SPEECH_TO_TEXT_APIKEY':
+                        args_dict['stt_apikey'] = value
+                    elif key == 'SPEECH_TO_TEXT_URL':
+                        args_dict['stt_url'] = value
+                    elif key == 'NATURAL_LANGUAGE_UNDERSTANDING_APIKEY':
+                        args_dict['nlu_apikey'] = value
+                    elif key == 'NATURAL_LANGUAGE_UNDERSTANDING_URL':
+                        args_dict['nlu_url'] = value
 
     engine = NLUEngine.create(**args_dict)
     print('created %s engine' % str(engine))

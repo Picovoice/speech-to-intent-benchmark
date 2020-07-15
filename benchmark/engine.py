@@ -7,12 +7,12 @@ from enum import Enum
 
 import boto3
 import dialogflow_v2 as dialogflow
-from ibm_watson import SpeechToTextV1
-from ibm_watson import NaturalLanguageUnderstandingV1
-from ibm_watson.natural_language_understanding_v1 import Features, EntitiesOptions
-import soundfile
 import requests
+import soundfile
 import urllib3
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson import NaturalLanguageUnderstandingV1, SpeechToTextV1
+from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Features
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -85,20 +85,17 @@ class NLUEngine(object):
         raise NotImplementedError()
 
     @classmethod
-    def create(cls, **kwargs):
-        engine_type = NLUEngines[kwargs['engine_type']]
-        gcp_project_id = kwargs['gcp_project_id']
-        ibm_model_id = kwargs['ibm_model_id']
-        ibm_custom_id = kwargs['ibm_custom_id']
-        apikey = kwargs['apikey']
-        stt_url = kwargs['stt_url']
+    def create(cls, engine_type, **kwargs):
+        engine_type = NLUEngines[engine_type]
 
         if engine_type is NLUEngines.AMAZON_LEX:
             return AmazonLex()
         elif engine_type is NLUEngines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(gcp_project_id)
+            return GoogleDialogflow(kwargs['gcp_project_id'])
         elif engine_type is NLUEngines.IBM_WATSON:
-            return IBMWatson(ibm_model_id, ibm_custom_id, apikey, stt_url)
+            return IBMWatson(kwargs['ibm_model_id'], kwargs['ibm_custom_id'],
+                             kwargs['stt_apikey'], kwargs['stt_url'],
+                             kwargs['nlu_apikey'], kwargs['nlu_url'])
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
@@ -194,23 +191,25 @@ class GoogleDialogflow(NLUEngine):
 
 
 class IBMWatson(NLUEngine):
-    def __init__(self, model_id, custom_id, apikey, stt_url):
+    def __init__(self, model_id, custom_id, stt_apikey, stt_url, nlu_apikey, nlu_url):
         self._model_id = model_id
         self._username = "apikey"
-        self._apikey = apikey
+        self._stt_apikey = stt_apikey
         self._stt_url = stt_url
+        self._nlu_apikey = nlu_apikey
+        self._nlu_url = nlu_url
         self._headers = {'Content-Type': "application/json"}
         if custom_id is None:
-            self._custom_id = self.create_language_model()
-            self.train_language_model()
+            self._custom_id = self._create_language_model()
+            self._train_language_model()
         else:
             self._custom_id = custom_id
 
-    def create_language_model(self):
+    def _create_language_model(self):
         data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
                 "description": "STT custom model for coffee maker context"}
         uri = self._stt_url + "/v1/customizations"
-        response = requests.post(uri, auth=(self._username, self._apikey), verify=False,
+        response = requests.post(uri, auth=(self._username, self._stt_apikey), verify=False,
                                  headers=self._headers, data=json.dumps(data).encode('utf-8'))
 
         if response.status_code != 201:
@@ -221,13 +220,13 @@ class IBMWatson(NLUEngine):
         print("Model customization id: ", custom_id)
         return custom_id
 
-    def add_corpus(self):
+    def _add_corpus(self):
         corpus_name = "corpus1"
         corpus_path = _path('data/watson/corpus.txt')
 
         uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/corpora/" + corpus_name
         with open(corpus_path, 'rb') as f:
-            response = requests.post(uri, auth=(self._username, self._apikey), verify=False,
+            response = requests.post(uri, auth=(self._username, self._stt_apikey), verify=False,
                                      headers=self._headers, data=f)
 
         if response.status_code != 201:
@@ -237,14 +236,14 @@ class IBMWatson(NLUEngine):
         print("Added corpus file")
         return uri
 
-    def get_corpus_status(self, uri):
-        response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+    def _get_corpus_status(self, uri):
+        response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
         response_json = response.json()
         status = response_json['status']
         time_to_run = 0
         while status != 'analyzed' and time_to_run < 10000:
             time.sleep(10)
-            response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+            response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
             response_json = response.json()
             status = response_json['status']
             time_to_run += 10
@@ -254,22 +253,24 @@ class IBMWatson(NLUEngine):
 
         print("Corpus analysis complete")
 
-    def train(self):
+    def _train(self):
         uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/train"
-        response = requests.post(uri, auth=(self._username, self._apikey),
+        response = requests.post(uri, auth=(self._username, self._stt_apikey),
                                  verify=False, data=json.dumps({}).encode('utf-8'))
 
         if response.status_code != 200:
             raise RuntimeError("Failed to start training custom model")
 
-    def get_training_status(self):
+        print("Started training custom model")
+
+    def _get_training_status(self):
         uri = self._stt_url + "/v1/customizations/" + self._custom_id
-        response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+        response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
         status = response.json()['status']
         time_to_run = 0
         while status != 'available' and time_to_run < 10000:
             time.sleep(10)
-            response = requests.get(uri, auth=(self._username, self._apikey), verify=False, headers=self._headers)
+            response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
             status = response.json()['status']
             time_to_run += 10
 
@@ -278,11 +279,11 @@ class IBMWatson(NLUEngine):
 
         print("Training custom model complete")
 
-    def train_language_model(self):
-        corpus_uri = self.add_corpus()
-        self.get_corpus_status(corpus_uri)
-        self.train()
-        self.get_training_status()
+    def _train_language_model(self):
+        corpus_uri = self._add_corpus()
+        self._get_corpus_status(corpus_uri)
+        self._train()
+        self._get_training_status()
 
     def process_file(self, path):
         cache_path = path.replace('.wav', '.watson')
@@ -291,7 +292,9 @@ class IBMWatson(NLUEngine):
             with open(cache_path) as f:
                 return json.load(f)
 
-        stt_service = SpeechToTextV1()
+        stt_service = SpeechToTextV1(authenticator=IAMAuthenticator(self._stt_apikey))
+        stt_service.set_service_url(self._stt_url)
+
         with open(path, 'rb') as audio_file:
             stt_response = stt_service.recognize(
                 audio=audio_file,
@@ -304,7 +307,9 @@ class IBMWatson(NLUEngine):
         else:
             return None
 
-        nlu_service = NaturalLanguageUnderstandingV1(version='2018-03-16')
+        nlu_service = NaturalLanguageUnderstandingV1(authenticator=IAMAuthenticator(self._nlu_apikey),
+                                                     version='2018-03-16')
+        nlu_service.set_service_url(self._nlu_url)
 
         response = nlu_service.analyze(
             features=Features(entities=EntitiesOptions(model=self._model_id)),
