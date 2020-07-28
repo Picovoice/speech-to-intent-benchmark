@@ -6,3 +6,5 @@ boto3
 ibm-watson
 requests
 urllib3
+azure-cognitiveservices-language-luis
+azure-cognitiveservices-speech

@@ -9,7 +9,7 @@ enabled coffee maker. You can listen to one of the sample commands [here](/data/
 In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen
 to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).
 
-Additionally we compare the accuracy of rhino with [Google Dialogflow](https://dialogflow.com/), [Amazon Lex](https://aws.amazon.com/lex/), and [IBM Watson](https://www.ibm.com/watson).
+Additionally we compare the accuracy of rhino with [Google Dialogflow](https://dialogflow.com/), [Amazon Lex](https://aws.amazon.com/lex/), [IBM Watson](https://www.ibm.com/watson) and [Microsoft LUIS](https://www.luis.ai/).
 
 # Data
 
@@ -43,7 +43,7 @@ Create accuracy results for running the noisy spoken commands through a NLU engi
 python benchmark/benchmark.py --engine_type ${AN_ENGINE_TYPE} --noise ${NOISE}
 ```
 
-The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, and `PICOVOICE_RHINO`, `IBM_WATSON`.
+The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, `IBM_WATSON`, `MICROSOFT_LUIS` and `PICOVOICE_RHINO`.
 
 In order to run the noisy spoken commands through Dialogflow API, include your Google Cloud Platform credential path and Google Cloud Platform project ID like the following
 ```bash
@@ -57,11 +57,13 @@ will be created for you.
 python benchmark/benchmark.py --engine_type IBM_WATSON --ibm_credential_path ${IBM_CREDENTIAL_PATH} --ibm_model_id ${IBM_MODEL_ID} --noise ${NOISE}
 ```
 
+Before running noisy spoken commands through Microsoft LUIS, add your LUIS credentials and Speech credentials into `/data/luis/credentials.env`.
+
 # Results
 
 Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
 to correctly understand the speech command.  
-The Amazon Lex bot, Google Dialogflow agent, and IBM Watson model used to produce these results were
+The Amazon Lex bot, Google Dialogflow agent, IBM Watson model and LUIS app used to produce these results were
 all trained on all 432 sample utterances.
 
 ![](data/misc/result.png)

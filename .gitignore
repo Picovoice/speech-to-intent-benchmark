@@ -109,3 +109,4 @@ data/speech/*db
 .amazonlex
 .dialogflow
 .watson
+.luis

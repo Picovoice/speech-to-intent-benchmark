@@ -11,7 +11,8 @@ def _path(x):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--engine_type', choices=['AMAZON_LEX', 'GOOGLE_DIALOGFLOW', 'PICOVOICE_RHINO', 'IBM_WATSON'],
+    parser.add_argument('--engine_type', choices=['AMAZON_LEX', 'GOOGLE_DIALOGFLOW', 'IBM_WATSON', 'MICROSOFT_LUIS',
+                                                  'PICOVOICE_RHINO'],
                         required=True)
     parser.add_argument('--gcp_credential_path', required=('GOOGLE_DIALOGFLOW' in argv))
     parser.add_argument('--gcp_project_id', required=('GOOGLE_DIALOGFLOW' in argv))
@@ -39,6 +40,13 @@ if __name__ == "__main__":
                         args_dict['nlu_apikey'] = value
                     elif key == 'NATURAL_LANGUAGE_UNDERSTANDING_URL':
                         args_dict['nlu_url'] = value
+
+    if args.engine_type == 'MICROSOFT_LUIS':
+        with open(_path('data/luis/credentials.env')) as f:
+            for line in f:
+                if len(line.strip()) > 0:
+                    key, value = line.strip().split('=', maxsplit=1)
+                    args_dict[key] = value
 
     engine = NLUEngine.create(**args_dict)
     print('created %s engine' % str(engine))

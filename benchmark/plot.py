@@ -13,6 +13,10 @@ ibm_cafe = np.array([0.51, 0.76, 0.85, 0.93, 0.95, 0.96, 0.97])
 ibm_kitchen = np.array([0.69, 0.82, 0.91, 0.93, 0.94, 0.96, 0.96])
 ibm = (ibm_cafe + ibm_kitchen) / 2.
 
+luis_cafe = np.array([0.835218, 0.875606, 0.912763, 0.911147, 0.925687, 0.907916, 0.927302])
+luis_kitchen = np.array([0.864297, 0.904685, 0.919225, 0.914378, 0.936995, 0.932149, 0.935380])
+luis = (luis_cafe + luis_kitchen) / 2.
+
 pv_cafe = np.array([0.90, 0.94, 0.97, 0.97, 0.97, 0.98, 0.98])
 pv_kitchen = np.array([0.96, 0.97, 0.98, 0.98, 0.99, 0.99, 0.99])
 pv = (pv_cafe + pv_kitchen) / 2.
@@ -22,6 +26,7 @@ snr = [6, 9, 12, 15, 18, 21, 24]
 plt.plot(snr, aws, color='g', marker='^', label='Amazon Lex')
 plt.plot(snr, df, color='r', marker='x', label='Google Dialogflow')
 plt.plot(snr, ibm, color='k', marker='s', label='IBM Watson')
+plt.plot(snr, luis, color='m', marker='d', label='Microsoft LUIS')
 plt.plot(snr, pv, color='b', marker='o', label='Picovoice Rhino')
 plt.xlim(6, 24)
 plt.xlabel('SNR dB')
@@ -29,5 +34,6 @@ plt.ylim(0.6, 1)
 plt.ylabel('Accuracy (Command Acceptance Probability)')
 plt.xticks([6, 9, 12, 15, 18, 21, 24])
 plt.legend()
+plt.title("Accuracy of NLU Engines")
 plt.grid()
 plt.show()
