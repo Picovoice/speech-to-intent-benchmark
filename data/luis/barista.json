@@ -1,0 +1,4280 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "None",
+      "features": []
+    },
+    {
+      "name": "orderDrink",
+      "features": []
+    }
+  ],
+  "entities": [],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "coffeeDrink",
+      "subLists": [
+        {
+          "canonicalForm": "americano",
+          "list": []
+        },
+        {
+          "canonicalForm": "cappuccino",
+          "list": []
+        },
+        {
+          "canonicalForm": "espresso",
+          "list": []
+        },
+        {
+          "canonicalForm": "iced mocha",
+          "list": []
+        },
+        {
+          "canonicalForm": "latte",
+          "list": []
+        },
+        {
+          "canonicalForm": "mocha",
+          "list": []
+        },
+        {
+          "canonicalForm": "coffee",
+          "list": []
+        },
+        {
+          "canonicalForm": "drip coffee",
+          "list": []
+        },
+        {
+          "canonicalForm": "house coffee",
+          "list": []
+        },
+        {
+          "canonicalForm": "iced coffee",
+          "list": []
+        }
+      ],
+      "roles": [
+        "Drink"
+      ]
+    },
+    {
+      "name": "milkAmount",
+      "subLists": [
+        {
+          "canonicalForm": "milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "some milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "some skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of skim milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "some whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of whole milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "some soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of soy milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "some almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of almond milk",
+          "list": []
+        },
+        {
+          "canonicalForm": "cream",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of cream",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of cream",
+          "list": []
+        },
+        {
+          "canonicalForm": "some cream",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of cream",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of cream",
+          "list": []
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "numberOfShots",
+      "subLists": [
+        {
+          "canonicalForm": "single shot",
+          "list": []
+        },
+        {
+          "canonicalForm": "double shot",
+          "list": []
+        },
+        {
+          "canonicalForm": "triple shot",
+          "list": []
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "roast",
+      "subLists": [
+        {
+          "canonicalForm": "light roast",
+          "list": []
+        },
+        {
+          "canonicalForm": "medium roast",
+          "list": []
+        },
+        {
+          "canonicalForm": "dark roast",
+          "list": []
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "size",
+      "subLists": [
+        {
+          "canonicalForm": "small",
+          "list": []
+        },
+        {
+          "canonicalForm": "medium",
+          "list": []
+        },
+        {
+          "canonicalForm": "large",
+          "list": []
+        },
+        {
+          "canonicalForm": "eight ounce",
+          "list": [
+            "8 ounce"
+          ]
+        },
+        {
+          "canonicalForm": "twelve ounce",
+          "list": [
+            "12 ounce"
+          ]
+        },
+        {
+          "canonicalForm": "sixteen ounce",
+          "list": [
+            "16 ounce"
+          ]
+        },
+        {
+          "canonicalForm": "twenty ounce",
+          "list": [
+            "20 ounce"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "sugarAmount",
+      "subLists": [
+        {
+          "canonicalForm": "sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "some sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "some brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of brown sugar",
+          "list": []
+        },
+        {
+          "canonicalForm": "sweetener",
+          "list": []
+        },
+        {
+          "canonicalForm": "a little bit of sweetener",
+          "list": []
+        },
+        {
+          "canonicalForm": "a bit of sweetener",
+          "list": []
+        },
+        {
+          "canonicalForm": "some sweetener",
+          "list": []
+        },
+        {
+          "canonicalForm": "a lot of sweetener",
+          "list": []
+        },
+        {
+          "canonicalForm": "lots of sweetener",
+          "list": []
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "prebuiltEntities": [],
+  "utterances": [
+    {
+      "text": "brew a dark roast single shot latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a dark roast single shot mocha with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a dark roast sixteen ounce latte with a bit of almond milk and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a dark roast triple shot house coffee with a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot coffee with some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot dark roast mocha with a bit of skim milk and a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot light roast iced mocha with brown sugar and a bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot medium roast americano with a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot medium roast espresso with a little bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a double shot mocha with brown sugar and a little bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a drip coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a drip coffee with lots of sugar and milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a eight ounce double shot espresso with a lot of sugar and soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a eight ounce iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a espresso with a lot of cream and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a espresso with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a large espresso with a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a large single shot iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a large single shot latte with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast double shot coffee with some brown sugar and almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast eight ounce americano with some milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast iced coffee with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast iced mocha with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a light roast small espresso with a bit of sweetener and a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium cappuccino with a little bit of milk and lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium iced coffee with a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium roast large house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium roast latte with a little bit of milk and a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium roast mocha with a little bit of sugar and a little bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium roast triple shot house coffee with lots of milk and a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a medium roast twelve ounce drip coffee with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a mocha with some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a single shot coffee with some whole milk and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a single shot eight ounce cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a single shot medium roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a sixteen ounce dark roast house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a sixteen ounce single shot mocha with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot large house coffee with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot large iced coffee with a lot of milk and sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot latte with almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot medium house coffee with some almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a triple shot sixteen ounce cappuccino with lots of sugar and a little bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a twelve ounce medium roast house coffee with lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a twenty ounce dark roast espresso with a bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a twenty ounce iced coffee with a bit of sweetener and a little bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "brew a twenty ounce single shot cappuccino with lots of skim milk and sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a americano with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a americano with milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a coffee with lots of almond milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a dark roast latte with some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a dark roast medium iced mocha with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a dark roast single shot iced coffee with sugar and almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a dark roast sixteen ounce latte with whole milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a double shot coffee with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a double shot dark roast latte with a little bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a double shot iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a double shot medium roast house coffee with sugar and some milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a double shot small latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a eight ounce cappuccino with a little bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a large drip coffee with a bit of brown sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast double shot iced coffee with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast double shot latte with some almond milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast double shot mocha with a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast house coffee with lots of cream and lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast house coffee with some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast large house coffee with a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast sixteen ounce house coffee with a lot of sugar and lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a light roast triple shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium double shot americano with a little bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium double shot iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium medium roast iced mocha with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium roast cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium roast large americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium roast mocha with some sugar and a bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium single shot americano with lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a medium triple shot cappuccino with a bit of sugar and lots of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a mocha with sugar and some skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot dark roast americano with lots of whole milk and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot house coffee with almond milk and lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot large house coffee with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot medium roast espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot medium roast iced mocha with lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a single shot twelve ounce latte with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a small coffee with lots of almond milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a small double shot espresso with a little bit of milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a small iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a small light roast house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a triple shot house coffee with a lot of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a triple shot iced coffee with a bit of brown sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a triple shot medium iced coffee with lots of sweetener and a little bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a triple shot sixteen ounce iced coffee with a little bit of skim milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a twelve ounce medium roast iced mocha with milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i get a twenty ounce iced coffee with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a americano with a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a dark roast double shot drip coffee with a lot of sugar and a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a dark roast eight ounce house coffee with a little bit of cream and sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a dark roast mocha with sweetener and lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot dark roast espresso with lots of sugar and a bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot house coffee with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot iced mocha with some sugar and some skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot sixteen ounce americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot sixteen ounce iced coffee with a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a double shot sixteen ounce iced coffee with a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a drip coffee with a little bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a eight ounce triple shot espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a espresso with some sweetener and lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast double shot americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast house coffee with some cream and a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast iced coffee with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast medium mocha with some almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast single shot drip coffee with a lot of almond milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast single shot iced mocha with sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast single shot mocha with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a light roast twenty ounce mocha with lots of sugar and lots of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a medium roast espresso with milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a medium roast mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a medium roast sixteen ounce americano with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a medium roast twenty ounce iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a mocha with a lot of whole milk and a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a single shot dark roast cappuccino with a little bit of cream and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a single shot house coffee with a little bit of almond milk and a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a single shot medium iced mocha with a little bit of milk and a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a sixteen ounce house coffee with a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a sixteen ounce latte with a little bit of cream and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a sixteen ounce medium roast espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a sixteen ounce single shot iced mocha with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a small light roast mocha with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a small triple shot americano with a lot of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a triple shot coffee with lots of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a triple shot dark roast mocha with a bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a triple shot light roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a triple shot medium roast americano with a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a triple shot twelve ounce cappuccino with brown sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twelve ounce triple shot house coffee with a little bit of sweetener and a little bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twelve ounce triple shot iced mocha with a lot of milk and a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twenty ounce americano with a bit of sweetener and a little bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twenty ounce coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twenty ounce coffee with lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "can i have a twenty ounce medium roast house coffee with some brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast double shot house coffee with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast house coffee with lots of whole milk and lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast large iced mocha with a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast latte with a little bit of sugar and whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast medium americano with brown sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a dark roast triple shot coffee with some skim milk and some brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a double shot cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a double shot eight ounce espresso with lots of soy milk and a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a double shot iced mocha with some sugar and a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a double shot large americano with brown sugar and a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a double shot light roast cappuccino with lots of sugar and lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a espresso with a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a house coffee with a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a iced mocha with some sugar and a little bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a large double shot mocha with a bit of brown sugar and a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a large latte with lots of cream and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a light roast coffee with a little bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a light roast coffee with brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a light roast eight ounce cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a light roast sixteen ounce espresso with some almond milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a light roast small iced coffee with a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium latte with a bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium medium roast latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium roast double shot espresso with some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium roast double shot iced mocha with a bit of brown sugar and a lot of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium roast drip coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium roast triple shot iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium single shot coffee with some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a medium single shot house coffee with a little bit of milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a mocha with a lot of skim milk and a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a single shot drip coffee with lots of almond milk and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a single shot eight ounce cappuccino with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a single shot small coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a sixteen ounce coffee with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot dark roast latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot house coffee with lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot iced coffee with lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot light roast drip coffee with lots of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot medium roast americano with a lot of whole milk and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot medium roast mocha with a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a triple shot small coffee with milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a twelve ounce dark roast house coffee with whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a twelve ounce iced coffee with brown sugar and some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a twelve ounce triple shot drip coffee with almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a twenty ounce medium roast mocha with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "get me a twenty ounce triple shot espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a coffee with lots of almond milk and a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a dark roast double shot house coffee with some sugar and some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a dark roast single shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a dark roast triple shot coffee with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot coffee with some almond milk and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot drip coffee with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot eight ounce cappuccino with a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot iced mocha with a lot of brown sugar and cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot mocha with a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a double shot sixteen ounce coffee with lots of sweetener and lots of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a drip coffee with lots of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a eight ounce americano with a lot of milk and a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a eight ounce double shot coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a espresso with some sugar and a little bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a iced coffee with lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a large dark roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast cappuccino with some brown sugar and lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast coffee with some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast house coffee with some brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast large iced mocha with lots of brown sugar and a bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast medium iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a light roast twenty ounce mocha with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium double shot drip coffee with lots of milk and a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast double shot iced mocha with a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast eight ounce mocha with lots of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast iced coffee with a lot of skim milk and lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast small mocha with some milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a medium roast triple shot latte with some milk and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot dark roast house coffee with a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot dark roast mocha with a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot eight ounce americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot medium roast house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a single shot twenty ounce espresso with milk and a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a sixteen ounce light roast latte with a lot of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a sixteen ounce triple shot americano with a little bit of brown sugar and lots of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a small americano with a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a small iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a small single shot drip coffee with a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a small triple shot drip coffee with a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a triple shot dark roast iced coffee with lots of milk and a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a triple shot light roast house coffee with some sugar and soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a triple shot small iced coffee with some almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a twelve ounce iced coffee with some brown sugar and milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a twenty ounce cappuccino with lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "give me a twenty ounce light roast iced mocha with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a coffee with a bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a coffee with sweetener and a little bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast americano with some sweetener and a little bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast double shot espresso with a bit of brown sugar and a lot of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast double shot iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast eight ounce latte with some skim milk and lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast espresso with almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast large iced mocha with a lot of sugar and a little bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a dark roast sixteen ounce espresso with soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a double shot coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a double shot drip coffee with a bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a double shot latte with some sweetener and a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a double shot light roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a double shot sixteen ounce iced mocha with lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a iced coffee with brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a large dark roast mocha with lots of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a large latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a light roast double shot iced mocha with a bit of cream and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a light roast single shot iced mocha with a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a light roast small americano with some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium light roast iced coffee with a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium roast americano with lots of soy milk and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium roast coffee with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium roast espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium roast sixteen ounce coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a medium roast triple shot house coffee with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a mocha with a bit of soy milk and a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a single shot latte with cream and a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a single shot light roast iced mocha with skim milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a single shot light roast mocha with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a single shot medium roast latte with a little bit of sugar and a lot of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a single shot sixteen ounce iced coffee with a little bit of sweetener and some skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a sixteen ounce double shot cappuccino with some milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a small single shot americano with milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a small triple shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a triple shot eight ounce drip coffee with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a triple shot eight ounce espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a triple shot latte with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a triple shot light roast mocha with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a triple shot medium coffee with a bit of milk and a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twelve ounce double shot iced coffee with a little bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twelve ounce latte with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twelve ounce light roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twenty ounce coffee with some brown sugar and a bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twenty ounce coffee with some soy milk and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twenty ounce iced coffee with a bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i want a twenty ounce single shot drip coffee with a lot of sweetener and cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a americano with sweetener and a lot of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a dark roast double shot latte with some almond milk and some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a dark roast eight ounce cappuccino with a lot of sugar and a little bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a dark roast medium iced mocha with cream and lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a double shot dark roast latte with some brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a double shot medium roast latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a double shot mocha with some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a double shot sixteen ounce coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a eight ounce coffee with some almond milk and a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a eight ounce dark roast mocha with some skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a iced coffee with a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a large mocha with a lot of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a large single shot mocha with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a large triple shot drip coffee with brown sugar and some cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a large triple shot iced coffee with a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a latte with lots of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast coffee with a bit of cream and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast double shot house coffee with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast double shot latte with a lot of sugar and a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast large latte with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a light roast single shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast cappuccino with skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast coffee with brown sugar and a little bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast double shot coffee with a little bit of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast iced coffee with sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast twelve ounce cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a medium roast twenty ounce coffee with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a mocha with some milk and a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot dark roast house coffee with whole milk and a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot dark roast iced mocha with a little bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot drip coffee with a lot of whole milk and sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot mocha with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot small iced mocha with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a single shot twenty ounce cappuccino with lots of milk and a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a sixteen ounce house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a sixteen ounce triple shot americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a small coffee with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a small double shot cappuccino with some skim milk and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a triple shot iced mocha with lots of sugar and some almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a triple shot light roast espresso with a bit of sweetener and a lot of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a triple shot sixteen ounce coffee with lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a triple shot small mocha with some sugar and lots of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a twelve ounce medium roast house coffee with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a twenty ounce americano with lots of sugar and lots of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "i'd like a twenty ounce dark roast iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a cappuccino with a bit of sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a coffee with skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast cappuccino with some brown sugar and lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast espresso with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast iced coffee with skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast mocha with a little bit of cream and lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast single shot iced mocha with a bit of milk and a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast triple shot mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a dark roast twenty ounce americano with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot large americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot light roast cappuccino with some sweetener and a little bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot medium roast espresso with almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot mocha with a lot of skim milk and a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a double shot twelve ounce house coffee with brown sugar and a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a eight ounce mocha with some soy milk and a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a espresso",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a espresso with some milk and lots of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a iced coffee with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a large drip coffee with some sweetener and lots of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a large iced coffee with a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a light roast eight ounce latte",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a light roast single shot espresso with some brown sugar and a bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a light roast triple shot cappuccino with a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a light roast twenty ounce drip coffee with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a light roast twenty ounce latte with a little bit of soy milk and a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a medium light roast cappuccino with a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a medium roast double shot drip coffee with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a medium roast iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a medium roast large iced mocha with a bit of sugar and lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a medium triple shot cappuccino with a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a single shot cappuccino with a lot of sweetener and a bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a single shot cappuccino with sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a single shot twelve ounce mocha with a bit of cream and a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a sixteen ounce double shot drip coffee with whole milk and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a small coffee with lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a small light roast americano with a bit of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a small triple shot americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot americano with a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot dark roast iced coffee with a lot of milk and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot light roast iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot medium roast house coffee with sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot sixteen ounce house coffee with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a triple shot sixteen ounce iced mocha with a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a twelve ounce light roast house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a twelve ounce mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a twelve ounce single shot house coffee with some sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "make me a twelve ounce single shot latte with a lot of sweetener and a bit of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a cappuccino with a bit of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a dark roast double shot mocha with some almond milk and brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a dark roast iced coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a dark roast single shot iced mocha with a lot of skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a dark roast sixteen ounce iced mocha with skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a double shot drip coffee with some skim milk and a lot of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a double shot medium roast house coffee with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a double shot sixteen ounce drip coffee with a bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a double shot sixteen ounce iced coffee with a little bit of whole milk and a lot of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a eight ounce iced mocha with lots of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a eight ounce medium roast americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a eight ounce mocha with a little bit of sugar and some cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a house coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a iced coffee with a bit of almond milk and sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a iced coffee with a lot of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a iced mocha with a little bit of sweetener and a little bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a large double shot cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a large double shot iced mocha with some sugar and some skim milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast americano with sweetener and milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast double shot iced mocha with a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast eight ounce espresso with a little bit of whole milk and a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast iced mocha with lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast medium iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast sixteen ounce coffee with a bit of sugar and a bit of cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a light roast triple shot drip coffee",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a medium iced mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a medium roast coffee with a bit of milk and a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a medium roast double shot iced mocha with some sweetener and milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a medium roast drip coffee with lots of milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a medium roast twenty ounce mocha with lots of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot americano",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot dark roast americano with a bit of skim milk and a lot of sweetener",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot dark roast iced coffee with cream",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot eight ounce iced coffee with lots of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot house coffee with some soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot light roast cappuccino",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a single shot small mocha",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a sixteen ounce iced coffee with a little bit of whole milk and some sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a sixteen ounce single shot espresso with a little bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a triple shot cappuccino with a little bit of sweetener and a bit of almond milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a triple shot espresso with a bit of brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a triple shot medium roast americano with lots of sugar and a lot of soy milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a triple shot twenty ounce mocha with a bit of sweetener and some whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a twelve ounce light roast drip coffee with a little bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a twelve ounce single shot iced mocha with a bit of cream and lots of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a twenty ounce cappuccino with a little bit of sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a twenty ounce medium roast iced coffee with brown sugar",
+      "intent": "orderDrink",
+      "entities": []
+    },
+    {
+      "text": "may i have a twenty ounce single shot house coffee with a little bit of whole milk",
+      "intent": "orderDrink",
+      "entities": []
+    }
+  ],
+  "versionId": "0.1",
+  "name": "barista",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "i'd like (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {size} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {size} {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {numberOfShots} {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {size} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {numberOfShots} {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {roast} {numberOfShots} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "get me (a|an) {roast} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "brew (a|an) {roast} {coffeeDrink} with {sugarAmount} and {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "make me (a|an) {size} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i'd like (a|an) {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "may i have (a|an) {numberOfShots} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i have (a|an) {size} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {size} {coffeeDrink} with {sugarAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "i want (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {numberOfShots} {roast} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {size} {numberOfShots} {coffeeDrink}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "give me (a|an) {roast} {coffeeDrink} with {milkAmount}",
+      "intent": "orderDrink"
+    },
+    {
+      "pattern": "can i get (a|an) {roast} {size} {coffeeDrink} with {milkAmount} and {sugarAmount}",
+      "intent": "orderDrink"
+    }
+  ],
+  "settings": [
+    {
+      "name": "NormalizePunctuation",
+      "value": "true"
+    }
+  ]
+}
