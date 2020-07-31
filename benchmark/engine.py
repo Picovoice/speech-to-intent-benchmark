@@ -5,14 +5,17 @@ import time
 import uuid
 from enum import Enum
 
+import azure.cognitiveservices.speech as speechsdk
 import boto3
 import dialogflow_v2 as dialogflow
 import requests
 import soundfile
 import urllib3
+from azure.cognitiveservices.language.luis.runtime import LUISRuntimeClient
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import NaturalLanguageUnderstandingV1, SpeechToTextV1
 from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Features
+from msrest.authentication import CognitiveServicesCredentials
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -24,8 +27,9 @@ def _path(x):
 class NLUEngines(Enum):
     AMAZON_LEX = 'AMAZON_LEX'
     GOOGLE_DIALOGFLOW = 'GOOGLE_DIALOGFLOW'
-    PICOVOICE_RHINO = 'PICOVOICE_RHINO'
     IBM_WATSON = 'IBM_WATSON'
+    MICROSOFT_LUIS = 'MICROSOFT_LUIS'
+    PICOVOICE_RHINO = 'PICOVOICE_RHINO'
 
 
 class NLUEngine(object):
@@ -96,6 +100,9 @@ class NLUEngine(object):
             return IBMWatson(kwargs['ibm_model_id'], kwargs['ibm_custom_id'],
                              kwargs['stt_apikey'], kwargs['stt_url'],
                              kwargs['nlu_apikey'], kwargs['nlu_url'])
+        elif engine_type is NLUEngines.MICROSOFT_LUIS:
+            return MicrosoftLUIS(kwargs['LUIS_PREDICTION_KEY'], kwargs['LUIS_ENDPOINT_URL'], kwargs['LUIS_APP_ID'],
+                                 kwargs['SPEECH_KEY'], kwargs['SPEECH_ENDPOINT_ID'])
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
             return PicovoiceRhino()
         else:
@@ -334,6 +341,127 @@ class IBMWatson(NLUEngine):
 
     def __str__(self):
         return 'IBM Watson'
+
+
+class MicrosoftLUIS(NLUEngine):
+    def __init__(self, prediction_key, endpoint_url, app_id, speech_key, speech_endpoint_id):
+        self._initial_silence_timeout_ms = 15000
+        self._slot_name = 'staging'
+        self._region = 'westus'
+        self._prediction_key = prediction_key
+        self._endpoint_url = endpoint_url
+        self._app_id = app_id
+        self._speech_key = speech_key
+        self._speech_endpoint_id = speech_endpoint_id
+
+    def process_file(self, path):
+        cache_path = path.replace('.wav', '.luis')
+
+        if os.path.exists(cache_path):
+            with open(cache_path) as f:
+                return json.load(f)
+
+        template = "wss://{}.stt.speech.microsoft.com/speech/recognition" \
+                   "/conversation/cognitiveservices/v1?initialSilenceTimeoutMs={:d}"
+        speech_config = speechsdk.SpeechConfig(subscription=self._speech_key,
+                                               endpoint=template.format(self._region,
+                                                                        self._initial_silence_timeout_ms))
+        source_language_config = speechsdk.languageconfig.SourceLanguageConfig("en-US", self._speech_endpoint_id)
+        audio_config = speechsdk.audio.AudioConfig(filename=path)
+
+        speech_recognizer = speechsdk.SpeechRecognizer(
+            speech_config=speech_config, source_language_config=source_language_config, audio_config=audio_config)
+        speech_response = speech_recognizer.recognize_once()
+
+        if speech_response is None:
+            return None
+
+        if speech_response.reason == speechsdk.ResultReason.RecognizedSpeech:
+            transcript = speech_response.text.lower()
+        elif speech_response.reason == speechsdk.ResultReason.NoMatch:
+            raise Exception(speech_response.no_match_details)
+        elif speech_response.reason == speechsdk.ResultReason.Canceled:
+            cancellation_details = speech_response.cancellation_details
+            if cancellation_details.reason == speechsdk.CancellationReason.Error:
+                print("Error details: {}".format(cancellation_details.error_details))
+            raise Exception(cancellation_details.reason)
+        else:
+            return None
+
+        if not transcript:
+            return None
+        request = {"query": transcript}
+
+        client_runtime = LUISRuntimeClient(self._endpoint_url, CognitiveServicesCredentials(self._prediction_key))
+        nlu_response = client_runtime.prediction.get_slot_prediction(app_id=self._app_id, slot_name=self._slot_name,
+                                                                     prediction_request=request)
+
+        if nlu_response is None:
+            return None
+
+        intent = nlu_response.prediction.top_intent
+        slots = dict()
+        for k, v in nlu_response.prediction.entities.items():
+            slots[k] = [e[0].strip() for e in v]
+
+        result = dict(intent=intent, slots=slots, transcript=transcript)
+
+        with open(cache_path, 'w') as f:
+            json.dump(result, f, indent=2)
+
+        return result
+
+    def process(self, folder, sleep_msec=2, retry_limit=32):
+        with open(_path('data/label/label.json')) as f:
+            labels = json.load(f)
+
+        num_examples = 0
+        num_errors = 0
+        for x in os.listdir(folder):
+            if x.endswith('.wav'):
+                num_examples += 1
+
+                if x not in labels:
+                    raise ValueError("the label for '%s' is missing" % x)
+                label = labels[x]
+
+                time.sleep(sleep_msec)
+
+                attempts = 0
+                result = None
+                while attempts < retry_limit:
+                    try:
+                        result = self.process_file(os.path.join(folder, x))
+                        break
+                    except Exception as ex:
+                        print(ex)
+                        attempts += 1
+
+                if attempts == retry_limit:
+                    raise RuntimeError()
+
+                if result is None:
+                    num_errors += 1
+                    continue
+
+                if label["intent"] != result["intent"]:
+                    num_errors += 1
+                    continue
+
+                for slot in label["slots"].keys():
+                    if slot not in result["slots"]:
+                        num_errors += 1
+                        break
+                    if label["slots"][slot].strip() not in result["slots"][slot]:
+                        num_errors += 1
+                        break
+
+        print('num examples: %d' % num_examples)
+        print('num errors: %d' % num_errors)
+        print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
+
+    def __str__(self):
+        return 'Microsoft LUIS'
 
 
 class PicovoiceRhino(NLUEngine):
