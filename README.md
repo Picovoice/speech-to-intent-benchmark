@@ -67,3 +67,5 @@ The Amazon Lex bot, Google Dialogflow agent, IBM Watson model and LUIS app used 
 all trained on all 432 sample utterances.
 
 ![](data/misc/result.png)
+
+![](data/misc/result-summary.png)
