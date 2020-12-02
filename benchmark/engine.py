@@ -468,7 +468,7 @@ class PicovoiceRhino(NLUEngine):
     def __init__(self):
         self._library_path = _path('rhino/lib/linux/x86_64/libpv_rhino.so')
         self._model_path = _path('rhino/lib/common/rhino_params.pv')
-        self._context_path = _path('rhino/resources/contexts/linux/coffee_maker_linux.rhn')
+        self._context_path = _path('data/rhino/coffee_maker_linux.rhn')
 
     def process_file(self, path):
         sys.path.append(_path('rhino/binding/python'))
@@ -477,7 +477,8 @@ class PicovoiceRhino(NLUEngine):
         rhino = Rhino(
             library_path=self._library_path,
             model_path=self._model_path,
-            context_path=self._context_path)
+            context_path=self._context_path,
+            sensitivity=.75)
 
         pcm, sample_rate = soundfile.read(path, dtype='int16')
         assert pcm.ndim == 1
@@ -493,9 +494,9 @@ class PicovoiceRhino(NLUEngine):
         if not is_finalized:
             result = None
         else:
-            if rhino.is_understood():
-                intent, slot_values = rhino.get_intent()
-                result = dict(intent=intent, slots=slot_values)
+            inference = rhino.get_inference()
+            if inference.is_understood:
+                result = dict(intent=inference.intent, slots=inference.slots)
             else:
                 result = None
 
