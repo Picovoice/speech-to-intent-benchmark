@@ -30,30 +30,26 @@ The figure below depicts engines performance at each SNR:
 
 ## Data
 
-The scenario under test is a voice-enabled coffee maker.
-
-The speech commands are crowd sourced from more than 50 unique speakers. Each speaker contributed about 10 different commands.
-Collectively there are 619 commands used in this benchmark. You can listen to one of the sample commands [here](/data/speech/clean/8a92c476-050d-4b5b-911e-24b661a5b69f.wav). In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).Noise is downloaded from [Freesound](https://freesound.org/).
+The speech data are crowd-sourced from more than 50 unique speakers. Each speaker contributed about ten different utterances.
+Collectively there are 619 commands used in this benchmark. We test the engines in noisy conditions to simulate real-world situations. Noise is from [Freesound](https://freesound.org/).
 
 ## How to Reproduce?
 
-Clone the directory and its submodules via
+Clone the repository:
 
 ```console
 git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-benchmark.git
 ```
 
-The first step is to mix the clean speech data under [clean](/data/speech/clean) with noise. There are two types of noise
-used for this benchmark (1) [cafe](/data/noise/cafe.wav) and (2) [kitchen](/data/noise/kitchen.wav). In order to create
-noisy test data enter the following from the root of the repository in shell
+Mix the clean speech data with noise:
 
 ```console
-python benchmark/mixer.py ${NOISE}
+python benchmark/mixer.py cafe
+python benchmark/mixer.py kitchen
 ```
 
-`${NOISE}` can be either `kitchen` or `cafe`.
+### Rhino
 
-Create accuracy results for running the noisy spoken commands through a NLU engine by running the following
 ```console
 python benchmark/benchmark.py --engine_type ${AN_ENGINE_TYPE} --noise ${NOISE}
 ```

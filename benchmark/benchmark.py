@@ -1,5 +1,4 @@
 import argparse
-import os
 from sys import argv
 
 from engine import *
@@ -20,9 +19,13 @@ if __name__ == "__main__":
     parser.add_argument('--ibm_model_id', required=('IBM_WATSON' in argv))
     parser.add_argument('--ibm_custom_id')
     parser.add_argument('--noise', required=True)
+    parser.add_argument('--access-key')
 
     args = parser.parse_args()
     args_dict = vars(args)
+
+    if args.access_key is not None:
+        args_dict['ACCESS_KEY'] = args.access_key
 
     if args.gcp_credential_path is not None:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.gcp_credential_path
