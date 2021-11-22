@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Picovoice/speech-to-intent-benchmark/blob/master/LICENSE)
 
-This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, Rhino. It compares the accuracy of Rhino
-with cloud-based natural language understanding (NLU) offerings:
+This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, [Rhino](https://github.com/Picovoice/rhino).
+It compares the accuracy of Rhino with cloud-based natural language understanding (NLU) offerings:
 
 - [Google Dialogflow](https://dialogflow.com/)
 - [Amazon Lex](https://aws.amazon.com/lex/)
@@ -20,12 +20,11 @@ with cloud-based natural language understanding (NLU) offerings:
 
 ## Results
 
-Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
-to correctly understand the speech command.  
-The Amazon Lex bot, Google Dialogflow agent, IBM Watson model and LUIS app used to produce these results were
-all trained on all 432 sample utterances.
+Command acceptance rate is the probability of an engine correctly understanding the spoken command. Below is the summary:
 
 ![](data/misc/result-summary.png)
+
+The figure below depicts engines performance at each SNR:
 
 ![](data/misc/result.png)
 
