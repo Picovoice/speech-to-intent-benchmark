@@ -2,6 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Picovoice/speech-to-intent-benchmark/blob/master/LICENSE)
 
+Made in Vancouver, Canada by [Picovoice](https://picovoice.ai)
+
 This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, [Rhino](https://github.com/Picovoice/rhino).
 It compares the accuracy of Rhino with cloud-based natural language understanding (NLU) offerings:
 
