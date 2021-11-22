@@ -44,28 +44,63 @@ git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-ben
 Mix the clean speech data with noise:
 
 ```console
-python benchmark/mixer.py cafe
-python benchmark/mixer.py kitchen
+python3 benchmark/mixer.py cafe
+python3 benchmark/mixer.py kitchen
 ```
 
 ### Rhino
 
+Signup for [Picovoice Console](https://console.picovoice.ai/) and get a free AccessKey. Then run the benchmark for Rhino:
+
 ```console
-python benchmark/benchmark.py --engine_type ${AN_ENGINE_TYPE} --noise ${NOISE}
+python3 benchmark/benchmark.py \
+--engine_type PICOVOICE_RHINO \
+--access-key ${ACCESS_KEY} --noise cafe
+python3 benchmark/benchmark.py \
+--engine_type PICOVOICE_RHINO \
+--access-key ${ACCESS_KEY} --noise kitchen
 ```
 
-The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, `IBM_WATSON`, `MICROSOFT_LUIS` and `PICOVOICE_RHINO`.
+### Google Dialogflow
 
-In order to run the noisy spoken commands through Dialogflow API, include your Google Cloud Platform credential path and Google Cloud Platform project ID like the following
-```bash
-python benchmark/benchmark.py --engine_type GOOGLE_DIALOGFLOW --gcp_credential_path ${GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} --gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise ${NOISE}
+You need to signup for Google Cloud Platform and create an account first. Then run the benchmark for Dialogflow:
+```console
+python3 benchmark/benchmark.py \
+--engine_type GOOGLE_DIALOGFLOW \
+--gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
+--gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise cafe
+python3 benchmark/benchmark.py \
+--engine_type GOOGLE_DIALOGFLOW \
+--gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
+--gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise kitchen
 ```
 
-To run the noisy spoken commands through IBM Watson API, include your IBM Cloud credential path and your Natural Language Understanding model ID.  
-If you already have a custom Speech to Text language model, include its ID using the argument `--ibm_custom_id`. Otherwise, a new custom language model
-will be created for you.
-```bash
-python benchmark/benchmark.py --engine_type IBM_WATSON --ibm_credential_path ${IBM_CREDENTIAL_PATH} --ibm_model_id ${IBM_MODEL_ID} --noise ${NOISE}
+### Microsoft LUIS
+
+Add your LUIS credentials into [`/data/luis/credentials.env`](/data/luis/credentials.env).
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type MICROSOFT_LUIS \
+--noise cafe
+python3 benchmark/benchmark.py \
+--engine_type MICROSOFT_LUIS \
+--noise kitchen
 ```
 
-Before running noisy spoken commands through Microsoft LUIS, add your LUIS credentials and Speech credentials into `/data/luis/credentials.env`.
+### IBM Watson
+
+Include your IBM Cloud credential path and your Natural Language Understanding model ID.  
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type IBM_WATSON \
+--ibm_credential_path ${IBM_CREDENTIAL_PATH} \
+--ibm_model_id ${IBM_MODEL_ID} \
+--noise cafe
+python3 benchmark/benchmark.py \
+--engine_type IBM_WATSON \
+--ibm_credential_path ${IBM_CREDENTIAL_PATH} \
+--ibm_model_id ${IBM_MODEL_ID} \
+--noise kitchen
+```
