@@ -63,7 +63,8 @@ python3 benchmark/benchmark.py \
 
 ### Google Dialogflow
 
-You need to signup for Google Cloud Platform and create an account first. Then run the benchmark for Dialogflow:
+You need to signup for Google Cloud Platform. Then run the benchmark for Dialogflow:
+
 ```console
 python3 benchmark/benchmark.py \
 --engine_type GOOGLE_DIALOGFLOW \
@@ -77,7 +78,7 @@ python3 benchmark/benchmark.py \
 
 ### Microsoft LUIS
 
-Add your LUIS credentials into [`/data/luis/credentials.env`](/data/luis/credentials.env).
+Add your LUIS credentials into [credentials.env](/data/luis/credentials.env).
 
 ```console
 python3 benchmark/benchmark.py \
@@ -90,7 +91,7 @@ python3 benchmark/benchmark.py \
 
 ### IBM Watson
 
-Include your IBM Cloud credential path and your Natural Language Understanding model ID.  
+You need to signup for IBM Watson. Then run the benchmark for Watson:
 
 ```console
 python3 benchmark/benchmark.py \
