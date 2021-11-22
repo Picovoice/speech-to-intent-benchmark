@@ -50,7 +50,7 @@ python3 benchmark/mixer.py kitchen
 
 ### Rhino
 
-Signup for [Picovoice Console](https://console.picovoice.ai/) and get a free AccessKey. Then run the benchmark for Rhino:
+Signup for [Picovoice Console](https://console.picovoice.ai/) and get a free `AccessKey`. Then run the benchmark:
 
 ```console
 python3 benchmark/benchmark.py \
@@ -63,7 +63,7 @@ python3 benchmark/benchmark.py \
 
 ### Google Dialogflow
 
-You need to signup for Google Cloud Platform. Then run the benchmark for Dialogflow:
+Signup for Google Cloud Platform. Then run the benchmark:
 
 ```console
 python3 benchmark/benchmark.py \
@@ -78,7 +78,8 @@ python3 benchmark/benchmark.py \
 
 ### Microsoft LUIS
 
-Add your LUIS credentials into [credentials.env](/data/luis/credentials.env).
+Signup for Microsoft LUIS and add your credentials into [credentials.env](/data/luis/credentials.env). Then run the
+benchmark:
 
 ```console
 python3 benchmark/benchmark.py \
@@ -91,7 +92,7 @@ python3 benchmark/benchmark.py \
 
 ### IBM Watson
 
-You need to signup for IBM Watson. Then run the benchmark for Watson:
+Signup for IBM Watson. Then run the benchmark:
 
 ```console
 python3 benchmark/benchmark.py \
