@@ -2,16 +2,23 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Picovoice/speech-to-intent-benchmark/blob/master/LICENSE)
 
-This is a framework to benchmark the accuracy of Picovoice's Speech-to-Intent engine, 
-[Rhino](https://github.com/Picovoice/rhino). It compares the accuracy of Rhino with leading cloud-based natural language
-understanding (NLU) offerings:
+This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, Rhino. It compares the accuracy of Rhino
+with cloud-based natural language understanding (NLU) offerings:
 
 - [Google Dialogflow](https://dialogflow.com/)
 - [Amazon Lex](https://aws.amazon.com/lex/)
 - [Microsoft LUIS](https://www.luis.ai/)
 - [IBM Watson](https://www.ibm.com/watson)
 
-# Results
+## Table of Contents
+
+- [Speech-to-Intent Benchmark](#speech-to-intent-benchmark)
+  - [Table of Contents](#table-of-contents)
+  - [Results](#results)
+  - [Data](#data)
+  - [How to Reproduce?](#how-to-reproduce)
+
+## Results
 
 Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
 to correctly understand the speech command.  
@@ -22,14 +29,14 @@ all trained on all 432 sample utterances.
 
 ![](data/misc/result.png)
 
-# Data
+## Data
 
 The scenario under test is a voice-enabled coffee maker.
 
 The speech commands are crowd sourced from more than 50 unique speakers. Each speaker contributed about 10 different commands.
 Collectively there are 619 commands used in this benchmark. You can listen to one of the sample commands [here](/data/speech/clean/8a92c476-050d-4b5b-911e-24b661a5b69f.wav). In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).Noise is downloaded from [Freesound](https://freesound.org/).
 
-# Usage
+## How to Reproduce?
 
 Clone the directory and its submodules via
 
