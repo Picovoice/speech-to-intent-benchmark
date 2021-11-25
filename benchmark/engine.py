@@ -104,7 +104,7 @@ class NLUEngine(object):
             return MicrosoftLUIS(kwargs['LUIS_PREDICTION_KEY'], kwargs['LUIS_ENDPOINT_URL'], kwargs['LUIS_APP_ID'],
                                  kwargs['SPEECH_KEY'], kwargs['SPEECH_ENDPOINT_ID'])
         elif engine_type is NLUEngines.PICOVOICE_RHINO:
-            return PicovoiceRhino()
+            return PicovoiceRhino(kwargs['ACCESS_KEY'])
         else:
             raise ValueError("cannot create %s of type '%s'" % (cls.__name__, engine_type))
 
@@ -465,7 +465,8 @@ class MicrosoftLUIS(NLUEngine):
 
 
 class PicovoiceRhino(NLUEngine):
-    def __init__(self):
+    def __init__(self, access_key):
+        self._access_key = access_key
         self._library_path = _path('rhino/lib/linux/x86_64/libpv_rhino.so')
         self._model_path = _path('rhino/lib/common/rhino_params.pv')
         self._context_path = _path('data/rhino/coffee_maker_linux.rhn')
@@ -475,6 +476,7 @@ class PicovoiceRhino(NLUEngine):
         from rhino import Rhino
 
         rhino = Rhino(
+            access_key=self._access_key,
             library_path=self._library_path,
             model_path=self._model_path,
             context_path=self._context_path,

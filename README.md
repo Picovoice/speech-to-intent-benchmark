@@ -1,71 +1,110 @@
-# Speech to Intent Benchmark
+# Speech-to-Intent Benchmark
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Picovoice/speech-to-intent-benchmark/blob/master/LICENSE)
 
-This is a framework to benchmark the accuracy of Picovoice's speech-to-intent engine (a.k.a rhino) against other
-natural language understanding engines. For more information regarding the engine refer to its repository directly [here](https://github.com/Picovoice/rhino).
-This repository contains all data and code to reproduce the results. In this benchmark we evaluate the accuracy of engine for the context of voice
-enabled coffee maker. You can listen to one of the sample commands [here](/data/speech/clean/81774d8e-7da7-4e9b-8cc3-33015b0ae0aa.wav).
-In order to simulate the real-life situations we have tested in two noisy conditions (1) Cafe and (2) Kitchen. You can listen
-to samples of noisy data [here](/data/misc/noisy1.wav) and [here](/data/misc/noisy2.wav).
+Made in Vancouver, Canada by [Picovoice](https://picovoice.ai)
 
-Additionally we compare the accuracy of rhino with [Google Dialogflow](https://dialogflow.com/), [Amazon Lex](https://aws.amazon.com/lex/), [IBM Watson](https://www.ibm.com/watson) and [Microsoft LUIS](https://www.luis.ai/).
+This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, [Rhino](https://github.com/Picovoice/rhino).
+It compares the accuracy of Rhino with cloud-based natural language understanding (NLU) offerings:
 
-# Data
+- [Google Dialogflow](https://dialogflow.com/)
+- [Amazon Lex](https://aws.amazon.com/lex/)
+- [Microsoft LUIS](https://www.luis.ai/)
+- [IBM Watson](https://www.ibm.com/watson)
 
-The speech commands are crowd sourced from more than 50 unique speakers. Each speaker contributed about 10 different commands.
-Collectively there are 619 commands used in this benchmark. Noise is downloaded from [Freesound](https://freesound.org/).
+## Table of Contents
 
-# Usage
+- [Speech-to-Intent Benchmark](#speech-to-intent-benchmark)
+  - [Table of Contents](#table-of-contents)
+  - [Results](#results)
+  - [Data](#data)
+  - [How to Reproduce?](#how-to-reproduce)
 
-Clone the directory and its submodules via
+## Results
 
-```bash
-git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-benchmark.git
-```
+Command acceptance rate is the probability of an engine correctly understanding the spoken command. Below is the summary:
 
-The repository grabs the latest version of rhino as a Git submodule under [rhino](/rhino). All data needed for this
-benchmark including speech, noise, and labels are provided under [data](/data). Additionally the Dialogflow agents used
-in this benchmark are exported [here](/data/dialogflow). The Amazon Lex bots used in this benchmark are exported [here](/data/amazonlex). The benchmark code is located under [benchmark](/benchmark).
+![](data/misc/result-summary.png)
 
-The first step is to mix the clean speech data under [clean](/data/speech/clean) with noise. There are two types of noise
-used for this benchmark (1) [cafe](/data/noise/cafe.wav) and (2) [kitchen](/data/noise/kitchen.wav). In order to create
-noisy test data enter the following from the root of the repository in shell
-
-```bash
-python benchmark/mixer.py ${NOISE}
-```
-
-`${NOISE}` can be either `kitchen` or `cafe`.
-
-Create accuracy results for running the noisy spoken commands through a NLU engine by running the following
-```bash
-python benchmark/benchmark.py --engine_type ${AN_ENGINE_TYPE} --noise ${NOISE}
-```
-
-The valid options for the `engine_type` parameter are: `AMAZON_LEX`, `GOOGLE_DIALOGFLOW`, `IBM_WATSON`, `MICROSOFT_LUIS` and `PICOVOICE_RHINO`.
-
-In order to run the noisy spoken commands through Dialogflow API, include your Google Cloud Platform credential path and Google Cloud Platform project ID like the following
-```bash
-python benchmark/benchmark.py --engine_type GOOGLE_DIALOGFLOW --gcp_credential_path ${GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} --gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise ${NOISE}
-```
-
-To run the noisy spoken commands through IBM Watson API, include your IBM Cloud credential path and your Natural Language Understanding model ID.  
-If you already have a custom Speech to Text language model, include its ID using the argument `--ibm_custom_id`. Otherwise, a new custom language model
-will be created for you.
-```bash
-python benchmark/benchmark.py --engine_type IBM_WATSON --ibm_credential_path ${IBM_CREDENTIAL_PATH} --ibm_model_id ${IBM_MODEL_ID} --noise ${NOISE}
-```
-
-Before running noisy spoken commands through Microsoft LUIS, add your LUIS credentials and Speech credentials into `/data/luis/credentials.env`.
-
-# Results
-
-Below is the result of benchmark. Command Acceptance Probability (Accuracy) is defined as the probability of the engine
-to correctly understand the speech command.  
-The Amazon Lex bot, Google Dialogflow agent, IBM Watson model and LUIS app used to produce these results were
-all trained on all 432 sample utterances.
+The figure below depicts engines performance at each SNR:
 
 ![](data/misc/result.png)
 
-![](data/misc/result-summary.png)
+## Data
+
+The speech data are crowd-sourced from more than 50 unique speakers. Each speaker contributed about ten different utterances.
+Collectively there are 619 commands used in this benchmark. We test the engines in noisy conditions to simulate real-world situations. Noise is from [Freesound](https://freesound.org/).
+
+## How to Reproduce?
+
+Clone the repository:
+
+```console
+git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-benchmark.git
+```
+
+Mix the clean speech data with noise:
+
+```console
+python3 benchmark/mixer.py cafe
+python3 benchmark/mixer.py kitchen
+```
+
+### Rhino
+
+Signup for [Picovoice Console](https://console.picovoice.ai/) and get a free `AccessKey`. Then run the benchmark:
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type PICOVOICE_RHINO \
+--access-key ${ACCESS_KEY} --noise cafe
+python3 benchmark/benchmark.py \
+--engine_type PICOVOICE_RHINO \
+--access-key ${ACCESS_KEY} --noise kitchen
+```
+
+### Google Dialogflow
+
+Signup for Google Cloud Platform. Then run the benchmark:
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type GOOGLE_DIALOGFLOW \
+--gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
+--gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise cafe
+python3 benchmark/benchmark.py \
+--engine_type GOOGLE_DIALOGFLOW \
+--gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
+--gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise kitchen
+```
+
+### Microsoft LUIS
+
+Signup for Microsoft LUIS and add your credentials into [credentials.env](/data/luis/credentials.env). Then run the
+benchmark:
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type MICROSOFT_LUIS \
+--noise cafe
+python3 benchmark/benchmark.py \
+--engine_type MICROSOFT_LUIS \
+--noise kitchen
+```
+
+### IBM Watson
+
+Signup for IBM Watson. Then run the benchmark:
+
+```console
+python3 benchmark/benchmark.py \
+--engine_type IBM_WATSON \
+--ibm_credential_path ${IBM_CREDENTIAL_PATH} \
+--ibm_model_id ${IBM_MODEL_ID} \
+--noise cafe
+python3 benchmark/benchmark.py \
+--engine_type IBM_WATSON \
+--ibm_credential_path ${IBM_CREDENTIAL_PATH} \
+--ibm_model_id ${IBM_MODEL_ID} \
+--noise kitchen
+```
