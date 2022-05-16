@@ -4,7 +4,7 @@ import time
 import uuid
 from enum import Enum
 from typing import *
-
+from logging import Logger
 import azure.cognitiveservices.speech as speechsdk
 import boto3
 import dialogflow_v2 as dialogflow
@@ -34,6 +34,9 @@ class Engines(Enum):
 
 
 class Engine(object):
+    def __init__(self, log: Optional[Logger] = None) -> None:
+        self._log = log
+
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
         raise NotImplementedError()
 
