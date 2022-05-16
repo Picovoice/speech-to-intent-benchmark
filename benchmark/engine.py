@@ -209,7 +209,17 @@ class GoogleDialogflow(Engine):
 
 
 class IBMWatson(Engine):
-    def __init__(self, model_id, custom_id, stt_apikey, stt_url, nlu_apikey, nlu_url):
+    def __init__(
+            self,
+            model_id,
+            custom_id,
+            stt_apikey,
+            stt_url,
+            nlu_apikey,
+            nlu_url,
+            log: Optional[Logger] = None) -> None:
+        super(IBMWatson, self).__init__(log=log)
+
         self._model_id = model_id
         self._username = "apikey"
         self._stt_apikey = stt_apikey
@@ -355,7 +365,16 @@ class IBMWatson(Engine):
 
 
 class MicrosoftLUIS(Engine):
-    def __init__(self, prediction_key, endpoint_url, app_id, speech_key, speech_endpoint_id):
+    def __init__(
+            self,
+            prediction_key,
+            endpoint_url,
+            app_id,
+            speech_key,
+            speech_endpoint_id,
+            log: Optional[Logger] = None) -> None:
+        super(MicrosoftLUIS, self).__init__(log=log)
+
         self._initial_silence_timeout_ms = 15000
         self._slot_name = 'staging'
         self._region = 'westus'
