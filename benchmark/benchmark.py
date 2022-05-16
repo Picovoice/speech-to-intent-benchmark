@@ -1,60 +1,54 @@
+import logging as log
 import os
 from argparse import ArgumentParser
 from sys import argv
 
 from engine import *
 
+log.basicConfig(level=log.INFO)
 
-def _path(x):
-    return os.path.join(os.path.dirname(__file__), '../%s' % x)
+
+def path(x: str) -> str:
+    return os.path.join(os.path.dirname(__file__), f'../{x}')
 
 
 def main():
     parser = ArgumentParser()
     parser.add_argument('--engine', choices=[x.value for x in Engines], required=True)
-    parser.add_argument('--noise', required=True)
-    parser.add_argument('--gcp_credential_path', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
-    parser.add_argument('--gcp_project_id', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
-    parser.add_argument('--ibm_credential_path', required=(Engines.IBM_WATSON.value in argv))
-    parser.add_argument('--ibm_model_id', required=(Engines.IBM_WATSON.value in argv))
-    parser.add_argument('--ibm_custom_id', required=(Engines.IBM_WATSON.value in argv))
-    parser.add_argument('--access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
+    parser.add_argument('--noise', required=True, choices=['cafe', 'kitchen'])
+    parser.add_argument('--google_dialogflow_credential_path', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
+    parser.add_argument('--google_dialogflow_project_id', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
+    parser.add_argument('--ibm_watson_model_id', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_custom_id', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_stt_apikey', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_stt_url', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_nlu_apikey', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_nlu_url', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--microsoft_luis_luis_prediction_key', required=(Engines.MICROSOFT_LUIS.value in argv))
+    parser.add_argument('--microsoft_luis_luis_endpoint_url', required=(Engines.MICROSOFT_LUIS.value in argv))
+    parser.add_argument('--microsoft_luis_luis_app_id', required=(Engines.MICROSOFT_LUIS.value in argv))
+    parser.add_argument('--microsoft_luis_speech_key', required=(Engines.MICROSOFT_LUIS.value in argv))
+    parser.add_argument('--microsoft_luis_speech_endpoint_id', required=(Engines.MICROSOFT_LUIS.value in argv))
+    parser.add_argument('--picovoice_rhino_access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
+    parser.add_argument('--snrs_db', choices='+', default=[24, 21, 18, 15, 12, 9, 6])
     args = parser.parse_args()
-    args_dict = vars(args)
 
-    if args.gcp_credential_path is not None:
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.gcp_credential_path
+    args.engine = Engines(args.engine)
 
-    if args.ibm_credential_path is not None:
-        with open(args.ibm_credential_path) as f:
-            for line in f:
-                if len(line.strip()) > 0:
-                    key, value = line.strip().split('=', maxsplit=1)
-                    if key == 'SPEECH_TO_TEXT_APIKEY':
-                        args_dict['stt_apikey'] = value
-                    elif key == 'SPEECH_TO_TEXT_URL':
-                        args_dict['stt_url'] = value
-                    elif key == 'NATURAL_LANGUAGE_UNDERSTANDING_APIKEY':
-                        args_dict['nlu_apikey'] = value
-                    elif key == 'NATURAL_LANGUAGE_UNDERSTANDING_URL':
-                        args_dict['nlu_url'] = value
+    kwargs = dict()
+    for k, v in vars(args.engine).items():
+        if k.startswith(args.engine.value.lower()):
+            kwargs[k.replace(f'{args.engine.value.lower()}_', '')] = v
 
-    if args.engine_type == 'MICROSOFT_LUIS':
-        with open(_path('data/luis/credentials.env')) as f:
-            for line in f:
-                if len(line.strip()) > 0:
-                    key, value = line.strip().split('=', maxsplit=1)
-                    args_dict[key] = value
+    engine = Engine.create(x=args.engine, log=log, **kwargs)
+    log.info(f'created {args.engine.value} engine')
 
-    engine = Engine.create(**args_dict)
-    print('created %s engine' % str(engine))
-
-    for snr_db in [24, 21, 18, 15, 12, 9, 6]:
-        print('%s %d db:' % (args.noise, snr_db))
+    for snr_db in args.snrs_db:
+        log.info(f'{args.noise} {snr_db} dB:')
         if args.engine_type == 'PICOVOICE_RHINO':
-            engine.process(_path('data/speech/%s_%ddb' % (args.noise, snr_db)), sleep_msec=0)
+            engine.process(path('data/speech/%s_%ddb' % (args.noise, snr_db)), sleep_msec=0)
         else:
-            engine.process(_path('data/speech/%s_%ddb' % (args.noise, snr_db)))
+            engine.process(path('data/speech/%s_%ddb' % (args.noise, snr_db)))
 
 
 if __name__ == "__main__":

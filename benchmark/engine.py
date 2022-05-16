@@ -108,7 +108,7 @@ class Engine(object):
                 kwargs['SPEECH_KEY'],
                 kwargs['SPEECH_ENDPOINT_ID'])
         elif x is Engines.PICOVOICE_RHINO:
-            return PicovoiceRhino(access_key=kwargs['ACCESS_KEY'])
+            return PicovoiceRhino(access_key=kwargs['access_key'])
         else:
             raise ValueError(f"Cannot create {cls.__name__} of type `{x.value}`")
 
