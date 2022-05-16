@@ -86,24 +86,30 @@ class Engine(object):
         raise NotImplementedError()
 
     @classmethod
-    def create(cls, engine_type, **kwargs):
-        engine_type = Engines[engine_type]
-
-        if engine_type is Engines.AMAZON_LEX:
+    def create(cls, x: Engines, **kwargs: Any) -> 'Engine':
+        if x is Engines.AMAZON_LEX:
             return AmazonLex()
-        elif engine_type is Engines.GOOGLE_DIALOGFLOW:
+        elif x is Engines.GOOGLE_DIALOGFLOW:
             return GoogleDialogflow(kwargs['gcp_project_id'])
-        elif engine_type is Engines.IBM_WATSON:
-            return IBMWatson(kwargs['ibm_model_id'], kwargs['ibm_custom_id'],
-                             kwargs['stt_apikey'], kwargs['stt_url'],
-                             kwargs['nlu_apikey'], kwargs['nlu_url'])
-        elif engine_type is Engines.MICROSOFT_LUIS:
-            return MicrosoftLUIS(kwargs['LUIS_PREDICTION_KEY'], kwargs['LUIS_ENDPOINT_URL'], kwargs['LUIS_APP_ID'],
-                                 kwargs['SPEECH_KEY'], kwargs['SPEECH_ENDPOINT_ID'])
-        elif engine_type is Engines.PICOVOICE_RHINO:
-            return PicovoiceRhino(kwargs['ACCESS_KEY'])
+        elif x is Engines.IBM_WATSON:
+            return IBMWatson(
+                kwargs['ibm_model_id'],
+                kwargs['ibm_custom_id'],
+                kwargs['stt_apikey'],
+                kwargs['stt_url'],
+                kwargs['nlu_apikey'],
+                kwargs['nlu_url'])
+        elif x is Engines.MICROSOFT_LUIS:
+            return MicrosoftLUIS(
+                kwargs['LUIS_PREDICTION_KEY'],
+                kwargs['LUIS_ENDPOINT_URL'],
+                kwargs['LUIS_APP_ID'],
+                kwargs['SPEECH_KEY'],
+                kwargs['SPEECH_ENDPOINT_ID'])
+        elif x is Engines.PICOVOICE_RHINO:
+            return PicovoiceRhino(access_key=kwargs['ACCESS_KEY'])
         else:
-            raise ValueError("cannot create %s of type '%s'" % (cls.__name__, engine_type))
+            raise ValueError(f"Cannot create {cls.__name__} of type `{x.value}`")
 
 
 class AmazonLex(Engine):
