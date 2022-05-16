@@ -4,12 +4,9 @@ from argparse import ArgumentParser
 from sys import argv
 
 from engine import *
+from mixer import *
 
 log.basicConfig(level=log.INFO)
-
-
-def path(x: str) -> str:
-    return os.path.join(os.path.dirname(__file__), f'../{x}')
 
 
 def main():
@@ -42,6 +39,8 @@ def main():
 
     engine = Engine.create(x=args.engine, log=log, **kwargs)
     log.info(f'created {args.engine.value} engine')
+
+    run(noise=args.noise, snrs_ds=args.snrs_db)
 
     for snr_db in args.snrs_db:
         log.info(f'{args.noise} {snr_db} dB:')
