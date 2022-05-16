@@ -88,8 +88,10 @@ class Engine(object):
 
     @classmethod
     def create(cls, x: Engines, **kwargs: Any) -> 'Engine':
+        log = kwargs['log'] if 'log' in kwargs else None
+
         if x is Engines.AMAZON_LEX:
-            return AmazonLex()
+            return AmazonLex(log=log)
         elif x is Engines.GOOGLE_DIALOGFLOW:
             return GoogleDialogflow(credential_path=kwargs['gcp_credential_path'], project_id=kwargs['gcp_project_id'])
         elif x is Engines.IBM_WATSON:
