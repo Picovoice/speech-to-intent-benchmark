@@ -91,7 +91,7 @@ class Engine(object):
         if x is Engines.AMAZON_LEX:
             return AmazonLex()
         elif x is Engines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(kwargs['gcp_project_id'])
+            return GoogleDialogflow(credential_path=kwargs['gcp_credential_path'], project_id=kwargs['gcp_project_id'])
         elif x is Engines.IBM_WATSON:
             return IBMWatson(
                 kwargs['ibm_model_id'],
@@ -151,7 +151,11 @@ class AmazonLex(Engine):
 
 
 class GoogleDialogflow(Engine):
-    def __init__(self, project_id: str) -> None:
+    def __init__(self, credential_path: str, project_id: str, log: Optional[Logger] = None) -> None:
+        super(GoogleDialogflow, self).__init__(log=log)
+
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
+
         self._project_id = project_id
 
     def process_file(self, path):
@@ -167,8 +171,8 @@ class GoogleDialogflow(Engine):
 
         session = session_client.session_path(self._project_id, session_id)
 
-        with open(path, 'rb') as audio_file:
-            input_audio = audio_file.read()
+        with open(path, 'rb') as f:
+            input_audio = f.read()
 
         audio_config = dialogflow.types.InputAudioConfig(
             audio_encoding=dialogflow.enums.AudioEncoding.AUDIO_ENCODING_LINEAR_16,
@@ -201,7 +205,7 @@ class GoogleDialogflow(Engine):
         return result
 
     def __str__(self):
-        return 'Google Dialogflow'
+        return Engines.GOOGLE_DIALOGFLOW.value
 
 
 class IBMWatson(Engine):
