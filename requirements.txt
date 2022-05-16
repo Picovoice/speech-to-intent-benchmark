@@ -1,7 +1,7 @@
 azure-cognitiveservices-language-luis
 azure-cognitiveservices-speech
 boto3
-dialogflow
+google-cloud-dialogflow
 ibm-watson
 matplotlib
 numpy

@@ -8,12 +8,12 @@ from typing import *
 
 import azure.cognitiveservices.speech as speechsdk
 import boto3
-import dialogflow_v2 as dialogflow
 import pvrhino
 import requests
 import soundfile
 import urllib3
 from azure.cognitiveservices.language.luis.runtime import LUISRuntimeClient
+from google.cloud import dialogflow
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import NaturalLanguageUnderstandingV1, SpeechToTextV1
 from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Features
