@@ -3,6 +3,7 @@ import os
 import time
 import uuid
 from enum import Enum
+from typing import *
 
 import azure.cognitiveservices.speech as speechsdk
 import boto3
@@ -33,11 +34,11 @@ class Engines(Enum):
 
 
 class Engine(object):
-    def process_file(self, path):
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
         raise NotImplementedError()
 
-    def process(self, folder, sleep_msec=2, retry_limit=32):
-        with open(_path('data/label/label.json')) as f:
+    def process(self, folder: str, sleep_msec: float = 2., retry_limit: int = 32) -> None:
+        with open(os.path.join(os.path.dirname(__file__), f'../data/label/label.json')) as f:
             labels = json.load(f)
 
         num_examples = 0
@@ -47,45 +48,41 @@ class Engine(object):
                 num_examples += 1
 
                 if x not in labels:
-                    raise ValueError("the label for '%s' is missing" % x)
+                    raise ValueError()
                 label = labels[x]
 
                 time.sleep(sleep_msec)
 
-                attempts = 0
+                retry_count = 0
                 result = None
-                while attempts < retry_limit:
+                while retry_count < retry_limit:
                     try:
                         result = self.process_file(os.path.join(folder, x))
                         break
-                    except Exception as ex:
-                        print(ex)
-                        attempts += 1
-
-                if attempts == retry_limit:
+                    except Exception as e:
+                        print(e)
+                        retry_count += 1
+                if retry_count == retry_limit:
                     raise RuntimeError()
 
                 if result is None:
                     num_errors += 1
-                    continue
-
-                if label["intent"] != result["intent"]:
+                elif label["intent"] != result["intent"]:
                     num_errors += 1
-                    continue
-
-                for slot in label["slots"].keys():
-                    if slot not in result["slots"]:
-                        num_errors += 1
-                        break
-                    if result["slots"][slot].strip() != label["slots"][slot].strip():
-                        num_errors += 1
-                        break
+                else:
+                    for slot in label["slots"].keys():
+                        if slot not in result["slots"]:
+                            num_errors += 1
+                            break
+                        if result["slots"][slot].strip() != label["slots"][slot].strip():
+                            num_errors += 1
+                            break
 
         print('num examples: %d' % num_examples)
         print('num errors: %d' % num_errors)
         print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
 
-    def __str__(self):
+    def __str__(self) -> str:
         raise NotImplementedError()
 
     @classmethod
@@ -465,19 +462,12 @@ class MicrosoftLUIS(Engine):
 
 
 class PicovoiceRhino(Engine):
-    def __init__(self, access_key):
+    def __init__(self, access_key: str) -> None:
         self._access_key = access_key
-        self._library_path = _path('rhino/lib/linux/x86_64/libpv_rhino.so')
-        self._model_path = _path('rhino/lib/common/rhino_params.pv')
         self._context_path = _path('data/rhino/coffee_maker_linux.rhn')
 
-    def process_file(self, path):
-        rhino = pvrhino.create(
-            access_key=self._access_key,
-            library_path=self._library_path,
-            model_path=self._model_path,
-            context_path=self._context_path,
-            sensitivity=.75)
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
+        rhino = pvrhino.create(access_key=self._access_key, context_path=self._context_path, sensitivity=.75)
 
         pcm, sample_rate = soundfile.read(path, dtype='int16')
         assert pcm.ndim == 1
@@ -501,8 +491,8 @@ class PicovoiceRhino(Engine):
 
         return result
 
-    def __str__(self):
-        return 'Picovoice Rhino'
+    def __str__(self) -> str:
+        return Engines.PICOVOICE_RHINO.value
 
 
 __all__ = [
