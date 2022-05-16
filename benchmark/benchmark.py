@@ -9,22 +9,18 @@ def _path(x):
     return os.path.join(os.path.dirname(__file__), '../%s' % x)
 
 
-if __name__ == "__main__":
+def main():
     parser = ArgumentParser()
-    parser.add_argument('--engine', choices=[x.value for x in NLUEngines], required=True)
-    parser.add_argument('--gcp_credential_path', required=('GOOGLE_DIALOGFLOW' in argv))
-    parser.add_argument('--gcp_project_id', required=('GOOGLE_DIALOGFLOW' in argv))
-    parser.add_argument('--ibm_credential_path', required=('IBM_WATSON' in argv))
-    parser.add_argument('--ibm_model_id', required=('IBM_WATSON' in argv))
-    parser.add_argument('--ibm_custom_id')
+    parser.add_argument('--engine', choices=[x.value for x in Engines], required=True)
     parser.add_argument('--noise', required=True)
-    parser.add_argument('--access-key')
-
+    parser.add_argument('--gcp_credential_path', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
+    parser.add_argument('--gcp_project_id', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
+    parser.add_argument('--ibm_credential_path', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_model_id', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_custom_id', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
     args = parser.parse_args()
     args_dict = vars(args)
-
-    if args.access_key is not None:
-        args_dict['ACCESS_KEY'] = args.access_key
 
     if args.gcp_credential_path is not None:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.gcp_credential_path
@@ -50,7 +46,7 @@ if __name__ == "__main__":
                     key, value = line.strip().split('=', maxsplit=1)
                     args_dict[key] = value
 
-    engine = NLUEngine.create(**args_dict)
+    engine = Engine.create(**args_dict)
     print('created %s engine' % str(engine))
 
     for snr_db in [24, 21, 18, 15, 12, 9, 6]:
@@ -59,3 +55,7 @@ if __name__ == "__main__":
             engine.process(_path('data/speech/%s_%ddb' % (args.noise, snr_db)), sleep_msec=0)
         else:
             engine.process(_path('data/speech/%s_%ddb' % (args.noise, snr_db)))
+
+
+if __name__ == "__main__":
+    main()

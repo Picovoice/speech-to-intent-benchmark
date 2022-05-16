@@ -24,7 +24,7 @@ def _path(x):
     return os.path.join(os.path.dirname(__file__), '../%s' % x)
 
 
-class NLUEngines(Enum):
+class Engines(Enum):
     AMAZON_LEX = 'AMAZON_LEX'
     GOOGLE_DIALOGFLOW = 'GOOGLE_DIALOGFLOW'
     IBM_WATSON = 'IBM_WATSON'
@@ -32,7 +32,7 @@ class NLUEngines(Enum):
     PICOVOICE_RHINO = 'PICOVOICE_RHINO'
 
 
-class NLUEngine(object):
+class Engine(object):
     def process_file(self, path):
         raise NotImplementedError()
 
@@ -90,26 +90,26 @@ class NLUEngine(object):
 
     @classmethod
     def create(cls, engine_type, **kwargs):
-        engine_type = NLUEngines[engine_type]
+        engine_type = Engines[engine_type]
 
-        if engine_type is NLUEngines.AMAZON_LEX:
+        if engine_type is Engines.AMAZON_LEX:
             return AmazonLex()
-        elif engine_type is NLUEngines.GOOGLE_DIALOGFLOW:
+        elif engine_type is Engines.GOOGLE_DIALOGFLOW:
             return GoogleDialogflow(kwargs['gcp_project_id'])
-        elif engine_type is NLUEngines.IBM_WATSON:
+        elif engine_type is Engines.IBM_WATSON:
             return IBMWatson(kwargs['ibm_model_id'], kwargs['ibm_custom_id'],
                              kwargs['stt_apikey'], kwargs['stt_url'],
                              kwargs['nlu_apikey'], kwargs['nlu_url'])
-        elif engine_type is NLUEngines.MICROSOFT_LUIS:
+        elif engine_type is Engines.MICROSOFT_LUIS:
             return MicrosoftLUIS(kwargs['LUIS_PREDICTION_KEY'], kwargs['LUIS_ENDPOINT_URL'], kwargs['LUIS_APP_ID'],
                                  kwargs['SPEECH_KEY'], kwargs['SPEECH_ENDPOINT_ID'])
-        elif engine_type is NLUEngines.PICOVOICE_RHINO:
+        elif engine_type is Engines.PICOVOICE_RHINO:
             return PicovoiceRhino(kwargs['ACCESS_KEY'])
         else:
             raise ValueError("cannot create %s of type '%s'" % (cls.__name__, engine_type))
 
 
-class AmazonLex(NLUEngine):
+class AmazonLex(Engine):
     def __init__(self):
         self._client = boto3.client('lex-runtime')
 
@@ -143,7 +143,7 @@ class AmazonLex(NLUEngine):
         return 'Amazon Lex'
 
 
-class GoogleDialogflow(NLUEngine):
+class GoogleDialogflow(Engine):
     def __init__(self, project_id):
         self._project_id = project_id
 
@@ -197,7 +197,7 @@ class GoogleDialogflow(NLUEngine):
         return 'Google Dialogflow'
 
 
-class IBMWatson(NLUEngine):
+class IBMWatson(Engine):
     def __init__(self, model_id, custom_id, stt_apikey, stt_url, nlu_apikey, nlu_url):
         self._model_id = model_id
         self._username = "apikey"
@@ -343,7 +343,7 @@ class IBMWatson(NLUEngine):
         return 'IBM Watson'
 
 
-class MicrosoftLUIS(NLUEngine):
+class MicrosoftLUIS(Engine):
     def __init__(self, prediction_key, endpoint_url, app_id, speech_key, speech_endpoint_id):
         self._initial_silence_timeout_ms = 15000
         self._slot_name = 'staging'
@@ -464,7 +464,7 @@ class MicrosoftLUIS(NLUEngine):
         return 'Microsoft LUIS'
 
 
-class PicovoiceRhino(NLUEngine):
+class PicovoiceRhino(Engine):
     def __init__(self, access_key):
         self._access_key = access_key
         self._library_path = _path('rhino/lib/linux/x86_64/libpv_rhino.so')
@@ -509,6 +509,6 @@ class PicovoiceRhino(NLUEngine):
 
 
 __all__ = [
-    'NLUEngines',
-    'NLUEngine',
+    'Engines',
+    'Engine',
 ]
