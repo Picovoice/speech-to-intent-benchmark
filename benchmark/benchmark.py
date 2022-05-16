@@ -45,10 +45,9 @@ def main():
 
     for snr_db in args.snrs_db:
         log.info(f'{args.noise} {snr_db} dB:')
-        if args.engine_type == 'PICOVOICE_RHINO':
-            engine.process(path('data/speech/%s_%ddb' % (args.noise, snr_db)), sleep_msec=0)
-        else:
-            engine.process(path('data/speech/%s_%ddb' % (args.noise, snr_db)))
+        num_examples, num_errors = engine.process(
+            os.path.join(os.path.dirname(__file__), f'../data/speech/{args.noise}_{snr_db}db'))
+        log.info(f"{num_examples} {num_errors} {num_errors / num_examples}")
 
 
 if __name__ == "__main__":
