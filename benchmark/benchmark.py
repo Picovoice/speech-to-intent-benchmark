@@ -33,7 +33,7 @@ def main():
     args.engine = Engines(args.engine)
 
     kwargs = dict()
-    for k, v in vars(args.engine).items():
+    for k, v in vars(args).items():
         if k.startswith(args.engine.value.lower()):
             kwargs[k.replace(f'{args.engine.value.lower()}_', '')] = v
 
