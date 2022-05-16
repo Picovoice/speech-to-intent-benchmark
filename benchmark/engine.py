@@ -506,3 +506,9 @@ class PicovoiceRhino(NLUEngine):
 
     def __str__(self):
         return 'Picovoice Rhino'
+
+
+__all__ = [
+    'NLUEngines',
+    'NLUEngine',
+]

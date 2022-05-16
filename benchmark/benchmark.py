@@ -1,4 +1,5 @@
-import argparse
+import os
+from argparse import ArgumentParser
 from sys import argv
 
 from engine import *
@@ -9,10 +10,8 @@ def _path(x):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--engine_type', choices=['AMAZON_LEX', 'GOOGLE_DIALOGFLOW', 'IBM_WATSON', 'MICROSOFT_LUIS',
-                                                  'PICOVOICE_RHINO'],
-                        required=True)
+    parser = ArgumentParser()
+    parser.add_argument('--engine', choices=[x.value for x in NLUEngines], required=True)
     parser.add_argument('--gcp_credential_path', required=('GOOGLE_DIALOGFLOW' in argv))
     parser.add_argument('--gcp_project_id', required=('GOOGLE_DIALOGFLOW' in argv))
     parser.add_argument('--ibm_credential_path', required=('IBM_WATSON' in argv))
