@@ -495,17 +495,17 @@ class MicrosoftLUIS(Engine):
 
 
 class PicovoiceRhino(Engine):
-    def __init__(self, access_key: str, sensitivity: float = 0.75, log: Optional[Logger] = None) -> None:
+    def __init__(self, access_key: str, log: Optional[Logger] = None) -> None:
         super(PicovoiceRhino, self).__init__(log=log)
 
         self._access_key = access_key
-        self._sensitivity = sensitivity
 
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
         o = pvrhino.create(
             access_key=self._access_key,
             context_path=os.path.join(os.path.dirname(__file__), '../data/rhino/coffee_maker_linux.rhn'),
-            sensitivity=self._sensitivity)
+            sensitivity=0.75,
+            require_endpoint=False)
 
         pcm, sample_rate = soundfile.read(path, dtype='int16')
         assert pcm.ndim == 1
