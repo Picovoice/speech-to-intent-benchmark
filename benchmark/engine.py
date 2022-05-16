@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 import time
 import uuid
 from enum import Enum
@@ -8,6 +7,7 @@ from enum import Enum
 import azure.cognitiveservices.speech as speechsdk
 import boto3
 import dialogflow_v2 as dialogflow
+import pvrhino
 import requests
 import soundfile
 import urllib3
@@ -472,10 +472,7 @@ class PicovoiceRhino(Engine):
         self._context_path = _path('data/rhino/coffee_maker_linux.rhn')
 
     def process_file(self, path):
-        sys.path.append(_path('rhino/binding/python'))
-        from rhino import Rhino
-
-        rhino = Rhino(
+        rhino = pvrhino.create(
             access_key=self._access_key,
             library_path=self._library_path,
             model_path=self._model_path,
