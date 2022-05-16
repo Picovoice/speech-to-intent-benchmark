@@ -3,8 +3,9 @@ import os
 import time
 import uuid
 from enum import Enum
-from typing import *
 from logging import Logger
+from typing import *
+
 import azure.cognitiveservices.speech as speechsdk
 import boto3
 import dialogflow_v2 as dialogflow
@@ -40,7 +41,7 @@ class Engine(object):
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
         raise NotImplementedError()
 
-    def process(self, folder: str, sleep_msec: float = 2., retry_limit: int = 32) -> None:
+    def process(self, folder: str, sleep_msec: float = 2., retry_limit: int = 32) -> Tuple[int, int]:
         with open(os.path.join(os.path.dirname(__file__), f'../data/label/label.json')) as f:
             labels = json.load(f)
 
@@ -50,40 +51,37 @@ class Engine(object):
             if x.endswith('.wav'):
                 num_examples += 1
 
-                if x not in labels:
-                    raise ValueError()
                 label = labels[x]
 
                 time.sleep(sleep_msec)
 
                 retry_count = 0
-                result = None
+                inference = None
                 while retry_count < retry_limit:
                     try:
-                        result = self.process_file(os.path.join(folder, x))
+                        inference = self.process_file(os.path.join(folder, x))
                         break
                     except Exception as e:
-                        print(e)
+                        if self._log is not None:
+                            self._log.warning(e)
                         retry_count += 1
                 if retry_count == retry_limit:
                     raise RuntimeError()
 
-                if result is None:
+                if inference is None:
                     num_errors += 1
-                elif label["intent"] != result["intent"]:
+                elif label["intent"] != inference["intent"]:
                     num_errors += 1
                 else:
                     for slot in label["slots"].keys():
-                        if slot not in result["slots"]:
+                        if slot not in inference["slots"]:
                             num_errors += 1
                             break
-                        if result["slots"][slot].strip() != label["slots"][slot].strip():
+                        if inference["slots"][slot].strip() != label["slots"][slot].strip():
                             num_errors += 1
                             break
 
-        print('num examples: %d' % num_examples)
-        print('num errors: %d' % num_errors)
-        print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
+        return num_examples, num_errors
 
     def __str__(self) -> str:
         raise NotImplementedError()
@@ -116,41 +114,44 @@ class Engine(object):
 
 
 class AmazonLex(Engine):
-    def __init__(self):
+    def __init__(self, log: Optional[Logger] = None) -> None:
+        super(AmazonLex, self).__init__(log=log)
         self._client = boto3.client('lex-runtime')
 
-    def process_file(self, path):
-        cache_path = path.replace('.wav', '.amazonlex')
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
+        cache_path = path.replace('.wav', '.lex')
 
         if os.path.exists(cache_path):
             with open(cache_path) as f:
                 return json.load(f)
 
-        with open(path, 'rb') as input_audio:
+        with open(path, 'rb') as f:
             response = self._client.post_content(
                 botName='barista',
                 botAlias='$LATEST',
                 userId=str(uuid.uuid4()),
                 contentType='audio/l16; rate=16000; channels=1',
                 accept='text/plain; charset=utf-8',
-                inputStream=input_audio
+                inputStream=f
             )
 
-        result = dict(intent=response['intentName'],
-                      slots={k: v for k, v in response['slots'].items() if v is not None},
-                      transcript=response['inputTranscript'])
+        res = {
+            "intent": response['intentName'],
+            "slots": {k: v for k, v in response['slots'].items() if v is not None},
+            "transcript": response['inputTranscript']
+        }
 
         with open(cache_path, 'w') as f:
-            json.dump(result, f, indent=2)
+            json.dump(res, f, indent=2)
 
-        return result
+        return res
 
-    def __str__(self):
-        return 'Amazon Lex'
+    def __str__(self) -> str:
+        return Engines.AMAZON_LEX.value
 
 
 class GoogleDialogflow(Engine):
-    def __init__(self, project_id):
+    def __init__(self, project_id: str) -> None:
         self._project_id = project_id
 
     def process_file(self, path):
