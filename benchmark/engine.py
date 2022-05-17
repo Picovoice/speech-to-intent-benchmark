@@ -496,9 +496,6 @@ class PicovoiceRhino(Engine):
 
         return result
 
-    def process(self, folder: str, sleep_sec: float = .0, retry_limit: int = 1) -> Tuple[int, int]:
-        return super(PicovoiceRhino, self).process(folder=folder, sleep_sec=sleep_sec, retry_limit=retry_limit)
-
     def __str__(self) -> str:
         return Engines.PICOVOICE_RHINO.value
 
