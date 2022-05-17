@@ -160,7 +160,7 @@ class GoogleDialogflow(Engine):
 
         self._project_id = project_id
 
-    def process_file(self, path):
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
         cache_path = path.replace('.wav', '.dialogflow')
 
         if os.path.exists(cache_path):
@@ -206,7 +206,7 @@ class GoogleDialogflow(Engine):
 
         return result
 
-    def __str__(self):
+    def __str__(self) -> str:
         return Engines.GOOGLE_DIALOGFLOW.value
 
 
