@@ -447,7 +447,7 @@ class MicrosoftLUIS(Engine):
         intent = nlu_response.prediction.top_intent
         slots = dict()
         for k, v in nlu_response.prediction.entities.items():
-            slots[k] = [e[0].strip() for e in v]
+            slots[k] = v[0][0].strip()
 
         result = dict(intent=intent, slots=slots, transcript=transcript)
 
