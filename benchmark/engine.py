@@ -93,7 +93,7 @@ class Engine(object):
         if x is Engines.AMAZON_LEX:
             return AmazonLex(log=log)
         elif x is Engines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(credential_path=kwargs['gcp_credential_path'], project_id=kwargs['gcp_project_id'])
+            return GoogleDialogflow(log=log, credential_path=kwargs['credential_path'], project_id=kwargs['project_id'])
         elif x is Engines.IBM_WATSON:
             return IBMWatson(
                 kwargs['ibm_model_id'],
@@ -192,8 +192,7 @@ class GoogleDialogflow(Engine):
 
         result = dict(intent=response.query_result.intent.display_name, slots=dict())
 
-        for k, v in response.query_result.parameters.fields.items():
-            v = v.string_value
+        for k, v in response.query_result.parameters.items():
             if v != '':
                 if k == 'size':
                     if '8' in v or 'eight' in v:
