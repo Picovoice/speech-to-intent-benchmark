@@ -242,7 +242,7 @@ class IBMWatson(Engine):
         self._username = "apikey"
         self._headers = {'Content-Type': "application/json"}
 
-    def _create_language_model(self):
+    def _create_language_model(self) -> str:
         data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
                 "description": "STT custom model for coffee maker context"}
         uri = self._stt_url + "/v1/customizations"
@@ -273,7 +273,7 @@ class IBMWatson(Engine):
         print("Added corpus file")
         return uri
 
-    def _get_corpus_status(self, uri):
+    def _get_corpus_status(self, uri: str) -> None:
         response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
         response_json = response.json()
         status = response_json['status']
@@ -288,9 +288,9 @@ class IBMWatson(Engine):
         if status != 'analyzed':
             raise RuntimeError()
 
-        print("Corpus analysis complete")
+        self._log.info("Corpus analysis complete")
 
-    def _train(self):
+    def _train(self) -> None:
         uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/train"
         response = requests.post(uri, auth=(self._username, self._stt_apikey),
                                  verify=False, data=json.dumps({}).encode('utf-8'))
@@ -298,9 +298,9 @@ class IBMWatson(Engine):
         if response.status_code != 200:
             raise RuntimeError("Failed to start training custom model")
 
-        print("Started training custom model")
+        self._log.info("Started training custom model")
 
-    def _get_training_status(self):
+    def _get_training_status(self) -> None:
         uri = self._stt_url + "/v1/customizations/" + self._custom_id
         response = requests.get(uri, auth=(self._username, self._stt_apikey), verify=False, headers=self._headers)
         status = response.json()['status']
@@ -314,15 +314,15 @@ class IBMWatson(Engine):
         if status != 'available':
             raise RuntimeError()
 
-        print("Training custom model complete")
+        self._log.info("Training custom model complete")
 
-    def _train_language_model(self):
+    def _train_language_model(self) -> None:
         corpus_uri = self._add_corpus()
         self._get_corpus_status(corpus_uri)
         self._train()
         self._get_training_status()
 
-    def process_file(self, path):
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
         cache_path = path.replace('.wav', '.watson')
 
         if os.path.exists(cache_path):
@@ -369,8 +369,8 @@ class IBMWatson(Engine):
 
         return result
 
-    def __str__(self):
-        return 'IBM Watson'
+    def __str__(self) -> str:
+        return Engines.IBM_WATSON.value
 
 
 class MicrosoftLUIS(Engine):
