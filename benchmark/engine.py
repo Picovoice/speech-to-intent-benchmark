@@ -194,18 +194,19 @@ class GoogleDialogflow(Engine):
 
         result = dict(intent=response.query_result.intent.display_name, slots=dict())
 
-        for k, v in response.query_result.parameters.items():
-            if v != '':
-                if k == 'size':
-                    if '8' in v or 'eight' in v:
-                        v = 'eight ounce'
-                    elif '12' in v or 'twelve' in v:
-                        v = 'twelve ounce'
-                    elif '16' in v or 'sixteen' in v:
-                        v = 'sixteen ounce'
-                    elif '20' in v or 'twenty' in v:
-                        v = 'twenty ounce'
-                result['slots'][k] = v
+        if response.query_result.parameters is not None:
+            for k, v in response.query_result.parameters.items():
+                if v != '':
+                    if k == 'size':
+                        if '8' in v or 'eight' in v:
+                            v = 'eight ounce'
+                        elif '12' in v or 'twelve' in v:
+                            v = 'twelve ounce'
+                        elif '16' in v or 'sixteen' in v:
+                            v = 'sixteen ounce'
+                        elif '20' in v or 'twenty' in v:
+                            v = 'twenty ounce'
+                    result['slots'][k] = v
 
         with open(cache_path, 'w') as f:
             json.dump(result, f, indent=2)
