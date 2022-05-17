@@ -217,27 +217,30 @@ class GoogleDialogflow(Engine):
 class IBMWatson(Engine):
     def __init__(
             self,
-            model_id,
-            custom_id,
-            stt_apikey,
-            stt_url,
-            nlu_apikey,
-            nlu_url,
+            model_id: str,
+            custom_id: Optional[str],
+            stt_apikey: str,
+            stt_url: str,
+            nlu_apikey: str,
+            nlu_url: str,
             log: Optional[Logger] = None) -> None:
         super(IBMWatson, self).__init__(log=log)
 
         self._model_id = model_id
-        self._username = "apikey"
-        self._stt_apikey = stt_apikey
-        self._stt_url = stt_url
-        self._nlu_apikey = nlu_apikey
-        self._nlu_url = nlu_url
-        self._headers = {'Content-Type': "application/json"}
+
         if custom_id is None:
             self._custom_id = self._create_language_model()
             self._train_language_model()
         else:
             self._custom_id = custom_id
+
+        self._stt_apikey = stt_apikey
+        self._stt_url = stt_url
+        self._nlu_apikey = nlu_apikey
+        self._nlu_url = nlu_url
+
+        self._username = "apikey"
+        self._headers = {'Content-Type': "application/json"}
 
     def _create_language_model(self):
         data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
@@ -373,11 +376,11 @@ class IBMWatson(Engine):
 class MicrosoftLUIS(Engine):
     def __init__(
             self,
-            prediction_key,
-            endpoint_url,
-            app_id,
-            speech_key,
-            speech_endpoint_id,
+            prediction_key: str,
+            endpoint_url: str,
+            app_id: str,
+            speech_key: str,
+            speech_endpoint_id: str,
             log: Optional[Logger] = None) -> None:
         super(MicrosoftLUIS, self).__init__(log=log)
 
@@ -390,23 +393,24 @@ class MicrosoftLUIS(Engine):
         self._speech_key = speech_key
         self._speech_endpoint_id = speech_endpoint_id
 
-    def process_file(self, path):
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
         cache_path = path.replace('.wav', '.luis')
 
         if os.path.exists(cache_path):
             with open(cache_path) as f:
                 return json.load(f)
 
-        template = "wss://{}.stt.speech.microsoft.com/speech/recognition" \
-                   "/conversation/cognitiveservices/v1?initialSilenceTimeoutMs={:d}"
-        speech_config = speechsdk.SpeechConfig(subscription=self._speech_key,
-                                               endpoint=template.format(self._region,
-                                                                        self._initial_silence_timeout_ms))
+        endpoint = f"wss://{self._region}.stt.speech.microsoft.com/speech/recognition" \
+                   f"/conversation/cognitiveservices/v1?initialSilenceTimeoutMs={self._initial_silence_timeout_ms}"
+
+        speech_config = speechsdk.SpeechConfig(subscription=self._speech_key, endpoint=endpoint)
         source_language_config = speechsdk.languageconfig.SourceLanguageConfig("en-US", self._speech_endpoint_id)
         audio_config = speechsdk.audio.AudioConfig(filename=path)
 
         speech_recognizer = speechsdk.SpeechRecognizer(
-            speech_config=speech_config, source_language_config=source_language_config, audio_config=audio_config)
+            speech_config=speech_config,
+            source_language_config=source_language_config,
+            audio_config=audio_config)
         speech_response = speech_recognizer.recognize_once()
 
         if speech_response is None:
@@ -419,7 +423,7 @@ class MicrosoftLUIS(Engine):
         elif speech_response.reason == speechsdk.ResultReason.Canceled:
             cancellation_details = speech_response.cancellation_details
             if cancellation_details.reason == speechsdk.CancellationReason.Error:
-                print("Error details: {}".format(cancellation_details.error_details))
+                self._log.error("Error details: {}".format(cancellation_details.error_details))
             raise Exception(cancellation_details.reason)
         else:
             return None
@@ -428,9 +432,14 @@ class MicrosoftLUIS(Engine):
             return None
         request = {"query": transcript}
 
-        client_runtime = LUISRuntimeClient(self._endpoint_url, CognitiveServicesCredentials(self._prediction_key))
-        nlu_response = client_runtime.prediction.get_slot_prediction(app_id=self._app_id, slot_name=self._slot_name,
-                                                                     prediction_request=request)
+        # noinspection PyTypeChecker
+        client_runtime = LUISRuntimeClient(
+            endpoint=self._endpoint_url,
+            credentials=CognitiveServicesCredentials(self._prediction_key))
+        nlu_response = client_runtime.prediction.get_slot_prediction(
+            app_id=self._app_id,
+            slot_name=self._slot_name,
+            prediction_request=request)
 
         if nlu_response is None:
             return None
@@ -496,8 +505,8 @@ class MicrosoftLUIS(Engine):
         print('num errors: %d' % num_errors)
         print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
 
-    def __str__(self):
-        return 'Microsoft LUIS'
+    def __str__(self) -> str:
+        return Engines.MICROSOFT_LUIS.value
 
 
 class PicovoiceRhino(Engine):

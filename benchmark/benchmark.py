@@ -16,7 +16,7 @@ def main():
     parser.add_argument('--google_dialogflow_credential_path', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
     parser.add_argument('--google_dialogflow_project_id', required=(Engines.GOOGLE_DIALOGFLOW.value in argv))
     parser.add_argument('--ibm_watson_model_id', required=(Engines.IBM_WATSON.value in argv))
-    parser.add_argument('--ibm_watson_custom_id', required=(Engines.IBM_WATSON.value in argv))
+    parser.add_argument('--ibm_watson_custom_id', default=None)
     parser.add_argument('--ibm_watson_stt_apikey', required=(Engines.IBM_WATSON.value in argv))
     parser.add_argument('--ibm_watson_stt_url', required=(Engines.IBM_WATSON.value in argv))
     parser.add_argument('--ibm_watson_nlu_apikey', required=(Engines.IBM_WATSON.value in argv))
