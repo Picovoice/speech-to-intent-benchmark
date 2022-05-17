@@ -104,11 +104,11 @@ class Engine(object):
                 kwargs['nlu_url'])
         elif x is Engines.MICROSOFT_LUIS:
             return MicrosoftLUIS(
-                kwargs['LUIS_PREDICTION_KEY'],
-                kwargs['LUIS_ENDPOINT_URL'],
-                kwargs['LUIS_APP_ID'],
-                kwargs['SPEECH_KEY'],
-                kwargs['SPEECH_ENDPOINT_ID'])
+                kwargs['luis_prediction_key'],
+                kwargs['luis_endpoint_url'],
+                kwargs['luis_app_id'],
+                kwargs['speech_key'],
+                kwargs['speech_endpoint_id'])
         elif x is Engines.PICOVOICE_RHINO:
             return PicovoiceRhino(access_key=kwargs['access_key'])
         else:
