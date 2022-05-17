@@ -456,55 +456,6 @@ class MicrosoftLUIS(Engine):
 
         return result
 
-    def process(self, folder, sleep_msec=2, retry_limit=32):
-        with open(_path('data/label/label.json')) as f:
-            labels = json.load(f)
-
-        num_examples = 0
-        num_errors = 0
-        for x in os.listdir(folder):
-            if x.endswith('.wav'):
-                num_examples += 1
-
-                if x not in labels:
-                    raise ValueError("the label for '%s' is missing" % x)
-                label = labels[x]
-
-                time.sleep(sleep_msec)
-
-                attempts = 0
-                result = None
-                while attempts < retry_limit:
-                    try:
-                        result = self.process_file(os.path.join(folder, x))
-                        break
-                    except Exception as ex:
-                        print(ex)
-                        attempts += 1
-
-                if attempts == retry_limit:
-                    raise RuntimeError()
-
-                if result is None:
-                    num_errors += 1
-                    continue
-
-                if label["intent"] != result["intent"]:
-                    num_errors += 1
-                    continue
-
-                for slot in label["slots"].keys():
-                    if slot not in result["slots"]:
-                        num_errors += 1
-                        break
-                    if label["slots"][slot].strip() not in result["slots"][slot]:
-                        num_errors += 1
-                        break
-
-        print('num examples: %d' % num_examples)
-        print('num errors: %d' % num_errors)
-        print('accuracy: %f' % (float(num_examples - num_errors) / num_examples))
-
     def __str__(self) -> str:
         return Engines.MICROSOFT_LUIS.value
 
