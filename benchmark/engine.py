@@ -96,19 +96,21 @@ class Engine(object):
             return GoogleDialogflow(log=log, credential_path=kwargs['credential_path'], project_id=kwargs['project_id'])
         elif x is Engines.IBM_WATSON:
             return IBMWatson(
-                kwargs['ibm_model_id'],
-                kwargs['ibm_custom_id'],
-                kwargs['stt_apikey'],
-                kwargs['stt_url'],
-                kwargs['nlu_apikey'],
-                kwargs['nlu_url'])
+                log=log,
+                model_id=kwargs['model_id'],
+                custom_id=kwargs['custom_id'],
+                stt_apikey=kwargs['stt_apikey'],
+                stt_url=kwargs['stt_url'],
+                nlu_apikey=kwargs['nlu_apikey'],
+                nlu_url=kwargs['nlu_url'])
         elif x is Engines.MICROSOFT_LUIS:
             return MicrosoftLUIS(
-                kwargs['luis_prediction_key'],
-                kwargs['luis_endpoint_url'],
-                kwargs['luis_app_id'],
-                kwargs['speech_key'],
-                kwargs['speech_endpoint_id'])
+                log=log,
+                prediction_key=kwargs['luis_prediction_key'],
+                endpoint_url=kwargs['luis_endpoint_url'],
+                app_id=kwargs['luis_app_id'],
+                speech_key=kwargs['speech_key'],
+                speech_endpoint_id=kwargs['speech_endpoint_id'])
         elif x is Engines.PICOVOICE_RHINO:
             return PicovoiceRhino(access_key=kwargs['access_key'])
         else:
@@ -227,13 +229,6 @@ class IBMWatson(Engine):
         super(IBMWatson, self).__init__(log=log)
 
         self._model_id = model_id
-
-        if custom_id is None:
-            self._custom_id = self._create_language_model()
-            self._train_language_model()
-        else:
-            self._custom_id = custom_id
-
         self._stt_apikey = stt_apikey
         self._stt_url = stt_url
         self._nlu_apikey = nlu_apikey
@@ -241,6 +236,12 @@ class IBMWatson(Engine):
 
         self._username = "apikey"
         self._headers = {'Content-Type': "application/json"}
+
+        if custom_id is None:
+            self._custom_id = self._create_language_model()
+            self._train_language_model()
+        else:
+            self._custom_id = custom_id
 
     def _create_language_model(self) -> str:
         data = {"name": "barista_1", "base_model_name": "en-US_BroadbandModel",
