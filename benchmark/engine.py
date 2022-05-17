@@ -176,14 +176,19 @@ class GoogleDialogflow(Engine):
         with open(path, 'rb') as f:
             input_audio = f.read()
 
-        audio_config = dialogflow.types.InputAudioConfig(
-            audio_encoding=dialogflow.enums.AudioEncoding.AUDIO_ENCODING_LINEAR_16,
+        # noinspection PyTypeChecker
+        audio_config = dialogflow.InputAudioConfig(
+            audio_encoding=dialogflow.AudioEncoding.AUDIO_ENCODING_LINEAR_16,
             language_code='en',
             sample_rate_hertz=16000)
 
-        query_input = dialogflow.types.QueryInput(audio_config=audio_config)
+        # noinspection PyTypeChecker
+        query_input = dialogflow.QueryInput(audio_config=audio_config)
 
-        response = session_client.detect_intent(session=session, query_input=query_input, input_audio=input_audio)
+        # noinspection PyTypeChecker
+        request = dialogflow.DetectIntentRequest(session=session, query_input=query_input, input_audio=input_audio)
+
+        response = session_client.detect_intent(request=request)
 
         result = dict(intent=response.query_result.intent.display_name, slots=dict())
 
