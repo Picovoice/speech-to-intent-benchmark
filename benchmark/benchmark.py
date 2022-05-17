@@ -28,6 +28,7 @@ def main():
     parser.add_argument('--microsoft_luis_speech_endpoint_id', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--picovoice_rhino_access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
     parser.add_argument('--snrs_db', choices='+', default=[24, 21, 18, 15, 12, 9, 6])
+    parser.add_argument('--sleep_sec', type=float, default=2.)
     args = parser.parse_args()
 
     args.engine = Engines(args.engine)
@@ -45,7 +46,8 @@ def main():
     for snr_db in args.snrs_db:
         log.info(f'{args.noise} {snr_db} dB:')
         num_examples, num_errors = engine.process(
-            os.path.join(os.path.dirname(__file__), f'../data/speech/{args.noise}_{snr_db}db'))
+            folder=os.path.join(os.path.dirname(__file__), f'../data/speech/{args.noise}_{snr_db}db'),
+            sleep_sec=args.sleep_sec)
         log.info(f"{num_examples} {num_errors} {num_errors / num_examples}")
 
 

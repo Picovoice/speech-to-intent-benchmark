@@ -41,7 +41,7 @@ class Engine(object):
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
         raise NotImplementedError()
 
-    def process(self, folder: str, sleep_msec: float = 2., retry_limit: int = 32) -> Tuple[int, int]:
+    def process(self, folder: str, sleep_sec: float = 2., retry_limit: int = 32) -> Tuple[int, int]:
         with open(os.path.join(os.path.dirname(__file__), f'../data/label/label.json')) as f:
             labels = json.load(f)
 
@@ -53,7 +53,7 @@ class Engine(object):
 
                 label = labels[x]
 
-                time.sleep(sleep_msec)
+                time.sleep(sleep_sec)
 
                 retry_count = 0
                 inference = None
@@ -496,8 +496,8 @@ class PicovoiceRhino(Engine):
 
         return result
 
-    def process(self, folder: str, sleep_msec: float = .0, retry_limit: int = 1) -> Tuple[int, int]:
-        return super(PicovoiceRhino, self).process(folder=folder, sleep_msec=sleep_msec, retry_limit=retry_limit)
+    def process(self, folder: str, sleep_sec: float = .0, retry_limit: int = 1) -> Tuple[int, int]:
+        return super(PicovoiceRhino, self).process(folder=folder, sleep_sec=sleep_sec, retry_limit=retry_limit)
 
     def __str__(self) -> str:
         return Engines.PICOVOICE_RHINO.value
