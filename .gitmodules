@@ -1,3 +1,0 @@
-[submodule "rhino"]
-	path = rhino
-	url = git@github.com:Picovoice/rhino.git
