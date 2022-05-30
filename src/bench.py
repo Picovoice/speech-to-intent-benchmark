@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 from sys import argv
 
 from engine import *
-from mixer import *
+from mix import *
 
 log.basicConfig(level=log.INFO)
 
