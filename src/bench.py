@@ -27,7 +27,7 @@ def main():
     parser.add_argument('--microsoft_luis_speech_key', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--microsoft_luis_speech_endpoint_id', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--picovoice_rhino_access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
-    parser.add_argument('--snrs_db', choices='+', type=float, default=list(range(24, 3, -3)))
+    parser.add_argument('--snrs_db', nargs='+', default=list(range(24, 3, -3)))
     parser.add_argument('--sleep_sec', type=float, default=2.)
     args = parser.parse_args()
 
@@ -42,7 +42,7 @@ def main():
     log.info(f'Initialized `{str(engine)}` engine')
 
     noise = args.noise
-    snrs_db = args.snrs_db
+    snrs_db = sorted([float(x) for x in args.snrs_db])
     sleep_sec = args.sleep_sec
 
     run(noise=noise, snrs_ds=snrs_db)

@@ -401,8 +401,9 @@ class MicrosoftLUIS(Engine):
             with open(cache_path) as f:
                 return json.load(f)
 
-        endpoint = f"wss://{self._region}.stt.speech.microsoft.com/speech/recognition" \
-                   f"/conversation/cognitiveservices/v1?initialSilenceTimeoutMs={self._initial_silence_timeout_ms}"
+        endpoint = \
+            f"wss://{self._region}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices" \
+            f"/v1?initialSilenceTimeoutMs={self._initial_silence_timeout_ms}"
 
         speech_config = speechsdk.SpeechConfig(subscription=self._speech_key, endpoint=endpoint)
         source_language_config = speechsdk.languageconfig.SourceLanguageConfig("en-US", self._speech_endpoint_id)
@@ -484,6 +485,8 @@ class PicovoiceRhino(Engine):
             end_index = start_index + o.frame_length
             is_finalized = o.process(pcm[start_index: end_index])
             start_index = end_index
+        if not is_finalized:
+            return None
 
         inference = o.get_inference()
         if inference.is_understood:
