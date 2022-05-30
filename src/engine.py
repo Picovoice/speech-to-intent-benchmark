@@ -327,6 +327,8 @@ class IBMWatson(Engine):
         if os.path.exists(cache_path):
             with open(cache_path) as f:
                 return json.load(f)
+        else:
+            return None
 
         stt_service = SpeechToTextV1(authenticator=IAMAuthenticator(self._stt_apikey))
         stt_service.set_service_url(self._stt_url)
