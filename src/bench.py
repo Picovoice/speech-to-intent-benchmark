@@ -6,7 +6,7 @@ from sys import argv
 from engine import *
 from mix import *
 
-log.basicConfig(level=log.INFO)
+log.basicConfig(format='', level=log.INFO)
 
 
 def main():
@@ -35,8 +35,8 @@ def main():
 
     engine_params = dict()
     for k, v in vars(args).items():
-        if k.startswith(args.engine.value.lower()):
-            engine_params[k.replace(f'{args.engine.value.lower()}_', '')] = v
+        if k.startswith(engine.value.lower()):
+            engine_params[k.replace(f'{engine.value.lower()}_', '')] = v
 
     engine = Engine.create(x=engine, log=log, **engine_params)
     log.info(f'Initialized `{str(engine)}` engine')
