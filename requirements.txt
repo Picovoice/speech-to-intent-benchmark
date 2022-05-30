@@ -8,4 +8,3 @@ numpy
 pvrhino
 requests
 soundfile
-urllib3

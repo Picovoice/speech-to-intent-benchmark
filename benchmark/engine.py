@@ -11,15 +11,12 @@ import boto3
 import pvrhino
 import requests
 import soundfile
-import urllib3
 from azure.cognitiveservices.language.luis.runtime import LUISRuntimeClient
 from google.cloud import dialogflow
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import NaturalLanguageUnderstandingV1, SpeechToTextV1
 from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Features
 from msrest.authentication import CognitiveServicesCredentials
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def _path(x):
@@ -335,6 +332,7 @@ class IBMWatson(Engine):
         stt_service.set_service_url(self._stt_url)
 
         with open(path, 'rb') as audio_file:
+            # noinspection PyUnresolvedReferences
             stt_response = stt_service.recognize(
                 audio=audio_file,
                 content_type='audio/wav',
@@ -350,6 +348,7 @@ class IBMWatson(Engine):
                                                      version='2018-03-16')
         nlu_service.set_service_url(self._nlu_url)
 
+        # noinspection PyUnresolvedReferences
         response = nlu_service.analyze(
             features=Features(entities=EntitiesOptions(model=self._model_id)),
             text=transcript,
