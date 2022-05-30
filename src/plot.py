@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-AMAZON_LEX_CAFE = np.array([0.70, 0.80, 0.85, 0.86, 0.87, 0.87, 0.87])
-AMAZON_LEX_KITCHEN = np.array([0.79, 0.83, 0.85, 0.86, 0.87, 0.87, 0.87])
+AMAZON_LEX_CAFE = np.array([0.71, 0.82, 0.84, 0.87, 0.87, 0.87, 0.87])
+AMAZON_LEX_KITCHEN = np.array([0.80, 0.84, 0.85, 0.87, 0.87, 0.87, 0.88])
 AMAZON_LEX = (AMAZON_LEX_CAFE + AMAZON_LEX_KITCHEN) / 2.
 
 GOOGLE_DIALOGFLOW_CAFE = np.array([0.63, 0.70, 0.75, 0.78, 0.79, 0.80, 0.81])

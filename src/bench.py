@@ -42,7 +42,7 @@ def main():
     log.info(f'Initialized `{str(engine)}` engine')
 
     noise = args.noise
-    snrs_db = sorted([float(x) for x in args.snrs_db])
+    snrs_db = sorted([int(x) for x in args.snrs_db])
     sleep_sec = args.sleep_sec
 
     run(noise=noise, snrs_ds=snrs_db)
@@ -52,7 +52,7 @@ def main():
         num_examples, num_errors = engine.process(
             folder=os.path.join(os.path.dirname(__file__), f'../data/speech/{noise}_{snr_db}db'),
             sleep_sec=sleep_sec)
-        log.info(f"{num_examples} {num_errors} {num_errors / num_examples}")
+        log.info(f"{num_examples} {num_errors} {(num_examples - num_errors) / num_examples:.2f}")
 
 
 if __name__ == "__main__":
