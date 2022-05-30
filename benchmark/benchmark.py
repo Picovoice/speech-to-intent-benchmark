@@ -27,27 +27,31 @@ def main():
     parser.add_argument('--microsoft_luis_speech_key', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--microsoft_luis_speech_endpoint_id', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--picovoice_rhino_access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
-    parser.add_argument('--snrs_db', choices='+', default=[24, 21, 18, 15, 12, 9, 6])
+    parser.add_argument('--snrs_db', choices='+', type=float, default=list(range(24, 3, -3)))
     parser.add_argument('--sleep_sec', type=float, default=2.)
     args = parser.parse_args()
 
-    args.engine = Engines(args.engine)
+    engine = Engines(args.engine)
 
-    kwargs = dict()
+    engine_params = dict()
     for k, v in vars(args).items():
         if k.startswith(args.engine.value.lower()):
-            kwargs[k.replace(f'{args.engine.value.lower()}_', '')] = v
+            engine_params[k.replace(f'{args.engine.value.lower()}_', '')] = v
 
-    engine = Engine.create(x=args.engine, log=log, **kwargs)
-    log.info(f'created {args.engine.value} engine')
+    engine = Engine.create(x=engine, log=log, **engine_params)
+    log.info(f'Initialized `{str(engine)}` engine')
 
-    run(noise=args.noise, snrs_ds=args.snrs_db)
+    noise = args.noise
+    snrs_db = args.snrs_db
+    sleep_sec = args.sleep_sec
 
-    for snr_db in args.snrs_db:
-        log.info(f'{args.noise} {snr_db} dB:')
+    run(noise=noise, snrs_ds=snrs_db)
+
+    for snr_db in snrs_db:
+        log.info(f'{noise} {snr_db} dB:')
         num_examples, num_errors = engine.process(
-            folder=os.path.join(os.path.dirname(__file__), f'../data/speech/{args.noise}_{snr_db}db'),
-            sleep_sec=args.sleep_sec)
+            folder=os.path.join(os.path.dirname(__file__), f'../data/speech/{noise}_{snr_db}db'),
+            sleep_sec=sleep_sec)
         log.info(f"{num_examples} {num_errors} {num_errors / num_examples}")
 
 
