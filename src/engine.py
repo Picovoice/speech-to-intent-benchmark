@@ -19,10 +19,6 @@ from ibm_watson.natural_language_understanding_v1 import EntitiesOptions, Featur
 from msrest.authentication import CognitiveServicesCredentials
 
 
-def _path(x):
-    return os.path.join(os.path.dirname(__file__), '../%s' % x)
-
-
 class Engines(Enum):
     AMAZON_LEX = 'AMAZON_LEX'
     GOOGLE_DIALOGFLOW = 'GOOGLE_DIALOGFLOW'
@@ -42,11 +38,11 @@ class Engine(object):
         with open(os.path.join(os.path.dirname(__file__), f'../data/label/label.json')) as f:
             labels = json.load(f)
 
-        num_examples = 0
+        num_utterances = 0
         num_errors = 0
         for x in os.listdir(folder):
             if x.endswith('.wav'):
-                num_examples += 1
+                num_utterances += 1
 
                 label = labels[x]
 
@@ -78,40 +74,25 @@ class Engine(object):
                             num_errors += 1
                             break
 
-        return num_examples, num_errors
+        return num_utterances, num_errors
 
     def __str__(self) -> str:
         raise NotImplementedError()
 
     @classmethod
     def create(cls, x: Engines, **kwargs: Any) -> 'Engine':
-        log = kwargs['log'] if 'log' in kwargs else None
-
         if x is Engines.AMAZON_LEX:
-            return AmazonLex(log=log)
+            return AmazonLex(**kwargs)
         elif x is Engines.GOOGLE_DIALOGFLOW:
-            return GoogleDialogflow(log=log, credential_path=kwargs['credential_path'], project_id=kwargs['project_id'])
+            return GoogleDialogflow(**kwargs)
         elif x is Engines.IBM_WATSON:
-            return IBMWatson(
-                log=log,
-                model_id=kwargs['model_id'],
-                custom_id=kwargs['custom_id'],
-                stt_apikey=kwargs['stt_apikey'],
-                stt_url=kwargs['stt_url'],
-                nlu_apikey=kwargs['nlu_apikey'],
-                nlu_url=kwargs['nlu_url'])
+            return IBMWatson(**kwargs)
         elif x is Engines.MICROSOFT_LUIS:
-            return MicrosoftLUIS(
-                log=log,
-                prediction_key=kwargs['luis_prediction_key'],
-                endpoint_url=kwargs['luis_endpoint_url'],
-                app_id=kwargs['luis_app_id'],
-                speech_key=kwargs['speech_key'],
-                speech_endpoint_id=kwargs['speech_endpoint_id'])
+            return MicrosoftLUIS(**kwargs)
         elif x is Engines.PICOVOICE_RHINO:
-            return PicovoiceRhino(access_key=kwargs['access_key'])
+            return PicovoiceRhino(**kwargs)
         else:
-            raise ValueError(f"Cannot create {cls.__name__} of type `{x.value}`")
+            raise ValueError(f"Cannot create `{cls.__name__}` of type `{x.value}`")
 
 
 class AmazonLex(Engine):
@@ -258,7 +239,7 @@ class IBMWatson(Engine):
 
     def _add_corpus(self):
         corpus_name = "corpus1"
-        corpus_path = _path('data/watson/corpus.txt')
+        corpus_path = os.path.join(os.path.dirname(__file__), '../data/watson/corpus.txt')
 
         uri = self._stt_url + "/v1/customizations/" + self._custom_id + "/corpora/" + corpus_name
         with open(corpus_path, 'rb') as f:

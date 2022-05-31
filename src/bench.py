@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--microsoft_luis_speech_endpoint_id', required=(Engines.MICROSOFT_LUIS.value in argv))
     parser.add_argument('--picovoice_rhino_access_key', required=(Engines.PICOVOICE_RHINO.value in argv))
     parser.add_argument('--snrs_db', nargs='+', default=list(range(24, 3, -3)))
-    parser.add_argument('--sleep_sec', type=float, default=2.)
+    parser.add_argument('--sleep_sec', type=float, default=0.)
     args = parser.parse_args()
 
     engine = Engines(args.engine)
