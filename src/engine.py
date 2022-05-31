@@ -469,8 +469,7 @@ class PicovoiceRhino(Engine):
         self._o = pvrhino.create(
             access_key=access_key,
             context_path=os.path.join(os.path.dirname(__file__), '../data/rhino/coffee_maker_linux.rhn'),
-            sensitivity=0.75,
-            require_endpoint=False)
+            sensitivity=.75)
 
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
         pcm, sample_rate = soundfile.read(path, dtype='int16')
@@ -487,14 +486,10 @@ class PicovoiceRhino(Engine):
             return None
 
         inference = self._o.get_inference()
-        if inference.is_understood:
-            result = dict(intent=inference.intent, slots=inference.slots)
-        else:
-            result = None
 
-        return result
+        return dict(intent=inference.intent, slots=inference.slots) if inference.is_understood else None
 
-    def __del__(self):
+    def __del__(self) -> None:
         self._o.delete()
 
     def __str__(self) -> str:
