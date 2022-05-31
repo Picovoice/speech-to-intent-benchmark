@@ -466,37 +466,36 @@ class PicovoiceRhino(Engine):
     def __init__(self, access_key: str, log: Optional[Logger] = None) -> None:
         super(PicovoiceRhino, self).__init__(log=log)
 
-        self._access_key = access_key
-
-    def process_file(self, path: str) -> Optional[Dict[str, str]]:
-        o = pvrhino.create(
-            access_key=self._access_key,
+        self._o = pvrhino.create(
+            access_key=access_key,
             context_path=os.path.join(os.path.dirname(__file__), '../data/rhino/coffee_maker_linux.rhn'),
             sensitivity=0.75,
             require_endpoint=False)
 
+    def process_file(self, path: str) -> Optional[Dict[str, str]]:
         pcm, sample_rate = soundfile.read(path, dtype='int16')
         assert pcm.ndim == 1
-        assert sample_rate == o.sample_rate
+        assert sample_rate == self._o.sample_rate
 
         is_finalized = False
         start_index = 0
-        while start_index < (len(pcm) - o.frame_length) and not is_finalized:
-            end_index = start_index + o.frame_length
-            is_finalized = o.process(pcm[start_index: end_index])
+        while start_index < (len(pcm) - self._o.frame_length) and not is_finalized:
+            end_index = start_index + self._o.frame_length
+            is_finalized = self._o.process(pcm[start_index: end_index])
             start_index = end_index
         if not is_finalized:
             return None
 
-        inference = o.get_inference()
+        inference = self._o.get_inference()
         if inference.is_understood:
             result = dict(intent=inference.intent, slots=inference.slots)
         else:
             result = None
 
-        o.delete()
-
         return result
+
+    def __del__(self):
+        self._o.delete()
 
     def __str__(self) -> str:
         return Engines.PICOVOICE_RHINO.value
