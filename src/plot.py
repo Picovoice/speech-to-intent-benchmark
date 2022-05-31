@@ -42,7 +42,7 @@ def plot_detailed(show: bool = False):
     plt.grid()
     if show:
         plt.show()
-    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result.svg'))
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result.svg'), transparent=True)
 
 
 PV_COLOR = (55 / 255, 125 / 255, 255 / 255)
@@ -78,7 +78,7 @@ def plot(show: bool = False):
     plt.title("Command Acceptance Rate\n(Averaged across various noisy environments)")
     if show:
         plt.show()
-    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result-summary.svg'))
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result-summary.svg'), transparent=True)
 
 
 if __name__ == '__main__':
