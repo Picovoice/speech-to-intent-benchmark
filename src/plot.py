@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -24,7 +26,7 @@ PICOVOICE_RHINO = (PICOVOICE_RHINO_CAFE + PICOVOICE_RHINO_KITCHEN) / 2.
 SNR_dB = [6, 9, 12, 15, 18, 21, 24]
 
 
-def plot_detailed():
+def plot_detailed(show: bool = False):
     plt.plot(SNR_dB, AMAZON_LEX, color='g', marker='^', label='Amazon Lex')
     plt.plot(SNR_dB, GOOGLE_DIALOGFLOW, color='r', marker='x', label='Google Dialogflow')
     plt.plot(SNR_dB, IBM_WATSON, color='k', marker='s', label='IBM Watson')
@@ -38,14 +40,16 @@ def plot_detailed():
     plt.legend()
     plt.title("Accuracy of NLU Engines")
     plt.grid()
-    plt.show()
+    if show:
+        plt.show()
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result.svg'))
 
 
 PV_COLOR = (55 / 255, 125 / 255, 255 / 255)
 COLOR = (100 / 255, 100 / 255, 100 / 255)
 
 
-def plot():
+def plot(show: bool = False):
     fig, ax = plt.subplots()
 
     for spine in plt.gca().spines.values():
@@ -72,7 +76,9 @@ def plot():
         ['Google\nDialogflow', 'Amazon\nLex', 'IBM\nWatson', 'Microsoft\nLUIS', 'Picovoice\nRhino'])
     plt.tick_params(axis='y', which='both', left=False, right=False, labelleft=False)
     plt.title("Command Acceptance Rate\n(Averaged across various noisy environments)")
-    plt.show()
+    if show:
+        plt.show()
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result-summary.svg'))
 
 
 if __name__ == '__main__':

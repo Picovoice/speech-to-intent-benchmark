@@ -27,11 +27,11 @@ It compares the accuracy of Rhino with:
 
 Command acceptance rate is the probability of an engine correctly understanding the spoken command. Below is the summary:
 
-![](data/misc/result-summary.png)
+![](data/misc/result-summary.svg)
 
 The figure below depicts engines performance at each SNR:
 
-![](data/misc/result.png)
+![](data/misc/result.svg)
 
 ## Data
 
