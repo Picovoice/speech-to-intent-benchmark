@@ -4,13 +4,16 @@
 
 Made in Vancouver, Canada by [Picovoice](https://picovoice.ai)
 
-This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, [Rhino](https://github.com/Picovoice/rhino).
-It compares the accuracy of Rhino with cloud-based natural language understanding (NLU) offerings:
+[![Twitter URL](https://img.shields.io/twitter/url?label=%40AiPicovoice&style=social&url=https%3A%2F%2Ftwitter.com%2FAiPicovoice)](https://twitter.com/AiPicovoice)
+[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCAdi9sTCXLosG1XeqDwLx7w?label=YouTube&style=social)](https://www.youtube.com/channel/UCAdi9sTCXLosG1XeqDwLx7w)
 
-- [Google Dialogflow](https://dialogflow.com/)
+This framework benchmarks the accuracy of Picovoice's Speech-to-Intent engine, [Rhino](https://github.com/Picovoice/rhino).
+It compares the accuracy of Rhino with:
+
 - [Amazon Lex](https://aws.amazon.com/lex/)
-- [Microsoft LUIS](https://www.luis.ai/)
+- [Google Dialogflow](https://dialogflow.com/)
 - [IBM Watson](https://www.ibm.com/watson)
+- [Microsoft LUIS](https://www.luis.ai/)
 
 ## Table of Contents
 
@@ -24,87 +27,37 @@ It compares the accuracy of Rhino with cloud-based natural language understandin
 
 Command acceptance rate is the probability of an engine correctly understanding the spoken command. Below is the summary:
 
-![](data/misc/result-summary.png)
+![](data/misc/result-summary.svg)
 
 The figure below depicts engines performance at each SNR:
 
-![](data/misc/result.png)
+![](data/misc/result.svg)
 
 ## Data
 
 The speech data are crowd-sourced from more than 50 unique speakers. Each speaker contributed about ten different utterances.
-Collectively there are 619 commands used in this benchmark. We test the engines in noisy conditions to simulate real-world situations. Noise is from [Freesound](https://freesound.org/).
+Collectively there are 619 commands used in this benchmark. We test the engines in noisy conditions to simulate real-world
+situations. Noise is from [Freesound](https://freesound.org/).
 
 ## How to Reproduce?
 
 Clone the repository:
 
 ```console
-git clone --recurse-submodules https://github.com/Picovoice/speech-to-intent-benchmark.git
+git clone https://github.com/Picovoice/speech-to-intent-benchmark.git
 ```
 
 Mix the clean speech data with noise:
 
 ```console
-python3 benchmark/mixer.py cafe
-python3 benchmark/mixer.py kitchen
+python3 src/mix.py cafe
+python3 src/mix.py kitchen
 ```
 
-### Rhino
-
-Signup for [Picovoice Console](https://console.picovoice.ai/) and get a free `AccessKey`. Then run the benchmark:
+Get the usage message:
 
 ```console
-python3 benchmark/benchmark.py \
---engine_type PICOVOICE_RHINO \
---access-key ${ACCESS_KEY} --noise cafe
-python3 benchmark/benchmark.py \
---engine_type PICOVOICE_RHINO \
---access-key ${ACCESS_KEY} --noise kitchen
+python3 src/bench.py --help
 ```
 
-### Google Dialogflow
-
-Signup for Google Cloud Platform. Then run the benchmark:
-
-```console
-python3 benchmark/benchmark.py \
---engine_type GOOGLE_DIALOGFLOW \
---gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
---gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise cafe
-python3 benchmark/benchmark.py \
---engine_type GOOGLE_DIALOGFLOW \
---gcp_credential_path {GOOGLE_CLOUD_PLATFORM_CREDENTIAL_PATH} \
---gcp_project_id ${GOOGLE_CLOUD_PLATFORM_PROJECT_ID} --noise kitchen
-```
-
-### Microsoft LUIS
-
-Signup for Microsoft LUIS and add your credentials into [credentials.env](/data/luis/credentials.env). Then run the
-benchmark:
-
-```console
-python3 benchmark/benchmark.py \
---engine_type MICROSOFT_LUIS \
---noise cafe
-python3 benchmark/benchmark.py \
---engine_type MICROSOFT_LUIS \
---noise kitchen
-```
-
-### IBM Watson
-
-Signup for IBM Watson. Then run the benchmark:
-
-```console
-python3 benchmark/benchmark.py \
---engine_type IBM_WATSON \
---ibm_credential_path ${IBM_CREDENTIAL_PATH} \
---ibm_model_id ${IBM_MODEL_ID} \
---noise cafe
-python3 benchmark/benchmark.py \
---engine_type IBM_WATSON \
---ibm_credential_path ${IBM_CREDENTIAL_PATH} \
---ibm_model_id ${IBM_MODEL_ID} \
---noise kitchen
-```
+Then run the script for each engine.

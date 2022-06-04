@@ -1,30 +1,32 @@
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 
-AMAZON_LEX_CAFE = np.array([0.70, 0.80, 0.85, 0.86, 0.87, 0.87, 0.87])
-AMAZON_LEX_KITCHEN = np.array([0.79, 0.83, 0.85, 0.86, 0.87, 0.87, 0.87])
+AMAZON_LEX_CAFE = np.array([0.71, 0.82, 0.84, 0.87, 0.87, 0.87, 0.87])
+AMAZON_LEX_KITCHEN = np.array([0.80, 0.84, 0.85, 0.87, 0.87, 0.87, 0.88])
 AMAZON_LEX = (AMAZON_LEX_CAFE + AMAZON_LEX_KITCHEN) / 2.
 
-GOOGLE_DIALOGFLOW_CAFE = np.array([0.63, 0.70, 0.75, 0.78, 0.79, 0.80, 0.81])
-GOOGLE_DIALOGFLOW_KITCHEN = np.array([0.69, 0.73, 0.77, 0.80, 0.81, 0.81, 0.83])
+GOOGLE_DIALOGFLOW_CAFE = np.array([0.63, 0.70, 0.76, 0.79, 0.82, 0.83, 0.82])
+GOOGLE_DIALOGFLOW_KITCHEN = np.array([0.70, 0.78, 0.78, 0.80, 0.81, 0.82, 0.83])
 GOOGLE_DIALOGFLOW = (GOOGLE_DIALOGFLOW_CAFE + GOOGLE_DIALOGFLOW_KITCHEN) / 2.
 
-IBM_WATSON_CAFE = np.array([0.51, 0.76, 0.85, 0.93, 0.95, 0.96, 0.97])
-IBM_WATSON_KITCHEN = np.array([0.69, 0.82, 0.91, 0.93, 0.94, 0.96, 0.96])
+IBM_WATSON_CAFE = np.array([0.50, 0.76, 0.88, 0.92, 0.94, 0.95, 0.96])
+IBM_WATSON_KITCHEN = np.array([0.72, 0.84, 0.89, 0.93, 0.95, 0.95, 0.96])
 IBM_WATSON = (IBM_WATSON_CAFE + IBM_WATSON_KITCHEN) / 2.
 
-MICROSOFT_LUIS_CAFE = np.array([0.84, 0.88, 0.91, 0.91, 0.93, 0.91, 0.93])
-MICROSOFT_LUIS_KITCHEN = np.array([0.86, 0.90, 0.92, 0.91, 0.94, 0.93, 0.94])
+MICROSOFT_LUIS_CAFE = np.array([0.83, 0.85, 0.89, 0.90, 0.91, 0.93, 0.93])
+MICROSOFT_LUIS_KITCHEN = np.array([0.86, 0.89, 0.90, 0.91, 0.92, 0.93, 0.93])
 MICROSOFT_LUIS = (MICROSOFT_LUIS_CAFE + MICROSOFT_LUIS_KITCHEN) / 2.
 
-PICOVOICE_RHINO_CAFE = np.array([0.92, 0.96, 0.97, 0.98, 0.99, 0.99, 0.99])
-PICOVOICE_RHINO_KITCHEN = np.array([0.95, 0.98, 0.98, 0.99, 0.99, 0.99, 0.99])
+PICOVOICE_RHINO_CAFE = np.array([0.91, 0.96, 0.98, 0.98, 0.98, 0.99, 0.99])
+PICOVOICE_RHINO_KITCHEN = np.array([0.96, 0.97, 0.98, 0.99, 0.99, 0.99, 0.99])
 PICOVOICE_RHINO = (PICOVOICE_RHINO_CAFE + PICOVOICE_RHINO_KITCHEN) / 2.
 
 SNR_dB = [6, 9, 12, 15, 18, 21, 24]
 
 
-def plot_detailed():
+def plot_detailed(show: bool = False):
     plt.plot(SNR_dB, AMAZON_LEX, color='g', marker='^', label='Amazon Lex')
     plt.plot(SNR_dB, GOOGLE_DIALOGFLOW, color='r', marker='x', label='Google Dialogflow')
     plt.plot(SNR_dB, IBM_WATSON, color='k', marker='s', label='IBM Watson')
@@ -38,14 +40,16 @@ def plot_detailed():
     plt.legend()
     plt.title("Accuracy of NLU Engines")
     plt.grid()
-    plt.show()
+    if show:
+        plt.show()
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result.svg'), transparent=True)
 
 
 PV_COLOR = (55 / 255, 125 / 255, 255 / 255)
 COLOR = (100 / 255, 100 / 255, 100 / 255)
 
 
-def plot():
+def plot(show: bool = False):
     fig, ax = plt.subplots()
 
     for spine in plt.gca().spines.values():
@@ -72,7 +76,9 @@ def plot():
         ['Google\nDialogflow', 'Amazon\nLex', 'IBM\nWatson', 'Microsoft\nLUIS', 'Picovoice\nRhino'])
     plt.tick_params(axis='y', which='both', left=False, right=False, labelleft=False)
     plt.title("Command Acceptance Rate\n(Averaged across various noisy environments)")
-    plt.show()
+    if show:
+        plt.show()
+    plt.savefig(os.path.join(os.path.dirname(__file__), '../data/misc/result-summary.svg'), transparent=True)
 
 
 if __name__ == '__main__':
