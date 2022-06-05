@@ -47,13 +47,6 @@ Clone the repository:
 git clone https://github.com/Picovoice/speech-to-intent-benchmark.git
 ```
 
-Mix the clean speech data with noise:
-
-```console
-python3 src/mix.py cafe
-python3 src/mix.py kitchen
-```
-
 Get the usage message:
 
 ```console
