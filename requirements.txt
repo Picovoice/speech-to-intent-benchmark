@@ -6,6 +6,6 @@ ibm-watson==6.0.0
 matplotlib==3.10.7
 numpy==1.26.4
 pvrhino==4.0.0
-requests==2.32.4
+requests==2.33.0
 setuptools==80.9.0
 soundfile==0.10.3.post1
