@@ -444,12 +444,23 @@ class MicrosoftLUIS(Engine):
 
 
 class PicovoiceRhino(Engine):
-    def __init__(self, access_key: str, log: Optional[Logger] = None) -> None:
+    def __init__(
+            self,
+            access_key: str,
+            context_path: Optional[str] = None,
+            library_path: Optional[str] = None,
+            model_path: Optional[str] = None,
+            log: Optional[Logger] = None) -> None:
         super(PicovoiceRhino, self).__init__(log=log)
+
+        if context_path is None:
+            context_path = os.path.join(os.path.dirname(__file__), '../data/rhino/coffee_maker_linux.rhn')
 
         self._o = pvrhino.create(
             access_key=access_key,
-            context_path=os.path.join(os.path.dirname(__file__), '../data/rhino/coffee_maker_linux.rhn'),
+            context_path=context_path,
+            library_path=library_path,
+            model_path=model_path,
             sensitivity=.75)
 
     def process_file(self, path: str) -> Optional[Dict[str, str]]:
